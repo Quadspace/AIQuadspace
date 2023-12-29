@@ -8,12 +8,12 @@ export default function AIResponse({ openModal }) {
     {
       role: "assistant",
       content:
-        "Hi! I'm Quad, here to chat with you about your warehouse processes and help you with your needs! ☀️",
+        "Hi! I'm Quad, here to chat with you about your warehouse processes and help you with your needs! ☀️<br><br> Let's chat about what's going on.",
     },
     {
       role: "assistant",
       content:
-        "Let's chat about what is going on. In a sentence or two, tell me what challenges you are facing in regards to your warehouse needs. Feel free to be casual like this is a discussion between friends or coworkers.",
+        "In a sentence or two, tell me what challenges you are facing in regards to your warehouse needs.<br><br> Feel free to be casual like this is a discussion between friends or coworkers.",
     },
   ]);
 
