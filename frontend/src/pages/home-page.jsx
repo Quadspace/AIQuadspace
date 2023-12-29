@@ -20,6 +20,20 @@ export default function AIResponse({ openModal }) {
   const chatContentRef = useRef(null);
   const inputRef = useRef(null);
 
+  function linkify(inputText) {
+    const urlRegex =
+      /(\b(https?|ftp|file):\/\/[-A-Z0-9+&@#/%?=~_|!:,.;]*[-A-Z0-9+&@#/%=~_|])/gi;
+    return inputText.replace(urlRegex, function (url) {
+      return (
+        '<a href="' +
+        url +
+        '" target="_blank" rel="noopener noreferrer" style="color: blue; text-decoration: underline;">' +
+        url +
+        "</a>"
+      );
+    });
+  }
+
   useEffect(() => {
     if (chatContentRef.current) {
       chatContentRef.current.scrollTop = chatContentRef.current.scrollHeight;
@@ -126,9 +140,8 @@ export default function AIResponse({ openModal }) {
                 className={`message ${
                   message.role === "user" ? "user-message" : "assistant-message"
                 }`}
-              >
-                {message.content}
-              </p>
+                dangerouslySetInnerHTML={{ __html: linkify(message.content) }}
+              />
             ))}
           </div>
         </div>
