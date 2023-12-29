@@ -20,13 +20,13 @@ body {
 .chat-container {
   width: 100%;
   max-width: 600px;
-  margin: auto;
+  margin: 150px auto; /* This will apply 150px margin to top and bottom, and auto margin to left and right */
   border: 1px solid #ddd;
   border-radius: 8px;
   overflow: hidden;
   display: flex;
   flex-direction: column;
-  height: 600px; /* Fixed height for the chat container */
+  height: 800px; /* Adjusted height */
   background-color: #fff;
 }
 

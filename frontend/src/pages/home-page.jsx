@@ -58,6 +58,7 @@ export default function AIResponse({ openModal }) {
 
   const handleSubmit = async () => {
     setIsLoading(true);
+    setInputText("");
 
     const messageContent = {
       role: "user",
@@ -132,6 +133,7 @@ export default function AIResponse({ openModal }) {
             value={inputText}
             onChange={handleInputChange}
             onKeyDown={handleInputKeyDown}
+            disabled={isLoading}
           />
           <button
             className="send-button"
