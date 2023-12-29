@@ -28,11 +28,13 @@ body {
   flex-direction: column;
   height: 800px; /* Adjusted height */
   background-color: #fff;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
 }
 
 .chat-box {
   overflow-y: auto;
   flex-grow: 1;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
 }
 
 .chat-content {
@@ -72,6 +74,7 @@ body {
   display: flex;
   padding: 10px;
   border-top: 1px solid #ddd;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
 }
 
 .chat-input {
@@ -84,15 +87,17 @@ body {
   resize: none; /* Disable manual resizing */
   min-height: 10px; /* Minimum height */
   max-height: 100px;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
 }
 
 .send-button {
   padding: 10px 15px;
-  background-color: #09f;
-  color: white;
+  background-color: #00d8ee;
+  color: rgb(27, 26, 26);
   border: none;
   border-radius: 20px;
   cursor: pointer;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
 }
 
 .send-button:disabled {
