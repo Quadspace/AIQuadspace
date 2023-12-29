@@ -27,13 +27,19 @@ export default function AIResponse({ openModal }) {
     setInputText(e.target.value);
   };
 
+  const handleInputKeyDown = (e) => {
+    if (e.key === "Enter" && !isLoading) {
+      handleSubmit();
+    }
+  };
+
   const appendToChatHistory = (message) => {
     setChatHistory((prevChatHistory) => [...prevChatHistory, message]);
   };
 
   const fetchFileContent = async () => {
     try {
-      const response = await fetch("../../public/knowledge.txt"); // Path relative to the public folder
+      const response = await fetch("/path_to_your_file.txt"); // Replace with the actual path
       if (!response.ok) {
         throw new Error("Failed to fetch file");
       }
@@ -44,7 +50,7 @@ export default function AIResponse({ openModal }) {
     }
   };
 
-  const fetchData = async () => {
+  const handleSubmit = async () => {
     setIsLoading(true);
 
     const messageContent = {
@@ -55,10 +61,7 @@ export default function AIResponse({ openModal }) {
     appendToChatHistory(messageContent);
 
     try {
-      // Fetch the file content
       const fileContent = await fetchFileContent();
-
-      // Include the file content in the system message if it exists
       const systemMessage = fileContent
         ? { role: "system", content: fileContent }
         : null;
@@ -122,10 +125,11 @@ export default function AIResponse({ openModal }) {
               placeholder="Type a message..."
               value={inputText}
               onChange={handleInputChange}
+              onKeyDown={handleInputKeyDown}
             />
             <button
               className="send-button"
-              onClick={fetchData}
+              onClick={handleSubmit}
               disabled={isLoading}
             >
               {isLoading ? <div className="loader"></div> : "Send"}
