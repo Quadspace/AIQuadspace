@@ -1,30 +1,36 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 
 export default function AIResponse({ openModal }) {
   const key = import.meta.env.VITE_OPENAI_API_KEY;
   const [inputText, setInputText] = useState("");
   const [isLoading, setIsLoading] = useState(false);
-  const [chatHistory, setChatHistory] = useState([]);
+  const [chatHistory, setChatHistory] = useState([
+    {
+      role: "assistant",
+      content:
+        "Hi! I'm Quad, here to chat with you about your warehouse processes and help you with your needs! ☀️",
+    },
+    {
+      role: "assistant",
+      content:
+        "Let's chat about what is going on. In a sentence or two, tell me what challenges you are facing in regards to your warehouse needs. Feel free to be casual like this is a discussion between friends or coworkers.",
+    },
+  ]);
+
+  const chatContentRef = useRef(null);
 
   useEffect(() => {
-    const initialMessages = [
-      {
-        role: "assistant",
-        content:
-          "Hi! I'm Quad, here to chat with you about your warehouse processes and help you with your needs! ☀️",
-      },
-      {
-        role: "assistant",
-        content:
-          "Let's chat about what is going on. In a sentence or two, tell me what challenges you are facing in regards to your warehouse needs. Feel free to be casual like this is a discussion between friends or coworkers.",
-      },
-    ];
-
-    setChatHistory(initialMessages);
-  }, []);
+    if (chatContentRef.current) {
+      chatContentRef.current.scrollTop = chatContentRef.current.scrollHeight;
+    }
+  }, [chatHistory]);
 
   const handleInputChange = (e) => {
     setInputText(e.target.value);
+
+    const textarea = e.target;
+    textarea.style.height = "auto";
+    textarea.style.height = `${textarea.scrollHeight}px`; // Set to content height
   };
 
   const handleInputKeyDown = (e) => {
@@ -39,7 +45,7 @@ export default function AIResponse({ openModal }) {
 
   const fetchFileContent = async () => {
     try {
-      const response = await fetch("/path_to_your_file.txt"); // Replace with the actual path
+      const response = await fetch("../../public/knowledge.txt"); // Replace with the actual path
       if (!response.ok) {
         throw new Error("Failed to fetch file");
       }
@@ -105,7 +111,7 @@ export default function AIResponse({ openModal }) {
   return (
     <>
       <div className="chat-container">
-        <div className="chat-box">
+        <div className="chat-box" ref={chatContentRef}>
           <div className="chat-content">
             {chatHistory.map((message, index) => (
               <p
@@ -118,23 +124,22 @@ export default function AIResponse({ openModal }) {
               </p>
             ))}
           </div>
-          <div className="input-container">
-            <input
-              type="text"
-              className="chat-input"
-              placeholder="Type a message..."
-              value={inputText}
-              onChange={handleInputChange}
-              onKeyDown={handleInputKeyDown}
-            />
-            <button
-              className="send-button"
-              onClick={handleSubmit}
-              disabled={isLoading}
-            >
-              {isLoading ? <div className="loader"></div> : "Send"}
-            </button>
-          </div>
+        </div>
+        <div className="input-container">
+          <textarea
+            className="chat-input"
+            placeholder="Type a message..."
+            value={inputText}
+            onChange={handleInputChange}
+            onKeyDown={handleInputKeyDown}
+          />
+          <button
+            className="send-button"
+            onClick={handleSubmit}
+            disabled={isLoading}
+          >
+            {isLoading ? <div className="loader"></div> : "Send"}
+          </button>
         </div>
       </div>
     </>

@@ -24,12 +24,15 @@ body {
   border: 1px solid #ddd;
   border-radius: 8px;
   overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  height: 600px; /* Fixed height for the chat container */
   background-color: #fff;
 }
 
 .chat-box {
-  max-height: 500px;
   overflow-y: auto;
+  flex-grow: 1;
 }
 
 .chat-content {
@@ -48,13 +51,13 @@ body {
 }
 
 .user-message {
-  background-color: #DCF8C6; /* Light green color for user messages */
+  background-color: #dcf8c6; /* Light green color for user messages */
   align-self: flex-end; /* Align to the right */
   border-bottom-right-radius: 0;
 }
 
 .assistant-message {
-  background-color: #E2E3E5; /* Light gray color for AI messages */
+  background-color: #e2e3e5; /* Light gray color for AI messages */
   align-self: flex-start; /* Align to the left */
   border-bottom-left-radius: 0;
 }
@@ -71,6 +74,10 @@ body {
   border: 1px solid #ddd;
   border-radius: 20px;
   margin-right: 10px;
+  overflow-y: hidden; /* Hide vertical scrollbar */
+  resize: none; /* Disable manual resizing */
+  min-height: 10px; /* Minimum height */
+  max-height: 100px;
 }
 
 .send-button {
@@ -84,4 +91,23 @@ body {
 
 .send-button:disabled {
   background-color: #ccc;
+}
+
+.loader {
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  border: 3px solid rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  border-top: 3px solid #fff;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }
