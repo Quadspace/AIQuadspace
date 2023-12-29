@@ -31,6 +31,19 @@ export default function AIResponse({ openModal }) {
     setChatHistory((prevChatHistory) => [...prevChatHistory, message]);
   };
 
+  const fetchFileContent = async () => {
+    try {
+      const response = await fetch("../../public/knowledge.txt"); // Path relative to the public folder
+      if (!response.ok) {
+        throw new Error("Failed to fetch file");
+      }
+      return await response.text();
+    } catch (error) {
+      console.error("Error reading file:", error);
+      return ""; // Return empty string if there's an error
+    }
+  };
+
   const fetchData = async () => {
     setIsLoading(true);
 
@@ -42,6 +55,14 @@ export default function AIResponse({ openModal }) {
     appendToChatHistory(messageContent);
 
     try {
+      // Fetch the file content
+      const fileContent = await fetchFileContent();
+
+      // Include the file content in the system message if it exists
+      const systemMessage = fileContent
+        ? { role: "system", content: fileContent }
+        : null;
+
       const response = await fetch(
         "https://api.openai.com/v1/chat/completions",
         {
@@ -51,8 +72,10 @@ export default function AIResponse({ openModal }) {
             "Content-Type": "application/json",
           },
           body: JSON.stringify({
-            model: "gpt-4",
-            messages: [...chatHistory, messageContent],
+            model: "gpt-4-1106-preview",
+            messages: systemMessage
+              ? [systemMessage, ...chatHistory, messageContent]
+              : [...chatHistory, messageContent],
           }),
         }
       );
