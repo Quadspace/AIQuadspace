@@ -117,9 +117,9 @@ export default function AIResponse({ openModal }) {
             {chatHistory.map((message, index) => (
               <p
                 key={index}
-                className={
+                className={`message ${
                   message.role === "user" ? "user-message" : "assistant-message"
-                }
+                }`}
               >
                 {message.content}
               </p>

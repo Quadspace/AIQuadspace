@@ -1,5 +1,5 @@
 body {
-  background: linear-gradient(270deg, #07b8ca, #a8ca36);
+  background: linear-gradient(270deg, #2c3233, #6b6f5d);
   background-size: 200% 100%;
   animation: gradient 5s ease infinite;
 
@@ -42,24 +42,30 @@ body {
 }
 
 .message {
-  width: 100%; /* Use full width */
+  max-width: 50%;
   margin-bottom: 10px;
   padding: 10px;
   border-radius: 12px;
   color: white;
-  word-wrap: break-word; /* Ensure long words do not overflow */
-}
+  word-wrap: break-word;
+  border-radius: 18px; /* More pronounced rounded corners */
+  padding: 12px 15px; /* Adjust padding for better bubble appearance */
+  margin-bottom: 10px;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2); /* Soft shadow for depth */
+} /* Ensure long words do not overflow */
 
 .user-message {
-  background-color: #dcf8c6; /* Light green color for user messages */
-  align-self: flex-end; /* Align to the right */
-  border-bottom-right-radius: 0;
+  color: rgb(27, 26, 26);
+  background-color: #00d8ee; /* Light green color for user messages */
+  align-self: flex-end;
+  border-bottom-right-radius: 3px; /* Adjust for tail-like effect */
 }
 
 .assistant-message {
-  background-color: #e2e3e5; /* Light gray color for AI messages */
-  align-self: flex-start; /* Align to the left */
-  border-bottom-left-radius: 0;
+  color: rgb(27, 26, 26);
+  background-color: #bfe538; /* Light gray color for AI messages */
+  align-self: flex-start;
+  border-bottom-left-radius: 3px; /* Adjust for tail-like effect */
 }
 
 .input-container {
