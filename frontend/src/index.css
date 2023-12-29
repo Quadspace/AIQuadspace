@@ -1,4 +1,4 @@
-body{
+body {
   background: linear-gradient(270deg, #07b8ca, #a8ca36);
   background-size: 200% 100%;
   animation: gradient 5s ease infinite;
@@ -15,74 +15,73 @@ body{
     }
   }
 }
+/* ChatStyles.css */
 
 .chat-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  
+  width: 100%;
+  max-width: 600px;
+  margin: auto;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+  background-color: #fff;
 }
 
 .chat-box {
-  width: 40%; /* 2/3rds of the container */
-  height: 60%;
-  display: flex;
-  flex-direction: column;
-  border: 1px solid #efe9e9;
-  border-radius: 10px;
-  overflow: hidden;
-  margin-top: 75px;
-  margin-bottom: 75px;
-  background: rgb(230, 220, 220);
-}
-
-.chat-content {
-  flex-grow: 1;
+  max-height: 500px;
   overflow-y: auto;
 }
 
-.chat-input {
+.chat-content {
   padding: 10px;
-  border-top: 1px solid #ccc;
+  display: flex;
+  flex-direction: column;
 }
+
+.message {
+  width: 100%; /* Use full width */
+  margin-bottom: 10px;
+  padding: 10px;
+  border-radius: 12px;
+  color: white;
+  word-wrap: break-word; /* Ensure long words do not overflow */
+}
+
+.user-message {
+  background-color: #DCF8C6; /* Light green color for user messages */
+  align-self: flex-end; /* Align to the right */
+  border-bottom-right-radius: 0;
+}
+
+.assistant-message {
+  background-color: #E2E3E5; /* Light gray color for AI messages */
+  align-self: flex-start; /* Align to the left */
+  border-bottom-left-radius: 0;
+}
+
 .input-container {
   display: flex;
-  align-items: center;
+  padding: 10px;
+  border-top: 1px solid #ddd;
 }
 
 .chat-input {
-  flex-grow: 1;
+  flex: 1;
   padding: 10px;
-  border-top: 1px solid #ccc;
+  border: 1px solid #ddd;
+  border-radius: 20px;
+  margin-right: 10px;
 }
 
 .send-button {
-  background-color: blue;
+  padding: 10px 15px;
+  background-color: #09f;
   color: white;
   border: none;
-  border-radius: 50px;
-  padding: 10px 20px;
+  border-radius: 20px;
   cursor: pointer;
-  margin-left: 10px;
 }
 
-.send-button:hover {
-  background-color: darkblue;
-}
-
-
-
-.loader {
-  border: 5px solid #f3f3f3; /* Light grey border */
-  border-top: 5px solid #3498db; /* Blue border */
-  border-radius: 50%;
-  width: 24px;
-  height: 24px;
-  animation: spin 2s linear infinite;
-}
-
-@keyframes spin {
-  0% { transform: rotate(0deg); }
-  100% { transform: rotate(360deg); }
+.send-button:disabled {
+  background-color: #ccc;
 }
