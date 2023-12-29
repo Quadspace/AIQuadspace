@@ -18,6 +18,7 @@ export default function AIResponse({ openModal }) {
   ]);
 
   const chatContentRef = useRef(null);
+  const inputRef = useRef(null);
 
   useEffect(() => {
     if (chatContentRef.current) {
@@ -58,7 +59,7 @@ export default function AIResponse({ openModal }) {
 
   const handleSubmit = async () => {
     setIsLoading(true);
-    setInputText("");
+    setInputText(""); // Clear the text area immediately after submission
 
     const messageContent = {
       role: "user",
@@ -105,7 +106,12 @@ export default function AIResponse({ openModal }) {
       console.error("Error fetching data:", error);
     } finally {
       setIsLoading(false);
-      setInputText("");
+      setInputText(""); // Clear the text area again to ensure it's clear after submission
+
+      // Focus the textarea after the response is received
+      if (inputRef.current) {
+        inputRef.current.focus();
+      }
     }
   };
 
@@ -128,6 +134,7 @@ export default function AIResponse({ openModal }) {
         </div>
         <div className="input-container">
           <textarea
+            ref={inputRef}
             className="chat-input"
             placeholder="Type a message..."
             value={inputText}
