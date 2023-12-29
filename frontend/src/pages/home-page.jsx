@@ -21,16 +21,22 @@ export default function AIResponse({ openModal }) {
   const inputRef = useRef(null);
 
   function linkify(inputText) {
+    // URLs to be replaced with custom text
+    const urlMappings = {
+      "https://forms.office.com/r/ManC4Y7ZA8": "Quiz",
+      "https://quadspace.us/": "Quadspace",
+    };
+
     const urlRegex =
       /(\b(https?|ftp|file):\/\/[-A-Z0-9+&@#/%?=~_|!:,.;]*[-A-Z0-9+&@#/%=~_|])/gi;
+
     return inputText.replace(urlRegex, function (url) {
-      return (
-        '<a href="' +
-        url +
-        '" target="_blank" rel="noopener noreferrer" style="color: blue; text-decoration: underline;">' +
-        url +
-        "</a>"
-      );
+      // Check if the url is one of the special cases
+      if (urlMappings[url]) {
+        return `<a href="${url}" target="_blank" rel="noopener noreferrer" style="color: blue; text-decoration: underline;">${urlMappings[url]}</a>`;
+      }
+      // If not a special case, return the url as is
+      return `<a href="${url}" target="_blank" rel="noopener noreferrer" style="color: blue; text-decoration: underline;">${url}</a>`;
     });
   }
 
