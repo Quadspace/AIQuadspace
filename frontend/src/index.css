@@ -15,12 +15,20 @@ body {
     }
   }
 }
-/* ChatStyles.css */
+
+.logo-container {
+  text-align: center; /* Center the logo horizontally */
+  margin-top: 50px; /* Add some space below the logo */
+}
+.logo-container img {
+  max-width: 100%; /* Ensure the logo is not wider than its container */
+  height: auto; /* Maintain the aspect ratio of the logo */
+}
 
 .chat-container {
   width: 100%;
   max-width: 600px;
-  margin: 150px auto; /* This will apply 150px margin to top and bottom, and auto margin to left and right */
+  margin: 20px auto 150px; /* This will apply 150px margin to top and bottom, and auto margin to left and right */
   border: 1px solid #ddd;
   border-radius: 8px;
   overflow: hidden;

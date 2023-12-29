@@ -23,7 +23,7 @@ export default function AIResponse({ openModal }) {
   function linkify(inputText) {
     // URLs to be replaced with custom text
     const urlMappings = {
-      "https://forms.office.com/r/ManC4Y7ZA8": "Quiz",
+      "https://forms.office.com/r/ManC4Y7ZA8": "Details Form",
       "https://quadspace.us/": "Quadspace",
     };
 
@@ -137,6 +137,9 @@ export default function AIResponse({ openModal }) {
 
   return (
     <>
+      <div className="logo-container">
+        <img src="../../public/logofull.png" alt="Logo" />{" "}
+      </div>
       <div className="chat-container">
         <div className="chat-box" ref={chatContentRef}>
           <div className="chat-content">
