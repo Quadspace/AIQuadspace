@@ -78,7 +78,7 @@ export default function AIResponse({ openModal }) {
 
   const fetchFileContent = async () => {
     try {
-      const response = await fetch("../assets/knowledge.txt"); 
+      const response = await fetch("../../public/knowledge.txt");
       if (!response.ok) {
         throw new Error("Failed to fetch file");
       }
@@ -153,7 +153,7 @@ export default function AIResponse({ openModal }) {
         <div className="disclaimer-wrapper">
           <div className="disclaimer-container">
             <img
-              src="../assets/logofull.png"
+              src="../../public/logofull.png"
               alt="Quadspace Logo"
               style={{ maxWidth: "100%", height: "auto" }}
             />
@@ -170,7 +170,7 @@ export default function AIResponse({ openModal }) {
       ) : (
         <div className="chat-container">
           <img
-            src="../assets/logofull.png"
+            src="../../public/logofull.png"
             alt="Quadspace Logo"
             style={{
               maxWidth: "80%",
