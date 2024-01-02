@@ -2,10 +2,10 @@ import React, { useState, useEffect, useRef } from "react";
 
 export default function AIResponse({ openModal }) {
   const key = import.meta.env.VITE_OPENAI_API_KEY;
+  const [isChatOpen, setIsChatOpen] = useState(false);
   const [inputText, setInputText] = useState("");
   const [isLoading, setIsLoading] = useState(false);
   const [showTyping, setShowTyping] = useState(true);
-  
 
   const [chatHistory, setChatHistory] = useState([
     {
@@ -15,22 +15,21 @@ export default function AIResponse({ openModal }) {
     },
   ]);
 
+  useEffect(() => {
+    // Show typing animation before displaying the second message
+    setShowTyping(true);
 
-   useEffect(() => {
-     // Show typing animation before displaying the second message
-     setShowTyping(true);
+    const timer = setTimeout(() => {
+      setShowTyping(false);
+      appendToChatHistory({
+        role: "assistant",
+        content:
+          "In a sentence or two, tell me what challenges you are facing in regards to your warehouse needs. Feel free to be casual like this is a discussion between friends or coworkers.",
+      });
+    }, 5500); // Delay of 3.5 seconds for the second message
 
-     const timer = setTimeout(() => {
-       setShowTyping(false);
-       appendToChatHistory({
-         role: "assistant",
-         content:
-           "In a sentence or two, tell me what challenges you are facing in regards to your warehouse needs. Feel free to be casual like this is a discussion between friends or coworkers.",
-       });
-     }, 5500); // Delay of 3.5 seconds for the second message
-
-     return () => clearTimeout(timer);
-   }, []);
+    return () => clearTimeout(timer);
+  }, []);
 
   const chatContentRef = useRef(null);
   const inputRef = useRef(null);
@@ -152,52 +151,66 @@ export default function AIResponse({ openModal }) {
 
   return (
     <>
-      <div className="logo-container">
-        <img src="../../public/logofull.png" alt="Logo" />{" "}
-      </div>
-      <div className="chat-container">
-        <div className="chat-box" ref={chatContentRef}>
-          <div className="chat-content">
-            {chatHistory.map((message, index) => (
-              <p
-                key={index}
-                className={`message ${
-                  message.role === "user" ? "user-message" : "assistant-message"
-                }`}
-                dangerouslySetInnerHTML={{ __html: linkify(message.content) }}
-              />
-            ))}
-            {showTyping && (
-              <div className="chat-bubble">
-                <div className="loading">
-                  <div className="dot one"></div>
-                  <div className="dot two"></div>
-                  <div className="dot three"></div>
+      {!isChatOpen ? (
+        <div className="disclaimer-container">
+          <img src="../../public/logofull.png" alt="Quadspace Logo" />
+          <p>
+            {" "}
+            By clicking "I Agree", I acknowledge that by using this
+            chatbot, I give Quadspace, LLC permission to store and use all data
+            entered into this chat conversation for the purposes of improving
+            services and user experience. Your information will be handled in
+            accordance with our Privacy Policy.
+          </p>
+          <button onClick={() => setIsChatOpen(true)}>I Agree</button>
+        </div>
+      ) : (
+        <div className="chat-container">
+          <div className="chat-box" ref={chatContentRef}>
+            <div className="chat-content">
+              {chatHistory.map((message, index) => (
+                <p
+                  key={index}
+                  className={`message ${
+                    message.role === "user"
+                      ? "user-message"
+                      : "assistant-message"
+                  }`}
+                  dangerouslySetInnerHTML={{ __html: linkify(message.content) }}
+                />
+              ))}
+              {showTyping && (
+                <div className="chat-bubble">
+                  <div className="loading">
+                    <div className="dot one"></div>
+                    <div className="dot two"></div>
+                    <div className="dot three"></div>
+                  </div>
+                  <div className="tail"></div>
                 </div>
-                <div className="tail"></div>
-              </div>
-            )}
+              )}
+            </div>
+          </div>
+          <div className="input-container">
+            <textarea
+              ref={inputRef}
+              className="chat-input"
+              placeholder="Type a message..."
+              value={inputText}
+              onChange={handleInputChange}
+              onKeyDown={handleInputKeyDown}
+              disabled={isLoading}
+            />
+            <button
+              className="send-button"
+              onClick={handleSubmit}
+              disabled={isLoading}
+            >
+              {isLoading ? <div className="loader"></div> : "Send"}
+            </button>
           </div>
         </div>
-        <div className="input-container">
-          <textarea
-            ref={inputRef}
-            className="chat-input"
-            placeholder="Type a message..."
-            value={inputText}
-            onChange={handleInputChange}
-            onKeyDown={handleInputKeyDown}
-            disabled={isLoading}
-          />
-          <button
-            className="send-button"
-            onClick={handleSubmit}
-            disabled={isLoading}
-          >
-            {isLoading ? <div className="loader"></div> : "Send"}
-          </button>
-        </div>
-      </div>
+      )}
     </>
   );
 }
