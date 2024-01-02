@@ -162,7 +162,6 @@ export default function AIResponse({ openModal }) {
       </div>
       <div className="chat-container">
         <div className="chat-box" ref={chatContentRef}>
-          
           <div className="chat-content">
             {chatHistory.map((message, index) => (
               <p
@@ -173,7 +172,16 @@ export default function AIResponse({ openModal }) {
                 dangerouslySetInnerHTML={{ __html: linkify(message.content) }}
               />
             ))}
-            {showTyping && <div className="typing-animation"></div>}
+            {showTyping && (
+              <div className="chat-bubble">
+                <div className="loading">
+                  <div className="dot one"></div>
+                  <div className="dot two"></div>
+                  <div className="dot three"></div>
+                </div>
+                <div className="tail"></div>
+              </div>
+            )}
           </div>
         </div>
         <div className="input-container">

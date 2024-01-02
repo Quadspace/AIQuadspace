@@ -16,33 +16,140 @@ body {
   }
 }
 
-.typing-animation {
-  width: 50px;
-  height: 20px;
-  border-radius: 10px;
-  background-color: #e2e3e5; /* Light gray color */
-  margin-left: 10px;
+.chat-bubble {
+  height: 54px; /* Adjusted to 75% of the original height */
+  width: 34.5px; /* Adjusted to 75% of the original width */
+  background: #e5e5e5;
   position: relative;
-  overflow: hidden;
+  margin-left: 10px;
+  transform: scale(0.75);
 }
 
-.typing-animation::after {
+.chat-bubble:before,
+.chat-bubble:after {
   content: "";
+  height: 54px; /* 75% of the original size */
+  width: 54px; /* 75% of the original size */
   position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 10px;
-  height: 10px;
-  background-color: black;
+  display: block;
+  background: #e5e5e5;
   border-radius: 50%;
-  transform: translate(-50%, -50%);
-  box-shadow: 15px 0 0 black, 30px 0 0 black;
-  animation: typing 1.5s infinite;
+  z-index: 1;
 }
 
-@keyframes typing {
-  50% {
-    opacity: 0;
+.chat-bubble:before {
+  left: -27px; /* Adjusted for 75% scaled size */
+}
+
+.chat-bubble:after {
+  right: -27px; /* Adjusted for 75% scaled size */
+}
+
+.chat-bubble .tail {
+  height: 18.75px; /* 75% of the original size */
+  width: 18.75px; /* 75% of the original size */
+  background: #e5e5e5;
+  position: absolute;
+  left: -22.5px; /* Adjusted for 75% scaled size */
+  bottom: 1px;
+  border-radius: 50%;
+}
+
+.chat-bubble .tail:before {
+  height: 9px; /* 75% of the original size */
+  width: 9px; /* 75% of the original size */
+  background: #e5e5e5;
+  content: "";
+  display: block;
+  border-radius: 50%;
+  position: absolute;
+  left: -4.5px; /* Adjusted for 75% scaled size */
+  bottom: -4.5px;
+}
+
+.chat-bubble .loading {
+  position: absolute;
+  z-index: 10;
+  width: 50.25px; /* Adjusted for 75% scaled size */
+  left: -6px; /* Adjusted for 75% scaled size */
+  top: 20px; /* Adjusted for 75% scaled size */
+}
+
+.chat-bubble .loading .dot {
+  height: 12.75px; /* 75% of the original size */
+  width: 12.75px; /* 75% of the original size */
+  border-radius: 50%;
+  background: #c1c1c1;
+  display: block;
+  float: left;
+  margin: 0 0 0 6px; /* Adjusted for 75% scaled size */
+}
+
+.chat-bubble .loading .dot:first-child {
+  margin: 0;
+}
+
+/* ... keep the existing keyframes and animation styles ... */
+
+/* ... keep the existing keyframes and animation styles ... */
+
+.chat-bubble .loading .dot.one {
+  -webkit-animation: cycleOne 1s ease-in-out infinite;
+  -webkit-animation-direction: normal;
+}
+
+.chat-bubble .loading .dot.two {
+  -webkit-animation: cycleTwo 1s ease-in-out infinite;
+  -webkit-animation-direction: normal;
+}
+
+.chat-bubble .loading .dot.three {
+  -webkit-animation: cycleThree 1s ease-in-out infinite;
+  -webkit-animation-direction: normal;
+}
+
+@-webkit-keyframes cycleOne {
+  0% {
+    background: rgba(150, 150, 150, 0.4);
+  }
+  33.333% {
+    background: rgba(150, 150, 150, 1);
+  }
+  66.6667% {
+    background: rgba(150, 150, 150, 0.4);
+  }
+  100% {
+    background: rgba(150, 150, 150, 0.4);
+  }
+}
+
+@-webkit-keyframes cycleTwo {
+  0% {
+    background: rgba(150, 150, 150, 0.4);
+  }
+  33.333% {
+    background: rgba(150, 150, 150, 0.4);
+  }
+  66.6667% {
+    background: rgba(150, 150, 150, 1);
+  }
+  100% {
+    background: rgba(150, 150, 150, 0.4);
+  }
+}
+
+@-webkit-keyframes cycleThree {
+  0% {
+    background: rgba(150, 150, 150, 0.4);
+  }
+  33.333% {
+    background: rgba(150, 150, 150, 0.4);
+  }
+  66.6667% {
+    background: rgba(150, 150, 150, 0.4);
+  }
+  100% {
+    background: rgba(150, 150, 150, 1);
   }
 }
 
