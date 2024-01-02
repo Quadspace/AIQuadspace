@@ -282,3 +282,10 @@ button {
     transform: rotate(360deg);
   }
 }
+
+@media (min-width: 768px) {
+  .chat-container {
+    height: 90vh; /* Taller height for larger screens */
+    margin-top: 50px; /* Larger top margin for larger screens */
+  }
+}
