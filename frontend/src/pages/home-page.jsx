@@ -152,17 +152,22 @@ export default function AIResponse({ openModal }) {
   return (
     <>
       {!isChatOpen ? (
-        <div className="disclaimer-container">
-          <img src="../../public/logofull.png" alt="Quadspace Logo" />
-          <p>
-            {" "}
-            By clicking "I Agree", I acknowledge that by using this
-            chatbot, I give Quadspace, LLC permission to store and use all data
-            entered into this chat conversation for the purposes of improving
-            services and user experience. Your information will be handled in
-            accordance with our Privacy Policy.
-          </p>
-          <button onClick={() => setIsChatOpen(true)}>I Agree</button>
+        <div className="disclaimer-wrapper">
+          <div className="disclaimer-container">
+            <img
+              src="../../public/logofull.png"
+              alt="Quadspace Logo"
+              style={{ maxWidth: "100%", height: "auto" }}
+            />
+            <p>
+              By clicking "Chat with Quad", I acknowledge that by using this
+              chatbot, I give Quadspace, LLC permission to store and use all
+              data entered into this chat conversation for the purposes of
+              improving services and user experience. Your information will be
+              handled in accordance with our Privacy Policy.
+            </p>
+            <button onClick={() => setIsChatOpen(true)}>Chat with Quad</button>
+          </div>
         </div>
       ) : (
         <div className="chat-container">

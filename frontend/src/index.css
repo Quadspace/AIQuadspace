@@ -133,6 +133,51 @@ body {
   }
 }
 
+
+
+.disclaimer-wrapper {
+  display: flex;
+  align-items: center; /* Vertical centering */
+  justify-content: center; /* Horizontal centering */
+  min-height: 100vh; /* Full viewport height */
+  padding: 20px; /* Prevents content from touching the edges */
+}
+
+.disclaimer-container {
+  max-width: 600px;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  padding: 20px;
+  margin: 0; /* Override any default margins */
+}
+
+
+.disclaimer-container p {
+  margin-bottom: 20px;
+}
+
+button {
+  padding: 10px 20px;
+  background-color: #00d8ee;
+  border: none;
+  border-radius: 4px;
+  color: white;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.logo-container {
+  text-align: center;
+  margin-bottom: 30px; /* Space between logo and disclaimer container */
+}
+
+.logo-container img {
+  max-width: 100%; /* Ensures the logo is responsive */
+  height: auto;
+}
+
 .logo-container {
   text-align: center; /* Center the logo horizontally */
   margin-top: 50px; /* Add some space below the logo */
