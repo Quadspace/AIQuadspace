@@ -5,37 +5,32 @@ export default function AIResponse({ openModal }) {
   const [inputText, setInputText] = useState("");
   const [isLoading, setIsLoading] = useState(false);
   const [showTyping, setShowTyping] = useState(true);
-  const [chatHistory, setChatHistory] = useState([]);
+  
 
-  useEffect(() => {
-    setShowTyping(true);
+  const [chatHistory, setChatHistory] = useState([
+    {
+      role: "assistant",
+      content:
+        "Hi! I'm Quad, here to chat with you about your warehouse processes and help you with your needs! ☀️<br><br> Let's chat about what's going on.",
+    },
+  ]);
 
-    const timer1 = setTimeout(() => {
-      setShowTyping(false);
-      appendToChatHistory({
-        role: "assistant",
-        content:
-          "Hi! I'm Quad, here to chat with you about your warehouse processes and help you with your needs! ☀️<br><br> Let's chat about what's going on.",
-      });
 
-      setTimeout(() => {
-        setShowTyping(true);
+   useEffect(() => {
+     // Show typing animation before displaying the second message
+     setShowTyping(true);
 
-        const timer2 = setTimeout(() => {
-          setShowTyping(false);
-          appendToChatHistory({
-            role: "assistant",
-            content:
-              "In a sentence or two, tell me what challenges you are facing in regards to your warehouse needs.<br><br> Feel free to be casual like this is a discussion between friends or coworkers.",
-          });
-        }, 3000); // Delay for second message
+     const timer = setTimeout(() => {
+       setShowTyping(false);
+       appendToChatHistory({
+         role: "assistant",
+         content:
+           "In a sentence or two, tell me what challenges you are facing in regards to your warehouse needs. Feel free to be casual like this is a discussion between friends or coworkers.",
+       });
+     }, 5500); // Delay of 3.5 seconds for the second message
 
-        return () => clearTimeout(timer2);
-      }, 1000); // Gap before showing typing for second message
-    }, 3000); // Delay for first message
-
-    return () => clearTimeout(timer1);
-  }, []);
+     return () => clearTimeout(timer);
+   }, []);
 
   const chatContentRef = useRef(null);
   const inputRef = useRef(null);
