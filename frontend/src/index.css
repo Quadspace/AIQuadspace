@@ -45,8 +45,6 @@ body {
   right: -27px; /* Adjusted for 75% scaled size */
 }
 
-
-
 .chat-bubble .loading {
   position: absolute;
   z-index: 10;
@@ -133,8 +131,6 @@ body {
   }
 }
 
-
-
 .disclaimer-wrapper {
   display: flex;
   align-items: center; /* Vertical centering */
@@ -152,7 +148,6 @@ body {
   padding: 20px;
   margin: 0; /* Override any default margins */
 }
-
 
 .disclaimer-container p {
   margin-bottom: 20px;
@@ -196,7 +191,8 @@ button {
   overflow: hidden;
   display: flex;
   flex-direction: column;
-  height: 800px; /* Adjusted height */
+  height: 625px;
+  max-height: 100%; /* Adjusted height */
   background-color: #fff;
   box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
 }

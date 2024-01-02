@@ -171,6 +171,17 @@ export default function AIResponse({ openModal }) {
         </div>
       ) : (
         <div className="chat-container">
+          <img
+            src="../../public/logofull.png"
+            alt="Quadspace Logo"
+            style={{
+              maxWidth: "80%",
+              height: "auto",
+              display: "block", // Added to make the image a block-level element
+              margin: "0 auto", // Added to center the image horizontally
+            }}
+          />
+
           <div className="chat-box" ref={chatContentRef}>
             <div className="chat-content">
               {chatHistory.map((message, index) => (
