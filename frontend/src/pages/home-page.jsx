@@ -15,21 +15,19 @@ export default function AIResponse({ openModal }) {
     },
   ]);
 
-  useEffect(() => {
-    // Show typing animation before displaying the second message
-    setShowTyping(true);
+    const handleChatStart = () => {
+      setIsChatOpen(true);
+      setShowTyping(true);
 
-    const timer = setTimeout(() => {
-      setShowTyping(false);
-      appendToChatHistory({
-        role: "assistant",
-        content:
-          "In a sentence or two, tell me what challenges you are facing in regards to your warehouse needs. Feel free to be casual like this is a discussion between friends or coworkers.",
-      });
-    }, 5500); // Delay of 3.5 seconds for the second message
-
-    return () => clearTimeout(timer);
-  }, []);
+      setTimeout(() => {
+        setShowTyping(false);
+        appendToChatHistory({
+          role: "assistant",
+          content:
+            "In a sentence or two, tell me what challenges you are facing in regards to your warehouse needs. Feel free to be casual like this is a discussion between friends or coworkers.",
+        });
+      }, 3500); // Delay for the second message
+    };
 
   const chatContentRef = useRef(null);
   const inputRef = useRef(null);
@@ -149,7 +147,8 @@ export default function AIResponse({ openModal }) {
     }
   };
 
-  return (
+  
+      return (
     <>
       {!isChatOpen ? (
         <div className="disclaimer-wrapper">
@@ -166,7 +165,7 @@ export default function AIResponse({ openModal }) {
               improving services and user experience. Your information will be
               handled in accordance with our Privacy Policy.
             </p>
-            <button onClick={() => setIsChatOpen(true)}>Chat with Quad</button>
+            <button onClick={handleChatStart}>Chat with Quad</button>
           </div>
         </div>
       ) : (
