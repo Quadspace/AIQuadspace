@@ -4,18 +4,38 @@ export default function AIResponse({ openModal }) {
   const key = import.meta.env.VITE_OPENAI_API_KEY;
   const [inputText, setInputText] = useState("");
   const [isLoading, setIsLoading] = useState(false);
-  const [chatHistory, setChatHistory] = useState([
-    {
-      role: "assistant",
-      content:
-        "Hi! I'm Quad, here to chat with you about your warehouse processes and help you with your needs! ☀️<br><br> Let's chat about what's going on.",
-    },
-    {
-      role: "assistant",
-      content:
-        "In a sentence or two, tell me what challenges you are facing in regards to your warehouse needs.<br><br> Feel free to be casual like this is a discussion between friends or coworkers.",
-    },
-  ]);
+  const [showTyping, setShowTyping] = useState(true);
+  const [chatHistory, setChatHistory] = useState([]);
+
+  useEffect(() => {
+    setShowTyping(true);
+
+    const timer1 = setTimeout(() => {
+      setShowTyping(false);
+      appendToChatHistory({
+        role: "assistant",
+        content:
+          "Hi! I'm Quad, here to chat with you about your warehouse processes and help you with your needs! ☀️<br><br> Let's chat about what's going on.",
+      });
+
+      setTimeout(() => {
+        setShowTyping(true);
+
+        const timer2 = setTimeout(() => {
+          setShowTyping(false);
+          appendToChatHistory({
+            role: "assistant",
+            content:
+              "In a sentence or two, tell me what challenges you are facing in regards to your warehouse needs.<br><br> Feel free to be casual like this is a discussion between friends or coworkers.",
+          });
+        }, 3000); // Delay for second message
+
+        return () => clearTimeout(timer2);
+      }, 1000); // Gap before showing typing for second message
+    }, 3000); // Delay for first message
+
+    return () => clearTimeout(timer1);
+  }, []);
 
   const chatContentRef = useRef(null);
   const inputRef = useRef(null);
@@ -79,6 +99,7 @@ export default function AIResponse({ openModal }) {
 
   const handleSubmit = async () => {
     setIsLoading(true);
+    setShowTyping(true); // Show typing animation
     setInputText(""); // Clear the text area immediately after submission
 
     const messageContent = {
@@ -121,14 +142,13 @@ export default function AIResponse({ openModal }) {
         content: data.choices[0].message.content,
       };
 
+      setShowTyping(false); // Hide typing animation once the response is ready
       appendToChatHistory(chatResponse);
     } catch (error) {
       console.error("Error fetching data:", error);
+      setShowTyping(false); // Ensure to hide typing animation in case of an error
     } finally {
       setIsLoading(false);
-      setInputText(""); // Clear the text area again to ensure it's clear after submission
-
-      // Focus the textarea after the response is received
       if (inputRef.current) {
         inputRef.current.focus();
       }
@@ -142,6 +162,7 @@ export default function AIResponse({ openModal }) {
       </div>
       <div className="chat-container">
         <div className="chat-box" ref={chatContentRef}>
+          
           <div className="chat-content">
             {chatHistory.map((message, index) => (
               <p
@@ -152,6 +173,7 @@ export default function AIResponse({ openModal }) {
                 dangerouslySetInnerHTML={{ __html: linkify(message.content) }}
               />
             ))}
+            {showTyping && <div className="typing-animation"></div>}
           </div>
         </div>
         <div className="input-container">
