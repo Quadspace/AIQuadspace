@@ -15,19 +15,19 @@ export default function AIResponse({ openModal }) {
     },
   ]);
 
-    const handleChatStart = () => {
-      setIsChatOpen(true);
-      setShowTyping(true);
+  const handleChatStart = () => {
+    setIsChatOpen(true);
+    setShowTyping(true);
 
-      setTimeout(() => {
-        setShowTyping(false);
-        appendToChatHistory({
-          role: "assistant",
-          content:
-            "In a sentence or two, tell me what challenges you are facing in regards to your warehouse needs. Feel free to be casual like this is a discussion between friends or coworkers.",
-        });
-      }, 3500); // Delay for the second message
-    };
+    setTimeout(() => {
+      setShowTyping(false);
+      appendToChatHistory({
+        role: "assistant",
+        content:
+          "In a sentence or two, tell me what challenges you are facing in regards to your warehouse needs. Feel free to be casual like this is a discussion between friends or coworkers.",
+      });
+    }, 3500); // Delay for the second message
+  };
 
   const chatContentRef = useRef(null);
   const inputRef = useRef(null);
@@ -78,7 +78,7 @@ export default function AIResponse({ openModal }) {
 
   const fetchFileContent = async () => {
     try {
-      const response = await fetch("../../public/knowledge.txt"); // Replace with the actual path
+      const response = await fetch("../assets/knowledge.txt"); 
       if (!response.ok) {
         throw new Error("Failed to fetch file");
       }
@@ -147,14 +147,13 @@ export default function AIResponse({ openModal }) {
     }
   };
 
-  
-      return (
+  return (
     <>
       {!isChatOpen ? (
         <div className="disclaimer-wrapper">
           <div className="disclaimer-container">
             <img
-              src="../../public/logofull.png"
+              src="../assets/logofull.png"
               alt="Quadspace Logo"
               style={{ maxWidth: "100%", height: "auto" }}
             />
@@ -171,7 +170,7 @@ export default function AIResponse({ openModal }) {
       ) : (
         <div className="chat-container">
           <img
-            src="../../public/logofull.png"
+            src="../assets/logofull.png"
             alt="Quadspace Logo"
             style={{
               maxWidth: "80%",
