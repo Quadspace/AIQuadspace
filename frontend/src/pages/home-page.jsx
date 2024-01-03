@@ -73,7 +73,68 @@ export default function AIResponse({ openModal }) {
   };
 
   const appendToChatHistory = (message) => {
-    setChatHistory((prevChatHistory) => [...prevChatHistory, message]);
+    setChatHistory((prevChatHistory) => {
+      const formattedMessage = {
+        ...message,
+        content: formatList(message.content), // Format the content if it's a list
+      };
+      return [...prevChatHistory, formattedMessage];
+    });
+  };
+
+  // const formatList = (content) => {
+  //   const lines = content.split("\n");
+  //   let formattedContent = "";
+  //   let inList = false;
+
+  //   for (let i = 0; i < lines.length; i++) {
+  //     const line = lines[i].trim();
+  //     if (line.startsWith("**")) {
+  //       // Bold title with a colon
+  //       const title = line.replace(/\*\*/g, "").trim();
+  //       formattedContent += `${
+  //         inList ? "<br><br>" : ""
+  //       }<strong>${title}:</strong> `;
+  //       inList = false;
+  //     } else if (line.length > 0) {
+  //       // List item or regular text
+  //       formattedContent += `${inList ? "<br><br>" : ""}${line}`;
+  //       inList = true;
+  //     }
+  //   }
+
+  //   return formattedContent;
+  // };
+  const formatList = (content) => {
+    const lines = content.split("\n");
+    let formattedContent = "";
+    let inList = false;
+    let isSubBullet = false;
+
+    for (let i = 0; i < lines.length; i++) {
+      const line = lines[i].trim();
+      if (line.startsWith("**")) {
+        // Bold title with a colon
+        const title = line.replace(/\*\*/g, "").trim();
+        formattedContent += `${
+          inList ? "<br><br>" : ""
+        }<strong>${title}:</strong> `;
+        inList = false;
+        isSubBullet = false;
+      } else if (line.startsWith("-")) {
+        // Sub bullet point
+        formattedContent += `<br>${isSubBullet ? "" : "<br>"}${line}`;
+        inList = true;
+        isSubBullet = true;
+      } else if (line.length > 0) {
+        // Regular text
+        formattedContent += `${inList ? "<br><br>" : ""}${line}`;
+        inList = true;
+        isSubBullet = false;
+      }
+    }
+
+    return formattedContent;
   };
 
   const fetchFileContent = async () => {
