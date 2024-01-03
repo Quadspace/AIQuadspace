@@ -153,37 +153,41 @@ export default function AIResponse({ openModal }) {
   const handleSubmit = async () => {
     setIsLoading(true);
     setShowTyping(true); // Show typing animation
-    setInputText(""); // Clear the text area immediately after submission
+    // Clear the text area immediately after submission
+    setInputText("");
 
+    // Construct the message content with the user's input
     const messageContent = {
       role: "user",
       content: inputText,
     };
 
+    // Add the user's message to the chat history
     appendToChatHistory(messageContent);
 
+    // Send the user's message to the Django backend for storage
+    try {
+      const response = await fetch("/api/save_chat_message/", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          // Include any necessary headers, like CSRF tokens if needed
+        },
+        body: JSON.stringify(messageContent),
+      });
+
+      // Check if the request was successful
+      if (!response.ok) {
+        throw new Error("Failed to save the message");
+      }
+    } catch (error) {
+      console.error("Error saving chat message:", error);
+    }
+
+    // Make the API call to OpenAI or your chatbot service
     try {
       const fileContent = await fetchFileContent();
-      const systemMessage = fileContent
-        ? { role: "system", content: fileContent }
-        : null;
-
-      const response = await fetch(
-        "https://api.openai.com/v1/chat/completions",
-        {
-          method: "POST",
-          headers: {
-            Authorization: `Bearer ${key}`,
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify({
-            model: "gpt-4-1106-preview",
-            messages: systemMessage
-              ? [systemMessage, ...chatHistory, messageContent]
-              : [...chatHistory, messageContent],
-          }),
-        }
-      );
+      const systemMessage = file;
 
       if (!response.ok) {
         throw new Error("Network response was not ok");
