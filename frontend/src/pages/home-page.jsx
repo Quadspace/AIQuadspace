@@ -24,8 +24,7 @@ export default function AIResponse({ openModal }) {
       setShowTyping(false);
       appendToChatHistory({
         role: "assistant",
-        content:
-          "In a sentence or two, tell me what challenges you are facing in regards to your warehouse needs. Feel free to be casual like this is a discussion between friends or coworkers.",
+        content: "Who do I have the pleasure of speaking with?",
       });
     }, 3500); // Delay for the second message
   };

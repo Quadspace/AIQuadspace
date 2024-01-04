@@ -5,7 +5,7 @@ import ReactDOM from "react-dom";
 import ErrorPage from "./pages/error-page";
 import Root from "./routes/root";
 import HomePage from "./pages/home-page";
-import AdminPage from "./pages/admin"; // Update this path if necessary
+import AdminPage from "./pages/admin";
 import "./index.css";
 
 ReactDOM.render(
@@ -15,7 +15,7 @@ ReactDOM.render(
         <Route path="/" element={<Root />}>
           <Route path="home" element={<HomePage />} />
         </Route>
-        <Route path="/admin" element={<AdminPage />} /> {/* Updated line */}
+        <Route path="/admin" element={<AdminPage />} />
         <Route path="*" element={<ErrorPage />} />
       </Routes>
     </Router>
