@@ -153,8 +153,7 @@ export default function AIResponse({ openModal }) {
   const handleSubmit = async () => {
     setIsLoading(true);
     setShowTyping(true); // Show typing animation
-    // Clear the text area immediately after submission
-    setInputText("");
+    setInputText(""); // Clear the text area immediately after submission
 
     // Construct the message content with the user's input
     const messageContent = {
@@ -167,27 +166,41 @@ export default function AIResponse({ openModal }) {
 
     // Send the user's message to the Django backend for storage
     try {
-      const response = await fetch("/api/save_chat_message/", {
+      await fetch("http://127.0.0.1:8000/api/save_chat_message/", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
-          // Include any necessary headers, like CSRF tokens if needed
+          // Other headers if needed
         },
         body: JSON.stringify(messageContent),
       });
-
-      // Check if the request was successful
-      if (!response.ok) {
-        throw new Error("Failed to save the message");
-      }
     } catch (error) {
       console.error("Error saving chat message:", error);
     }
 
-    // Make the API call to OpenAI or your chatbot service
+    // Make the API call to OpenAI
     try {
       const fileContent = await fetchFileContent();
-      const systemMessage = file;
+      const systemMessage = fileContent
+        ? { role: "system", content: fileContent }
+        : null;
+
+      const response = await fetch(
+        "https://api.openai.com/v1/chat/completions",
+        {
+          method: "POST",
+          headers: {
+            Authorization: `Bearer ${key}`,
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            model: "gpt-4-1106-preview",
+            messages: systemMessage
+              ? [systemMessage, ...chatHistory, messageContent]
+              : [...chatHistory, messageContent],
+          }),
+        }
+      );
 
       if (!response.ok) {
         throw new Error("Network response was not ok");
@@ -199,15 +212,15 @@ export default function AIResponse({ openModal }) {
         content: data.choices[0].message.content,
       };
 
-      setShowTyping(false); // Hide typing animation once the response is ready
+      // Add the chatbot's response to the chat history
       appendToChatHistory(chatResponse);
     } catch (error) {
       console.error("Error fetching data:", error);
-      setShowTyping(false); // Ensure to hide typing animation in case of an error
     } finally {
-      setIsLoading(false);
+      setShowTyping(false); // Hide typing animation
+      setIsLoading(false); // Stop loading indicator
       if (inputRef.current) {
-        inputRef.current.focus();
+        inputRef.current.focus(); // Refocus on the input element
       }
     }
   };

@@ -11,10 +11,10 @@ https://docs.djangoproject.com/en/3.2/ref/settings/
 """
 import environ
 from pathlib import Path
+import os
+from dotenv import load_dotenv
 
-
-env = environ.Env()
-environ.Env.read_env()
+load_dotenv()
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -23,19 +23,19 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/3.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = "django-insecure-9*8r)__e&d2c21^ok-fo0n0ax1_+p-ig37a(5@jp1nt7rmd-&6"
-
+SECRET_KEY = os.environ["SECRET_KEY"]
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["localhost", "127.0.0.1"]
+CORS_ORIGIN_ALLOW_ALL = True
 
-CORS_ALLOWED_ORIGINS = [
-    "https://example.com",
-    "http://localhost:8000",
-    "http://localhost:5173",
-    "http://127.0.0.1:9000",
-]
+# CORS_ALLOWED_ORIGINS = [
+#     "https://example.com",
+#     "http://localhost:8000",
+#     "http://localhost:5173",
+#     "http://127.0.0.1:9000",
+# ]
 
 
 # Application definition
@@ -88,9 +88,14 @@ WSGI_APPLICATION = "chat_project.wsgi.application"
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
 DATABASES = {
-    "default": env.db(
-        "DATABASE_URL", default="postgres://postgres:postgres@localhost/postgres"
-    )
+    "default": {
+        "ENGINE": "django.db.backends.postgresql",
+        "NAME": os.environ["DB_NAME"],
+        "USER": os.environ["DB_USER"],
+        "PASSWORD": os.environ["DB_PASSWORD"],
+        "HOST": os.environ["DB_HOST"],
+        "PORT": os.environ["DB_PORT"],
+    }
 }
 
 
