@@ -152,33 +152,28 @@ export default function AIResponse({ openModal }) {
 
   const handleSubmit = async () => {
     setIsLoading(true);
-    setShowTyping(true); // Show typing animation
-    setInputText(""); // Clear the text area immediately after submission
+    setShowTyping(true);
+    setInputText("");
 
-    // Construct the message content with the user's input
-    const messageContent = {
+    const userMessageContent = {
       role: "user",
       content: inputText,
     };
 
-    // Add the user's message to the chat history
-    appendToChatHistory(messageContent);
+    appendToChatHistory(userMessageContent);
 
-    // Send the user's message to the Django backend for storage
     try {
       await fetch("http://127.0.0.1:8000/api/save_chat_message/", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
-          // Other headers if needed
         },
-        body: JSON.stringify(messageContent),
+        body: JSON.stringify(userMessageContent),
       });
     } catch (error) {
-      console.error("Error saving chat message:", error);
+      console.error("Error saving user message:", error);
     }
 
-    // Make the API call to OpenAI
     try {
       const fileContent = await fetchFileContent();
       const systemMessage = fileContent
@@ -196,8 +191,8 @@ export default function AIResponse({ openModal }) {
           body: JSON.stringify({
             model: "gpt-4-1106-preview",
             messages: systemMessage
-              ? [systemMessage, ...chatHistory, messageContent]
-              : [...chatHistory, messageContent],
+              ? [systemMessage, ...chatHistory, userMessageContent]
+              : [...chatHistory, userMessageContent],
           }),
         }
       );
@@ -207,20 +202,31 @@ export default function AIResponse({ openModal }) {
       }
 
       const data = await response.json();
-      const chatResponse = {
+      const assistantMessageContent = {
         role: "assistant",
         content: data.choices[0].message.content,
       };
 
-      // Add the chatbot's response to the chat history
-      appendToChatHistory(chatResponse);
+      appendToChatHistory(assistantMessageContent);
+
+      try {
+        await fetch("http://127.0.0.1:8000/api/save_chat_message/", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(assistantMessageContent),
+        });
+      } catch (error) {
+        console.error("Error saving assistant message:", error);
+      }
     } catch (error) {
       console.error("Error fetching data:", error);
     } finally {
-      setShowTyping(false); // Hide typing animation
-      setIsLoading(false); // Stop loading indicator
+      setShowTyping(false);
+      setIsLoading(false);
       if (inputRef.current) {
-        inputRef.current.focus(); // Refocus on the input element
+        inputRef.current.focus();
       }
     }
   };

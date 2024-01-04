@@ -5,7 +5,6 @@ class ChatMessage(models.Model):
     ROLE_CHOICES = [
         ("user", "User"),
         ("assistant", "Assistant"),
-        ("system", "System"),
     ]
 
     role = models.CharField(max_length=10, choices=ROLE_CHOICES)
@@ -13,7 +12,4 @@ class ChatMessage(models.Model):
     timestamp = models.DateTimeField(auto_now_add=True)
 
     def __str__(self):
-        return f"{self.get_role_display()}: {self.content[:50]}"
-
-
-# Create your models here.
+        return f"{self.role}: {self.content[:50]}..."
