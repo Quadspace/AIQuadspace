@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useRef } from "react";
+import { Link } from "react-router-dom";
 
 export default function AIResponse({ openModal }) {
   const key = import.meta.env.VITE_OPENAI_API_KEY;
@@ -309,6 +310,11 @@ export default function AIResponse({ openModal }) {
           </div>
         </div>
       )}
+      <div style={{ position: "fixed", bottom: 20, right: 20 }}>
+        <Link to="/admin">
+          <button>Admin Login</button>
+        </Link>
+      </div>
     </>
   );
 }
