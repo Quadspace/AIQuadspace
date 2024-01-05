@@ -11,3 +11,14 @@ def save_chat_message(request):
         ChatMessage.objects.create(role=data["role"], content=data["content"])
         return JsonResponse({"status": "success"})
     return JsonResponse({"status": "error"}, status=400)
+
+
+def get_chat_history(request):
+    chat_messages = ChatMessage.objects.all().order_by(
+        "-timestamp"
+    )  # Assuming you want the newest messages first
+    data = [
+        {"role": msg.role, "content": msg.content, "timestamp": msg.timestamp}
+        for msg in chat_messages
+    ]
+    return JsonResponse(data, safe=False)
