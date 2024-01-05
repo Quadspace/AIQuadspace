@@ -52,7 +52,12 @@ export default function AdminPage() {
       <h1>Admin Panel - Chat History</h1>
       <div className="chat-history">
         {chatHistory.map((message, index) => (
-          <div key={index} className={`message ${message.role}`}>
+          <div
+            key={index}
+            className={`message ${
+              message.role === "user" ? "user-message" : "assistant-message"
+            }`}
+          >
             <p>
               <strong>{message.role.toUpperCase()}:</strong> {message.content}
             </p>
