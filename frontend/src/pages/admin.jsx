@@ -46,36 +46,45 @@ export default function AdminPage() {
   }, [selectedThreadId]);
 
   return (
-    <div className="admin-container">
-      <select
-        value={selectedThreadId}
-        onChange={(e) => setSelectedThreadId(e.target.value)}
-      >
-        <option value="">Select a thread</option>
-        {threadIds.map((threadId, index) => (
-          <option key={index} value={threadId}>
-            {threadId}
-          </option>
-        ))}
-      </select>
-
-      {/* Chat history display */}
-      <div className="chat-history">
-        {chatHistory.map((message, index) => (
-          <div
-            key={index}
-            className={`message ${
-              message.role === "user" ? "user-message" : "assistant-message"
-            }`}
-          >
-            <p>
-              <strong>{message.role.toUpperCase()}:</strong> {message.content}
-            </p>
-            <p>
-              <small>{message.formattedTimestamp}</small>
-            </p>
+    <div className="disclaimer-wrapper">
+      <div className="admin-container">
+        <h1>Admin</h1> {/* Admin header */}
+        <div className="logo-container">
+          <img src="/logofull.png" alt="Quadspace Logo" />
+        </div>
+        <select
+          value={selectedThreadId}
+          onChange={(e) => setSelectedThreadId(e.target.value)}
+          className="chat-input" // Reuse style for consistent appearance
+        >
+          <option value="">Select a thread</option>
+          {threadIds.map((threadId, index) => (
+            <option key={index} value={threadId}>
+              {threadId}
+            </option>
+          ))}
+        </select>
+        <div className="chat-container" style={{ marginTop: "20px" }}>
+          <div className="chat-box">
+            <div className="chat-content">
+              {chatHistory.map((message, index) => (
+                <p
+                  key={index}
+                  className={`message ${
+                    message.role === "user"
+                      ? "user-message"
+                      : "assistant-message"
+                  }`}
+                >
+                  <strong>{message.role.toUpperCase()}:</strong>{" "}
+                  {message.content}
+                  <br />
+                  <small>{message.formattedTimestamp}</small>
+                </p>
+              ))}
+            </div>
           </div>
-        ))}
+        </div>
       </div>
     </div>
   );

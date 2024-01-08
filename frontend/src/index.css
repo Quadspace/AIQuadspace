@@ -16,6 +16,16 @@ body {
   }
 }
 
+.admin-container {
+  width: 80%; /* Set a fixed width */
+  margin: auto; /* Center the container */
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  text-align: center; /* Center the content */
+}
+
 .chat-bubble {
   height: 54px; /* Adjusted to 75% of the original height */
   width: 34.5px; /* Adjusted to 75% of the original width */
