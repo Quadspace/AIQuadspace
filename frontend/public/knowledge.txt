@@ -925,6 +925,5003 @@ challenges of results
 10. Accurate results – actual results are close to
 projected savings.
 
+Warehouse Layout Spot Audit
+Developed and used by
+Richard Muther & Associates
 
+1. Receive and ship materials quickly and smoothly –
+without congestion, delays, or excessive handlings.
+2. Put away materials economically –
+without delays or excessive handlings.
+3. Locate storage areas to minimize travel distance –
+keeping high cubic throughput close to docks.
+4. Store similar materials together –
+for space utilization, flexibility and handling economy.
+5. Keep like types of storage equipment together –
+for flexibility and handling economy.
+6. Locate items to minimize picking travel –
+storing together items that are ordered together.
+7. Arrange picking locations to build sound loads –
+e.g. heavy and/or large to light and/or small and fragile.
+8. Store material safely –
+without damage to people, equipment or materials.
+9. Locate activities for easy supervision and control –
+avoiding isolation or excessive dispersion of people.
+10. Locate activities to share expensive equipment –
+thus increasing its utilization.
+© Copyright 2015. RICHARD MUTHER & ASSOCIATES - 105
+
+Poor
+
+Fair
+
+Good
+
+Very Good
+
+Courtesy of Richard Muther & Associates
+Marietta, Georgia. Phone: 770-859-0161.
+www.RichardMuther.com
+
+Excellent
+
+Based upon the most fundamental of layout planning objectives, every warehouse and
+distribution center should, wherever possible, be arranged to meet ten considerations.
+Check your current or planned layout against these ten points.
+
+Plant Layout Spot Audit
+Developed and used by
+Richard Muther & Associates
+
+1. Directness of material flow – back tracking and cross traffic.
+2. Direct labor hours required and utilized.
+3. Investment in material-in-process necessary by nature of the
+layout.
+4. Maintenance – space for and ease of; availability of service.
+5. Costs of material handling – by direct labor, handlers, and
+servicemen – including scrap, packing, returns, salvage,
+trimmings, etc.
+6. Costs of storing – stores keeping, handling in stores area,
+controlled areas, ease of identity, etc.
+7. Quality costs – inspection cost, damage to material, access
+of inspectors and/or test equipment.
+8. Space utilization – idle or wasted space.
+9. Equipment utilization – idle or inaccessible equipment.
+10. Supervision – ease or difficulty to see area, to get operators,
+to check quality and performance.
+11. Personnel – safety and satisfaction thereof.
+12. Work accountability – planning, scheduling, paperwork,
+count, timekeeping, etc.
+13. Housekeeping possibilities by nature of layout – including
+effect on quality, output, equipment and personnel of dirt,
+dust, fumes, vibrations, etc.
+14. Flexibility – ease of expansion or adaptability to changes in
+product, process, routing, or schedules.
+15. Set-up and tool service – availability of and access for.
+© Copyright 2003. RICHARD MUTHER & ASSOCIATES - 104
+
+Poor
+
+Fair
+
+Good
+
+Very Good
+
+Courtesy of Richard Muther & Associates
+Marietta, Georgia. Phone: 770-859-0161.
+www.hpcinc.com/rma.html.
+
+Excellent
+
+Based upon the most fundamental of layout planning objectives, every production or industrial
+service facility should, wherever possible, be arranged to meet the following considerations.
+Check your current or planned layout against these points.
+
+NETWORK PLANNING SPOT AUDIT
+Developed and used by
+CHANDRA NATARAJAN WITH RICHARD MUTHER & ASSOCIATES
+
+1. Quick start up on new projects –
+without confusion on purpose, scope, and approach.
+2. Finish on time or earlier than expected –
+without delays, excessive iterations and rework.
+3. Visualization of the network being modeled –
+with clear and explicit diagrams of lanes and locations.
+4. Effective communication of model inputs and elements –
+data sources, assumptions, constraints, model structure.
+5. Effective documentation of the analysis performed –
+those not directly involved can see and explain the work.
+6. Management chooses from multiple scenarios –
+each of which is a cost-effective course of action.
+7. Formal evaluation of intangible factors in addition to cost –
+ease of implementation, business risk, flexibility.
+8. Involvement of operations personnel –
+especially in defining and evaluating scenarios and plans.
+9. Ready acceptance of model outputs by operations –
+without disbelief, objections, challenges of results.
+10. Accurate results –
+actual results are close to projected savings.
+
+© Copyright 2007. CHANDRA NATARAJAN & RICHARD MUTHER & ASSOCIATES - 205
+
+Poor
+
+Fair
+
+Good
+
+Very Good
+
+Courtesy of Richard Muther & Associates
+Marietta, Georgia. Phone: 770-859-0161.
+www.RichardMuther.com
+
+Excellent
+
+Based upon the most fundamental of network planning objectives, every planning project should,
+wherever possible, be conducted to meet ten considerations. Check your current or planned project
+against these ten points.
+
+RMA Planning Guide # 1570
+
+Page 1 of 29
+
+How to Plan a Manufacturing Cell
+This Planning Guide explains step by step how to plan a manufacturing cell. It discusses
+the information and analyses required at each step and the outputs achieved. Several types of
+cells are discussed. Special issues related to automation are also discussed. A comprehensive
+checklist is provided covering all major aspects of cell planning and operation, including
+physical arrangement, operating procedures, organization and training.
+
+KEY TOPICS
+
+page
+
+Types of Manufacturing Cells
+
+3
+
+Six-Step Planning Process for Simple Cells
+
+4
+
+Complex Cells and Issues
+
+18
+
+Checklist for Cell Planning & Design
+
+22
+
+BACKGROUND
+Definition of a Manufacturing Cell
+A manufacturing cell consists of two or more operations, work stations, or machines
+dedicated to processing one or a limited number of parts or products. A cell has a defined
+working area and is scheduled, managed, and measured as a single unit of production facilities.
+Typically, a cell is relatively small, and may be virtually self-managed. Usually, the outputs of a
+cell are more-or-less complete parts or assemblies, ready for use by a downstream operation or
+cell, or for shipment to a customer.
+Three aspects– physical, procedural, and personal – must be addressed when planning a
+manufacturing cell. Cells consist of physical facilities such as layout, material handling,
+machinery, and utilities. Cells also require operating procedures for quality, engineering,
+materials management, maintenance, and accounting. And because cells employ personnel in
+various jobs and capacities, they also require policies, organization, leadership, and training.
+A cell is essentially a production line (or layout by product) for a group or family of
+similar items. It is an alternative to layout and organization by process, in which materials
+typically move through successive departments of similar processes or operations. This layout
+by process generally leads to higher inventories as parts wait between departmental operations,
+especially if larger batches or lots are produced. There is more material handling is required to
+move between departments, and overall processing time is longer. Exposure to quality problems
+is greater, since more time may pass and more non-conforming parts may be produced before the
+downstream department notices a problem.
+
+RMA – 1570 © Copyright 2002. RICHARD MUTHER & ASSOCIATES
+
+ALL RIGHTS RESERVED
+
+RMA Planning Guide # 1570
+How to Plan a Manufacturing Cell
+
+Page 2 of 29
+
+Benefits of Cells
+The principal physical change made with a manufacturing cell us to reduce the distance
+between operations. In turn, this reduces material handling, cycle times, inventory, quality
+problems, and space requirements. Plants installing cells consistently report the following
+benefits when compared to process-oriented layouts and organizations:
+•
+
+Reduced materials handling – 67% to 90% reductions in distance traveled are not
+uncommon, since operations are adjacent within a dedicated area.
+
+•
+
+Reduced inventory in process – 50% to 90% reductions are common, since material
+is not waiting ahead of distant processing operations. Also, within the cell, smaller
+lots or single-piece flow is used, further reducing the amount of material in process.
+
+•
+
+Shorter time in production – from days to hours or minutes, since parts and products
+can flow quickly between adjacent operations.
+
+In addition to these primary, quantifiable benefits, companies using cells also report:
+•
+•
+•
+•
+•
+•
+
+Easier production control
+Greater operator productivity
+Quicker action on quality problems
+More effective training
+Better utilization of personnel
+Better handling of engineering changes
+
+These secondary benefits result from the smaller, more-focused, and simplified nature of cells.
+Difficulties in Planning & Managing Cells
+To obtain the benefits of cells, planners and managers must overcome the following
+difficulties:
+•
+
+Worker rejection or lack of acceptance – often due to lack of operator involvement in
+planning the cell, or to insufficient motivation and explanation by management,
+especially if the outcome is perceived to be a work force reduction.
+
+•
+
+Lack of support or opposition by support staffs in production planning, inventory
+control and/or cost accounting – usually when creation of the cell causes changes in
+procedures and practices, or reduces the amount of detail reported from the plant
+floor.
+
+•
+
+Reduced machine utilization – due to dedication of equipment to cells and to families
+of parts. In some cases, additional, duplicated machinery may be required. In other
+cases, large and high-speed equipment that may be appropriate in a process-oriented
+department or job shop must be replaced by slower and usually smaller, lowercapacity machines that are more appropriate to the volumes of a cell.
+
+RMA – 1570 © Copyright 2002. RICHARD MUTHER & ASSOCIATES
+
+ALL RIGHTS RESERVED
+
+RMA Planning Guide # 1570
+How to Plan a Manufacturing Cell
+
+Page 3 of 29
+
+•
+
+Need to train or re train operators, often for a wider range of duties and
+responsibilities.
+
+•
+
+Wage and performance measurement problems, especially when individual and piecerate incentives are in use. The team-oriented nature of the typical cell and the goals
+of inventory reduction may work against traditional incentives and measures.
+
+TYPES OF MANUFACTURING CELLS
+Cells take different forms based upon the characteristics of the parts (P) and quantities
+(Q) produced, and the nature of the process sequence or routing (R) employed. The relationship
+of these characteristics – P, Q, and R – and their influence on manufacturing cells can be seen in
+Figure 1.
+
+Figure 1. Key Considerations and Types of Manufacturing Cells. From the book: Planning
+Manufacturing Cells, © Copyright 2002 Richard Muther & Associates.
+
+Production Line, Group of Parts, and Functional Cells
+Cells are typically used to serve the broad middle range of a Product-Quantity (P-Q)
+distribution. Very high quantities of a part or product – typically above 1 million units per year
+– lend themselves to dedicated mass-production techniques such as high-speed automation,
+progressive assembly lines, or transfer machines. At the other extreme, very low quantities and
+intermittent production are insufficient to justify the dedicated resources of a cell. Items at this
+RMA – 1570 © Copyright 2002. RICHARD MUTHER & ASSOCIATES
+
+ALL RIGHTS RESERVED
+
+RMA Planning Guide # 1570
+How to Plan a Manufacturing Cell
+
+Page 4 of 29
+
+end of the P-Q curve are best produced in a general-purpose job shop. In between these quantity
+extremes, are the many items, parts or products that may be grouped or combined in some way to
+justify the formation of one or more manufacturing cells.
+Within the middle range, a production line cell may be dedicated to one or few highvolume items. This type of cell will have many of the attributes of a traditional progressive line,
+but is usually less mechanized or automated.
+Medium and lower production quantities are typically manufactured in group technology
+or group-of-parts cells. These are the most common types of cells. They exhibit progressive
+flow, but the variety of parts and routings works against a production line.
+If the processing steps are specialized in some way, requiring special machinery and
+utilities, or special enclosures of some kind, then a functional cell may be appropriate.
+Functional cells are often used for painting, plating, heat treating, specialized cleaning, and
+similar batch or environmentally sensitive operations. If the functional cell processes parts for
+other group-of-parts or production line cells it will introduce extra handling, cycle time and
+inventory since parts must be transported and held ahead of and behind the functional cell. For
+this reason, planners should first examine the practicality of decentralizing or duplicating the
+specialized process(es) into group-of-parts or production line cells.
+The steps required to plan a manufacturing cell are the same for all three types of cells –
+production line, group technology, and functional. However, the emphasis and specific
+techniques used will vary somewhat based upon the physical nature of the manufacturing
+processes involved. For example, when planning for machining and fabrication cells the
+capacity of key machines is critical and may be relatively fixed. The time required to change
+from one part or item to another is also critical. Allowances for set-up and capacity losses to
+changeovers are very important. Manpower planning may be of secondary importance, after the
+number of machines has been determined. In contrast, when planning for progressive assembly,
+the variability of operation times must be understood, and the work must be balanced among the
+operators to assure good utilization of labor. In such assembly cells, utilization of equipment
+may be a secondary issue.
+HOW TO PLAN A MANUFACTURING CELL
+Most cells can be planned using a simple six-step approach:
+1. Orient the Project
+2. Classify the Parts
+3. Analyze the Process
+4. Couple into Cell Plans
+5. Select the Best Plan
+6. Detail and Implement the Plan
+
+RMA – 1570 © Copyright 2002. RICHARD MUTHER & ASSOCIATES
+
+ALL RIGHTS RESERVED
+
+RMA Planning Guide # 1570
+How to Plan a Manufacturing Cell
+
+Page 5 of 29
+
+This approach is fully-described in the booklet: Simplified Systematic Planning of
+Manufacturing Cells, by Richard Muther, William E. Fillmore, and Charles P. Rome. See
+Reference 2. A synopsis of this approach is presented here by permission of the authors.
+Step 1. Orient the Project
+The cell planner’s first step is to organize the project, beginning with a statement of
+objectives, operational goals, and desired improvements. External conditions imposed by the
+facility or the surroundings should be noted. The planning or business situation is also reviewed
+and understood for issues such as urgency and timing, management constraints, or other policy
+matters. The scope of the project and the form of the final output are agreed upon.
+All cell-planning projects begin with a set of open “issues”. These are problems,
+opportunities, or simply questions that will affect the planning of the cell or its subsequent
+operation. These issues must be resolved and answered during the planning process. Typical
+issues include: responsibilities for inspection and maintenance, cost accounting methods,
+scheduling procedures, job design and training; in addition to physical issues related to available
+space, equipment, and utilities. The planner and the planning team should list their issues at the
+first opportunity, and rate the relative importance of each to the project.
+Orientation also requires an achievable project schedule, showing the necessary tasks and
+the individuals assigned to each. The essential planning tasks can be established using the sixstep procedure outlined above, adapted to the specifics of the project at hand. The final output of
+Step 1 – Orientation can be summarized on a simple worksheet like that shown in Figure 2.
+Step 2. Classify the Parts
+Most projects have a candidate list of potential parts that could be made in the cell.
+These parts typically have the same or similar routings. The planner must still clarify and
+confirm that these candidate parts do belong in the cell, and identify those that do not.
+Classifying the parts also simplifies the analysis and design of the cell. The first cut at
+classification usually involves the physical characteristics of the candidate parts. These include:
+•
+•
+•
+
+Basic material type
+Quality level, tolerance, or finish
+Size
+
+•
+•
+•
+
+Weight or density
+Shape
+Risk of damage
+
+Additional common considerations for classification include:
+•
+•
+•
+•
+
+Quantity or volume of demand
+Routing or process sequence (and any special or dominant considerations)
+Service or utility requirements (related to the process equipment required)
+Timing – (may be demand-related, e.g. seasonality; schedule-related peaks or valleys;
+shift-related; or possibly related to processing time if some parts have very long or
+very short processing times).
+
+RMA – 1570 © Copyright 2002. RICHARD MUTHER & ASSOCIATES
+
+ALL RIGHTS RESERVED
+
+RMA Planning Guide # 1570
+How to Plan a Manufacturing Cell
+
+Page 6 of 29
+
+ORIENTATION & ISSUES WORKSHEET
+
+Project Name Oven Assembly Cell
+By Team
+Date 10/8
+
+Project No.
+With DM
+Sheet 1 of
+
+99509
+1
+
+1 Objectives
+Reduce material handling; accommodate plant ordering procedures; minimize throughput
+time; attain desired output rate, no more, no less.
+2 External Conditions Locate in old Receiving area. Moves of baskets and totes-on-pallets by fork truck.
+3 Situation Quick start up required to meet customer demand. Use available equipment.
+4 Scope and Form of Output
+
+Cell must start deliveries by 11/15.
+
+PLANNING ISSUES
+
+Action to Resolve
+
+1 Will team be cross trained?
+
+I
+
+2 What will project life be?
+
+E
+
+3 Can takt time goal be met?
+
+A
+
+4 Must use avail. Equipment
+
+A
+
+5 Must start delivery by 11/15
+
+A
+
+Resp
+
+Proposed Resolution
+
+X
+
+6
+7
+8
+9
+10
+Dominance/Importance Rating
+Notes:
+
+Mark "X" if beyond control of company/plant/project
+
+Distribution
+
+By Team With
+
+Team
+
+PROJECT SCHEDULE
+No.
+Action Required
+1 Define & schedule project
+2 Classify parts
+3 Analyze & document process
+4 Balance operations
+5 Equipment & Flow Diagram
+6 Develop cell plans
+7 Evaluation meeting
+8 Make implementation plan
+9 Install available equipment
+10 Complete implementation
+
+Who
+Team
+BG
+PH
+PH
+PH
+Team
+All
+DM
+DM
+All
+
+10/8
+
+10/15
+
+DM
+10/22
+
+Status as of
+10/29
+
+11/5
+
+Notes
+
+Target 11/15
+
+Notes:
+
+Figure 2. Cell Planning Orientation & Issues Worksheet for a small cell assembling sheet metal
+ovens. © Copyright 1995 Richard Muther.
+
+RMA – 1570 © Copyright 2002. RICHARD MUTHER & ASSOCIATES
+
+ALL RIGHTS RESERVED
+
+RMA Planning Guide # 1570
+How to Plan a Manufacturing Cell
+
+Page 7 of 29
+
+Less common but occasionally significant classification factors include building features,
+safety issues, regulatory considerations, marketing-related considerations, and even
+organizational factors that may be reflected in the way that a specific part is scheduled and
+produced.
+All of these factors can be tied together into a worksheet like the one shown in Figure 3.
+Project
+By
+
+Oven Assembly Cell
+BG
+With
+
+1
+
+E
+
+8 "U" O
+
+1
+
+O
+
+U O U U U
+
+b
+
+O
+
+E
+
+8 "U" O
+
+1
+
+O
+
+U O U U U
+
+b
+
+U O U U U
+
+d
+
+C
+
+Coil Holders
+
+Steel
+
+O
+
+O
+
+4
+
+"I" O
+
+2
+
+D
+
+Thermo Bracket
+
+Steel
+
+O
+
+O
+
+4
+
+"I" O
+
+1
+
+E
+
+Nut
+
+Steel
+
+O
+
+O
+
+2 "H" O
+
+1
+
+R
+
+S
+
+O
+O
+O
+
+T
+
+To be calculated
+
+Q
+
+Assembly
+
+Steel
+
+of
+
+Other Considerations*
+
+Value
+
+Lower Half
+
+Risk of
+Damage
+
+B
+
+1
+
+O
+
+Shape
+
+Top Half
+
+Sheet
+
+Size
+
+A
+
+Basic
+Material
+Steel
+
+Name
+
+10/9
+
+Date
+
+Quality
+Level
+
+Item
+No.
+
+WeightDensity
+
+Physical Characteristics
+
+99509
+
+Project No.
+
+Team
+
+Class.
+Identif.
+
+PRODUCT/PART CLASSIFICATION
+WORKSHEET
+
+B
+
+F
+
+L
+
+K
+
+O
+
+Further Explanation
+
+U O U U U
+
+d
+
+U O U U U
+
+d
+
+F
+
+Back
+
+Steel
+
+O
+
+I
+
+8 "F" O
+
+1
+
+U O U U U
+
+c
+
+G
+
+Reinforcements
+
+Steel
+
+O
+
+O
+
+3 "FL" O
+
+2
+
+O
+
+U O U U U
+
+d
+
+-
+
+Oven Assembly
+
+Steel
+
+O
+
+A
+
+44 "R" I
+
+1
+
+O
+
+U O U U U
+
+a
+
+* Other Considerations
+Q Quantity/Volume/Demand
+
+O
+
+Reference Notations
+F Safety problems
+
+a.
+
+R Routing/Process domination
+
+L Legal/Regulatory problems
+
+b.
+
+S Service/Utility requirements
+
+K Market togetherness
+
+c.
+
+T Timing/Complementary seasons
+
+O Others/Operators/Organization
+
+d.
+
+B Building features
+
+Weight shown in ounces
+Finished assembly: 24" x 19" x 16"
+Number of pieces per unit
+
+e.
+
+Figure 3. Product/Part Classification Worksheet for the parts sketched in Figure 4. © Copyright 1995
+Richard Muther.
+
+The planner identifies and records the physical characteristics and other considerations for each
+part or item. If it seems awkward to record or rate each amount or specific dimension, once can
+rate the importance or significance of each characteristic as to its contrast or dissimilarity with
+the other parts. Use the vowel-letter, order-of-magnitude rating code illustrated in Figure 3 and
+defined below.
+A – Abnormally great
+E – Especially significant
+I – Important
+O – Ordinary
+U – Unimportant
+After recording or rating the physical characteristics and other considerations for each part or
+item, note those parts that have similar characteristics – that is, classify the parts according to the
+most important characteristics and considerations. Assign a class code letter to each class,
+group, or combination of meaningful similarities. Enter the appropriate class letter code for each
+part or item in the Class Identification column.
+RMA – 1570 © Copyright 2002. RICHARD MUTHER & ASSOCIATES
+
+ALL RIGHTS RESERVED
+
+RMA Planning Guide # 1570
+How to Plan a Manufacturing Cell
+
+Page 8 of 29
+
+When a large number of different parts will be produced, planners should place special
+emphasis on sorting the parts into groups or sub-groups with similar operational sequences or
+routings. Those assigned to a class will all go through the same operations. Generally, for cells
+producing many parts different parts, this is the most useful type of classification for the
+subsequent steps in cell planning. The final output of Step 2 – Classify the Parts is a clear listing
+of the classes or groups of parts to be produced in the cell.
+Step 3. Analyze the Process
+In Step 3, the planner uses charts and diagrams to visualize the routings for each class or
+sub-group of parts, and then calculates the numbers of machines and/or operators and work
+places that will be required to satisfy the target production rates and quantities.
+If the cell performs assembly – like
+that of the sheet metal oven shown in Figure
+4 – the best way to visualize the process is
+with an operation process chart like that
+shown in Figure 5.
+Figure 4. Sketch of the sheet metal oven
+charted in Figure 5. The oven consists of a top
+half, a bottom half, and a back, to which smaller
+parts are added.
+
+In addition to showing the progressive assembly of the finished item, the process chart
+also shows the labor time at each step. Given a target production rate and the number of
+working hours available, the planner calculates the work content of the process and breaks it into
+meaningful work assignments. In this way, the required number of operators and workplaces is
+determined, along with the flow of materials between them. Assumptions or calculations must
+be made to establish the time that will be lost to breaks and to “non-value adding” tasks such as
+material handling, housekeeping, and the like. The formal name for this process is line
+balancing. A good line balance achieves the desired production rate with the minimum number
+of operators and minimal idle time.
+Once balanced to the planning team’s satisfaction, workplaces and equipment are defined
+and represented in an Equipment and Flow Diagram. This is the final output of Step 3. See
+Figure 6. In this example, scaled templates represent the equipment. Such graphic detail is
+useful but not mandatory. A simple square symbol can be used to represent each operator
+workstation, or each machine. Numbers of lines and lower-case letters designate the flow of
+parts and materials.
+
+RMA – 1570 © Copyright 2002. RICHARD MUTHER & ASSOCIATES
+
+ALL RIGHTS RESERVED
+
+RMA Planning Guide # 1570
+How to Plan a Manufacturing Cell
+
+Page 9 of 29
+
+Figure 5. Operation Process Chart for the sheet metal oven pictured in Figure 4. From the book:
+Planning Manufacturing Cells, © Copyright 2002 Richard Muther & Associates.
+
+RMA – 1570 © Copyright 2002. RICHARD MUTHER & ASSOCIATES
+
+ALL RIGHTS RESERVED
+
+RMA Planning Guide # 1570
+How to Plan a Manufacturing Cell
+
+Page 10 of 29
+
+Figure 6. Equipment and Flow Diagram for the sheet metal oven charted in Figure 5.
+
+RMA – 1570 © Copyright 2002. RICHARD MUTHER & ASSOCIATES
+
+ALL RIGHTS RESERVED
+
+RMA Planning Guide # 1570
+How to Plan a Manufacturing Cell
+
+Page 11 of 29
+
+When planning a machining or fabrication cell, the Group-of-Parts process chart is used
+to illustrate the sequence of operations for each class of parts. See Figure 7.
+
+Figure 7. Group-of-Parts Process Chart for a family of steel shafts. From the book: Planning
+Manufacturing Cells, © Copyright 2002 Richard Muther & Associates.
+
+The Group-of-Parts process chart must be accompanied by a capacity analysis showing
+the types and quantities of machines required by the cell. A simple form of this capacity analysis
+is shown in Figure 8.
+
+RMA – 1570 © Copyright 2002. RICHARD MUTHER & ASSOCIATES
+
+ALL RIGHTS RESERVED
+
+RMA Planning Guide # 1570
+How to Plan a Manufacturing Cell
+
+Page 12 of 29
+
+MACHINE TYPE
+PRODUCT CLASS/DESCRIPTION
+
+Work Center Number>>
+1
+20
+30
+50
+Pieces Center'g Contour Engine
+Key Mill
+Part No.
+Model
+per Year Lathe
+Lathe
+Lathe
+Carried forward from Page 2 (hours/year)
+750
+2192
+2775
+0
+
+12
+Univ.
+Mill
+
+40
+Spline
+Mill
+
+60
+Thread
+Mill
+
+70
+Drill
+Press
+
+80
+Cylinder
+Grinder
+
+90
+Gear
+Mill
+
+10
+Gear
+Cutter
+
+0
+
+3521
+
+718
+
+838
+
+1585
+
+1563
+
+1750
+
+(b) Shaft with gears and threads
+Rear axle gear shaft
+
+47345
+53049
+
+LS 20
+B 30
+
+300
+
+8
+
+55
+
+28
+
+---
+
+15
+
+---
+
+15
+
+---
+
+123
+
+15
+
+---
+
+Power take-off shaft
+
+36456
+70459
+
+L 10
+L 20
+
+650
+
+13
+
+108
+
+32
+
+---
+
+18
+
+---
+
+43
+
+---
+
+132
+
+39
+
+---
+
+Auxiliary gear shaft
+
+56097
+78905
+76890
+
+LS 20
+B 20
+B 30
+
+650
+
+13
+
+135
+
+74
+
+120
+
+---
+
+---
+
+67
+
+---
+
+149
+
+32
+
+---
+
+Injection pump drive shaft
+
+46785
+
+M 85
+
+2750
+
+42
+
+335
+
+255
+
+---
+
+22
+
+---
+
+205
+
+275
+
+---
+
+---
+
+---
+
+Steering knuckle arm
+
+46056
+45159
+45907
+45650
+45432
+45329
+
+L 10
+BH 10
+L 20
+BH 20
+BV 20
+B 30
+
+2750
+
+46
+
+160
+
+225
+
+---
+
+168
+
+---
+
+182
+
+463
+
+---
+
+---
+
+---
+
+King pin
+
+46554
+56354
+10101
+
+L-B 10
+L-B 20
+B 30
+
+5500
+
+92
+
+350
+
+275
+
+---
+
+92
+
+---
+
+228
+
+245
+
+---
+
+---
+
+---
+
+Machine Run Time (hours/year, incl. load & unload)
+
+964
+
+3335
+
+3664
+
+120
+
+315
+
+3521
+
+1458
+
+1821
+
+1989
+
+1649
+
+1750
+
+Setups (estimated hours per year)
+
+100
+
+600
+
+260
+
+3
+
+30
+
+210
+
+111
+
+21
+
+200
+
+200
+
+522
+
+Scheduled Maintenance (est. hrs per year)
+
+24
+
+25
+
+28
+
+6
+
+14
+
+33
+
+20
+
+180
+
+50
+
+52
+
+360
+
+Allowance for Unplanned Downtime (est. hrs per year)
+
+12
+
+12
+
+15
+
+3
+
+7
+
+16
+
+10
+
+90
+
+24
+
+25
+
+180
+
+Total Machine Hours Per Year 1100
+
+3972
+
+3967
+
+132
+
+366
+
+3780
+
+1599
+
+2112
+
+2263
+
+1926
+
+2812
+
+No. of Machines Required
+
+0.6
+
+2.0
+
+2.0
+
+0.1
+
+0.2
+
+1.9
+
+0.8
+
+1.1
+
+1.1
+
+1.0
+
+1.4
+
+No. of Machines Available
+
+1
+
+2
+
+2
+
+1
+
+1
+
+2
+
+1
+
+2
+
+2
+
+1
+
+1
+
+99%
+
+99%
+
+7%
+
+18%
+
+95%
+
+80%
+
+53%
+
+57%
+
+96%
+
+141%
+
+(a) Shaft with threads
+
+Capacity Utilization 55%
+
+Figure 8. Capacity Utilization Worksheet for the family of steel shafts charted in Figure 7. From the
+book: Planning Manufacturing Cells, © Copyright 2002 Richard Muther & Associates.
+
+When calculating the number of machines, planners must be sure to add allowances to
+downtime, schedule interference, and changeovers between individual parts and groups of parts.
+A good cell capacity plan meets the desired production rate with an appropriate number of
+machines and level of utilization. Usually, the analysis will reveal over and under-utilization of
+some equipment planned for the cell. If the analysis reveals over-utilization, the planner may
+choose to:
+•
+•
+•
+
+Remove parts from the cell to reduce utilization of the equipment.
+Purchase more equipment.
+Reduce process, changeover, or maintenance times.
+
+If the analysis reveals under-utilization, the planner may choose to:
+•
+•
+
+Add parts to the cell to increase the utilization of equipment.
+Remove parts from the cell to eliminate the need for the equipment.
+
+RMA – 1570 © Copyright 2002. RICHARD MUTHER & ASSOCIATES
+
+ALL RIGHTS RESERVED
+
+RMA Planning Guide # 1570
+How to Plan a Manufacturing Cell
+
+•
+•
+
+Page 13 of 29
+
+Change the manufacturing process to eliminate the need for the equipment.
+Leave the equipment external to the cell and route parts to it.
+
+In machining or fabrication cells where the throughput is paced more by the operators
+than the machines, the cell planner may need to conduct a line balancing exercise, in addition to
+rough capacity and utilization analyses. In some cases, computer simulation may be useful to
+examine the implications of changes to product mix and peaks in production volume.
+Once the number of machines has been determined, an Equipment and Flow Diagram is
+prepared, similar to that shown earlier in Figure 5. The Standardized Work form shown in
+Figure 9 is a similar type of conceptual visualization that also illustrates operator times and
+cycles.
+STANDARDIZED WORK
+Company/Plant
+Operation/Process
+Production Rate
+
+Manual Work
+Machine Time
+Walking
+
+Ref.
+Symbol
+
+Element Time (Sec.)
+Cyclical Work Element
+
+Manual
+
+Machine
+
+1
+
+Pick blank from basket in
+
+1
+
+0
+
+2
+
+Load L-1 & start
+
+1.5
+
+45
+
+3
+
+Pick part from L-1 eject
+
+1.5
+
+0
+
+4
+
+Load T-1 & start
+
+2
+
+21
+
+5
+
+Pick from T-1 eject
+
+2
+
+0
+
+6
+
+Load RG-1 & start
+
+3
+
+42
+
+7
+
+Pick from RG-1 eject
+
+1.5
+
+0
+
+8
+
+Load Rolmac & start
+
+2
+
+14
+
+9
+
+Pick from Rolmac eject
+
+1.5
+
+0
+
+10
+
+Load washer basket
+
+2
+
+12
+
+11
+
+Pick blank from basket in
+
+1
+
+0
+
+12
+
+Load L-2 & start
+
+1.5
+
+40
+
+Pick from L-2 eject
+
+1.5
+
+0
+
+22
+
+174
+
+13
+
+Standard Automotive
+Gear Machining Cell
+Takt Time
+1100/day
+
+Continued on Sheet 2
+Sub-Total
+
+5
+
+10
+
+15
+
+20
+
+Part/Product
+By WEF
+Sheet 1
+
+55 seconds
+25
+
+30
+
+35
+
+Model J Gear - #366675AH
+With
+Issue Date
+JJ
+of
+Rev. Date
+2
+LAYOUT SKETCH & WALK PATH
+
+40
+
+Walking
+3
+
+2
+
+L-2
+
+0
+3
+
+Non-Cyclical Work Element
+
+12
+
+L-1
+
+2
+
+13
+
+1.5
+3
+0
+
+11
+
+1
+
+Blanks
+
+20
+
+10
+
+Washer
+
+19
+
+9
+
+18
+
+8
+
+Totes
+of 60
+
+4
+
+3
+
+14
+
+0
+
+T-1
+
+2
+
+5
+
+0
+
+15
+
+3
+0
+2.5
+RG-1
+
+20
+
+Rolmac
+
+6
+7
+
+17
+
+RG-2
+
+16
+
+Total Operator Cycle Time
+No.
+
+19-May
+6-Jun
+
+Time
+
+Freq.
+
+a
+
+Team meeting
+
+Daily
+
+b
+
+Houskeeping
+
+Daily
+
+c
+
+Machine maintenance
+
+Daily
+
+Total
+Notes
+Work-in-Process
+
+Inspection
+
+One or two operators in alternating walk path between L-1
+& L-2; R-1 & R-2. Gage & inspection table after washer
+not shown.
+
+Total Operator Time
+
+Notes
+
+Figure 9. Standardized Work for a gear machining cell. From the book: Planning Manufacturing Cells,
+© Copyright 2002 Richard Muther & Associates.
+
+RMA – 1570 © Copyright 2002. RICHARD MUTHER & ASSOCIATES
+
+ALL RIGHTS RESERVED
+
+RMA Planning Guide # 1570
+How to Plan a Manufacturing Cell
+
+Page 14 of 29
+
+Step 4. Couple into Cell Plans
+A cell plan is a coupling of parts and process into an effective arrangement and operating
+plan. It should include:
+•
+•
+•
+
+The layout of operating equipment (physical)
+The method(s) of moving or handling parts and materials (physical)
+The procedures or methods of scheduling operating, and supporting the cell
+(procedural)
+
+•
+
+The policies, organizational structure, and training required to make the cell work
+(personal)
+
+The best way to begin this step is by sketching a layout from the Equipment and Flow
+Diagram developed in Step 3. Once the machinery and workplace layout is visualized, the
+material handling and any storage methods are determined. Material handling equipment,
+containers and storage, or parts-feeding equipment are added to the layout. The planner also
+adds any support equipment not already visualized in the workplaces, such as tool and die
+storage, fixture storage, gage tables and tool set-up, inspection areas, supply storage, trash bins,
+desks, computer terminals and printers, display boards, meeting areas, etc.
+Once the layout and handling methods – the physical aspects of cell planning – have been
+determined, the planning team turns its attention to the procedural and personal aspects. In our
+experience, the procedural and personal aspects are often more important than the layout and
+handling in assuring a successful manufacturing cell. These aspects include the procedures and
+policies for staffing, scheduling, maintenance, quality, training, production reporting,
+performance measurement, and compensation. In practice, some of these will have already been
+determined during the layout and handling discussion; the remainder should be clearly defined
+by the team and approved by management. The documentation of a viable cell plan will also
+require the resolution of any remaining planning issues listed earlier in Step 1. The final output
+of Step 4 is one or more documented cell plans. These will take the form of a layout with
+associated policies and operating procedures like that shown in Figure 10.
+Step 5. Select the Best Plan
+In Step 5, the planning team and other decision-makers will evaluate the alternatives
+prepared in Step 4 and select the best plan. Typically, this selection will be based upon
+comparisons of costs and intangible factors. Typical considerations include:
+Investment costs (and savings or avoidance)
+•
+•
+•
+•
+•
+
+New production machinery
+Material handling equipment
+Pallets, containers, and storage equipment
+Auxiliary or support equipment
+Building or area preparation
+
+RMA – 1570 © Copyright 2002. RICHARD MUTHER & ASSOCIATES
+
+ALL RIGHTS RESERVED
+
+RMA Planning Guide # 1570
+How to Plan a Manufacturing Cell
+
+Page 15 of 29
+
+Alternative C
+Alternative B
+Alternative A
+
+Operating Features:
+1.
+2.
+3.
+4.
+5.
+6.
+7.
+
+Water-cooled seam welder located near column E6 for utility access.
+Single job classification; all operators cross-trained for all operations.
+Planned weekly rotation between operator stations.
+Operators responsible for routine maintenance.
+Demand spikes to be handled through overtime.
+Will gradually reduce lot size after cell is operational.
+All consummables and tooling to be located in the cell with weekly
+reordering by lead operator.
+8. Operators responsible for assembly quality.
+
+Figure 10. Alternative cell plans for the oven assembly cell diagrammed in Figure 6.
+
+•
+•
+•
+•
+•
+
+One-time move costs, including overtime
+Training and run-in
+Engineering services
+Permits, taxes, freight or other miscellaneous costs
+Inventory increases or reductions (one-time basis)
+
+Operating Costs
+•
+•
+•
+•
+
+Direct labor
+Fringe benefits and other personnel-related costs
+Indirect labor
+Maintenance
+
+RMA – 1570 © Copyright 2002. RICHARD MUTHER & ASSOCIATES
+
+ALL RIGHTS RESERVED
+
+RMA Planning Guide # 1570
+How to Plan a Manufacturing Cell
+
+•
+•
+•
+•
+
+Page 16 of 29
+
+Rental of equipment or space
+Utilities
+Inventory increases or decreases (annual carrying cost)
+Scrap and rework
+
+Intangible Factors
+•
+•
+•
+•
+•
+•
+•
+•
+
+Flexibility
+Response time to changing production demand
+Ease of supervision
+Ease of material handling
+Utilization of floor space
+Ease of installation (avoidance of disruption)
+Acceptance by key employees
+Effect on quality
+
+Costs are rarely sufficient for selecting the best cell plan. There are typically too many
+intangible considerations involved. And in many cases, the costs of alternative plans fall within
+a relatively narrow range. In practice, the final selection often rests on intangibles.
+The weighted-factor method is the most effective way to make selections based upon
+intangible factors. After making a list of the relevant factors, weights should be assigned to
+indicate their relative importance. An effective scale is 1 to 10: with 10 being most important.
+Next, the cell operating team should rate the performance or effectiveness of each alternative on
+each weighted factor. It is important that ratings be made by cell operators and the appropriate
+plant support personnel – those closest to the action and responsible for making the selected plan
+work.
+Since ratings are subjective they are best made with a simple vowel-code scale, and
+converted later into numerical values and scores. The following scale and values are effective:
+A – Almost Perfect Results (excellent)
+E – Especially Good Results (very good)
+I – Important Results (good)
+O – OrdinaryResults (fair)
+U – Unimportant Results (poor)
+X – Not Acceptable Results
+
+4 points
+3 points
+2 points
+1 point
+0 points
+fix or remove from consideration
+
+Rating values are multiplied by factor weights and down totaled to arrive at a score for
+each alternative plan. If one plan scores 15% to 20% higher than the rest, it is probably the
+better plan. If the costs are acceptable, this plan should be selected. If no plan scores
+significantly better than any other, then pick the least expensive, or consider additional factors.
+The final output of Step 5 is a selected cell plan.
+RMA – 1570 © Copyright 2002. RICHARD MUTHER & ASSOCIATES
+
+ALL RIGHTS RESERVED
+
+RMA Planning Guide # 1570
+How to Plan a Manufacturing Cell
+
+Page 17 of 29
+
+Step 6. Detail and Implement the Plan
+Once selected, details must still be worked out and preparations made to implement the
+cell plan. Detailing should begin with an updated, dimensioned drawing of the selected cell
+layout – typically at a fairly large scale, say 1:50. The detailing step should produce a scaled
+plan view of each work place showing:
+•
+•
+•
+•
+•
+•
+
+Normal operator work position
+Location of tooling, gauges, controls
+Parts containers, fixtures, and workplace handling devices
+Utility drops and connection points
+Door swings and access points on control panels and machinery
+Position of overhead lighting
+
+In some cases, an elevation sketch may be useful, showing vertical placement of work
+surfaces, fixtures, containers, etc. Where highly fixed machinery is tied together with fixed
+conveyors, or where robots are used, it may also be necessary to develop a 3-dimensional
+computer model of the cell in order to simulate or test for interference and proper placement.
+In light manufacturing cells – machining or assembly – where equipment is easily adjusted
+during installation, this sophistication is typically unnecessary. Conventional plan views are
+usually sufficient.
+If space is available and time permits, great insight can often be gained by creating a lifesize mock-up of the cell, using cardboard, wood, light metal or plastic tubing. (See Figure 11).
+By involving the cell operators in this mock-up, a great deal of useful detailing can be
+accomplished in a very short time. In our experience, mock-ups provide two significant benefits:
+(1) They uncover overlooked details that may be expensive to change later in implementation,
+and (2) they obtain a much greater level of operator involvement and interaction than is possible
+with an on-screen computer model, or with a 2-dimensional plan view of the layout.
+Implementing a cell is an opportunity on a relatively small scale to make progress on
+plant-wide improvement initiatives. The cell implementation plan should include tasks, time,
+and money for the following common improvements:
+•
+
+Housekeeping & safety – disposition of unnecessary items, fixing of leaks, cleaning
+and painting of machines, floors, ceilings, machine guards, aisle way guard rails and
+posts, etc.
+
+•
+
+Visual Control – marking and striping, signs for machines and workplaces, labeling
+for tool and fixture storage and containers, signal lights, performance displays.
+
+•
+
+Quality Management – certification of machine and process capabilities, tool and
+gauge lists and calibration plans, mistake-proofing and failure analyses, control plans,
+training, etc.
+
+RMA – 1570 © Copyright 2002. RICHARD MUTHER & ASSOCIATES
+
+ALL RIGHTS RESERVED
+
+RMA Planning Guide # 1570
+How to Plan a Manufacturing Cell
+
+Page 18 of 29
+
+Figure 11. Physical mock-up for the gear machining cell charted in Figure 9. From the book: Planning
+Manufacturing Cells, © Copyright 2002 Richard Muther & Associates.
+
+•
+
+Maintenance -- repair and rebuilding of machines, replacement of worn-out
+equipment, preventive maintenance schedules, operator maintenance procedures, etc.
+
+•
+
+Set-Up Reduction – video-taping, time- study, and methods analysis; redesign of
+fixtures, tools, and machines; duplication of key equipment, gauges, and fixtures,
+redefinition of responsibilities; training, etc.
+
+Once the necessary tasks have been defined, they should be assigned to the appropriate
+individuals, estimated in terms of time and resources, and placed into a schedule, recognizing
+any dependencies between the tasks. The final output of Step 6 is the selected cell plan detailed
+and ready for implementation.
+MORE COMPLEX CELLS
+Several considerations can complicate cell-planning projects. Chief among these is the
+question of how many cells are needed. Given a set of candidate parts and their desired
+production rates or quantities, the planner must occasionally decide whether a single cell is
+appropriate, or whether the work should be spread across multiple cells.
+
+RMA – 1570 © Copyright 2002. RICHARD MUTHER & ASSOCIATES
+
+ALL RIGHTS RESERVED
+
+RMA Planning Guide # 1570
+How to Plan a Manufacturing Cell
+
+Page 19 of 29
+
+When one or more cells feed others, the project becomes one not unlike planning a
+“mini-factory.” (See Figure 12). Additional analysis is required to agree upon the materialhandling methods and scheduling procedures for moving parts between the cells. It may also be
+necessary to share personnel or equipment capacity across the cells being planned. And, the
+project may also have to decide on common policies (across all of the cells) for organization,
+supervision, and performance measurement.
+
+Figure 12. Complex, multi-cell planning. From the book: Planning Manufacturing Cells, © Copyright
+2002 Richard Muther & Associates.
+
+RMA – 1570 © Copyright 2002. RICHARD MUTHER & ASSOCIATES
+
+ALL RIGHTS RESERVED
+
+RMA Planning Guide # 1570
+How to Plan a Manufacturing Cell
+
+Page 20 of 29
+
+Even when planning a single cell, complications can be introduced if there is a wide
+range of possible locations for the cell, the appropriate level of automation is unclear, or there is
+the potential for radical organizational change, such as a move from traditional supervision to
+self-directed teams.
+Four Phased Approach
+Complex cell planning projects are best planned in four overlapping phases.
+I. Orientation
+II. Overall Cell Plan
+III. Detailed Cell Plans
+IV. Implementation
+The scope of these phases is illustrated in Figure 13. Specific steps within each phase are fullydescribed in the book: Planning Manufacturing Cells, by H. Lee Hales and Bruce Andersen. See
+Reference 3. A synopsis of each phase is presented here.
+
+Planning Phases
+
+Scope & Visualization
+
+I. ORIENTATION
+
+The Plant
+
+Location, external conditions and planning the planning.
+The surrounding physical and non-physical
+conditions/considerations; plus the objective,
+situation and plan for planning the cell.
+
+Pack &
+Ship
+Office
+
+II. OVERALL CELL PLAN
+The general plan for cellular operations.
+
+Manufacturing Cells
+
+Definition of the cell or cells: how many; what
+parts, what processes and equipment. Alternative
+block layouts of space and equipment. Operating
+relationships and integration between cells and the
+rest of the plant.
+
+III. DETAILED CELL PLANS
+
+Cell or Subcell
+
+Detail plans and designs for each cell.
+The detailed arrangements of equipment and
+workplace design. Specification of detailed
+operating procedures and methods within each cell.
+
+IV. IMPLEMENTATION
+Do; take action on the plans.
+Schedule, provide, procure, train, install, cleanup,
+debug...
+
+Workplace
+
+Task
+Approve
+Procure
+Train
+Install
+Debug
+
+P1 P2 P3 P4 P5
+
+Outputs
+•
+•
+•
+•
+•
+•
+
+Objectives
+Project plan & schedule
+Targeted parts or operational area
+Planned location
+External conditions
+Scope; “givens”, or limits of team’s authority
+
+• Definition of cells: what parts, what
+operations, what equipment
+• Block layout of cells and supporting areas
+• Material handling and coupling between cells
+• Preliminary cell layouts
+• General operating policies and practices
+• Confirmed definition of cell: parts, operations,
+equipment
+• Detailed layout for each cell
+• Material handling within the cells (between
+work stations)
+• Detailed operating policies and procedures
+•
+•
+•
+•
+
+Project approval and funding
+Detailed implementation plan
+Procured equipment
+Working cell
+
+Figure 13. Four phases for planning complex cells. From the book: Planning Manufacturing Cells, ©
+Copyright 2002 Richard Muther & Associates.
+
+RMA – 1570 © Copyright 2002. RICHARD MUTHER & ASSOCIATES
+
+ALL RIGHTS RESERVED
+
+RMA Planning Guide # 1570
+How to Plan a Manufacturing Cell
+
+Page 21 of 29
+
+Phase I – Orientation
+Complex projects or those with very large scope may need an entire phase to determine
+the best location(s) for the prospective cell(s), the handling to and from, the issues involved, and
+the plan for planning the cell. Reaching sound decisions may require creating or updating a
+master plan for the total facility. It may also require some conceptual planning of the
+prospective cells themselves – hence the overlap with Phase II – Overall Cell Plan.
+Phase II – Overall Cell Plan
+In large or complex planning projects, Phase II defines the general plan for cellular
+operations. This includes the number of cells and their respective parts and processes, and the
+relationships between them. Block layouts are developed along with material handling plans for
+movement to and from and in between the cells. General operating practices or policies are
+decided. These planning activities and decisions are not addressed in the simplified six-step
+approach described in the previous section, How to Plan a Manufacturing Cell. Reaching
+decisions in Phase II may also require some detailed planning and design – and therefore
+overlaps Phase III – Detailed Cell Plans.
+Phase III – Detailed Cell Plans
+Phase III details the individual cell(s) within the selected overall plan. The six-step
+simplified procedure described in the previously is highly effective for purpose. At the
+conclusion of Phase III, the planning team has identified the best detailed plan for each
+manufacturing cell.
+Phase IV – Implementation
+In Phase IV, an implementation schedule is defined for each cell. On larger and complex
+projects involving multiple cells, this schedule may span several months. It will typically
+include many interdependencies between the individual cell installations, and changes to the
+surrounding facilities, organization, and management systems. The team then obtains approval
+and funding, procures necessary equipment and services, directs the physical and procedural
+implementation, and debugs and releases the cell for production.
+Impact of Automation & Technology
+Most manufacturing cells consist of conventional, operator-controlled machinery and
+equipment. However, in some industries and processing situations, highly automated machinery
+may be used. For example, cells for high volume, repetitive welding may use robots instead of
+human operators. The same is true with other hazardous operations such as forging. In high
+volume assembly of many small or precision components, cells may consist of automated
+assembly machines, and pick-and-place robots, often connected by conveyors. The entire cell
+may be computer controlled, with operators providing service and material handling to and from
+the cell. In some cases, the material handling may be automated using automated guided
+vehicles.
+
+RMA – 1570 © Copyright 2002. RICHARD MUTHER & ASSOCIATES
+
+ALL RIGHTS RESERVED
+
+RMA Planning Guide # 1570
+How to Plan a Manufacturing Cell
+
+Page 22 of 29
+
+In between the extremes of all manual or fully automatic operations, cells may include
+some limited automation for parts feeding and loading, or material handling between operations.
+A common example is the use of automatic ejection or unloading devices on machine tools.
+These are typically used to present a completed part to the operator during the same cycle used
+to manually load the machine. Other examples of selective automation include conveyorized
+parts washers, curing tunnels, or similar process equipment. Typically the conveyor automates
+movement between sequential operations without operator intervention or effort, and may drop
+finished parts into a container.
+If an automated cell with computerized controls is planned, extra attention should be
+given to estimating the costs of equipment, software, systems integration, and to the ongoing
+maintenance of the system. Adherence to sound technical standards and thorough
+documentation of all computerized systems will help to keep these costs down. As noted earlier,
+advanced visualization with 3-dimensional computer models is often valuable. Computer
+simulation may also be used.
+Use of automation and advanced technology in a manufacturing cell is most appropriate
+when the following conditions apply:
+•
+
+Production volumes are very high, typically above 500,000 units per year, and
+predictable or steady.
+
+•
+
+Product lives are relatively long (before extensive changes or reconfigurations are
+required).
+
+•
+•
+•
+•
+•
+•
+
+Product designs are relative stable.
+Labor is expensive.
+The company or plant has prior successful experience with automated systems.
+The processes are hazardous or unsafe for human operators.
+Very high repeatability and precision are required.
+The processing technology is stable.
+
+When several of these conditions are met, then at least one alternative cell plan should
+make use of automation, to be sure that good opportunities are not overlooked.
+CHECKLIST FOR CELL PLANNING AND DESIGN
+Pages 23 - 27 contain a checklist and brief discussion of the most common choices or
+decisions to be made when planning or designing a cell. The topics are organized around the
+three aspects of cell planning discussed earlier: physical, procedural, and personal. The order of
+presentation follows roughly the order in which the choices and decisions should be made during
+a planning project – starting with the physical, followed by the procedural, and finally the
+personal or personnel-related.
+A more detailed and formatted version of this checklist may be downloaded in Microsoft
+Excel format from www.hpcinc.com/rma.html. (Navigate: Downloads>Register>Form 760 1-4,
+Manufacturing Cell Planning Coupling & Integration Worksheet.)
+RMA – 1570 © Copyright 2002. RICHARD MUTHER & ASSOCIATES
+
+ALL RIGHTS RESERVED
+
+RMA Planning Guide # 1570
+How to Plan a Manufacturing Cell
+
+Page 23 of 29
+
+Physical Questions
+Layout and Flow Patterns
+1. Which material flow pattern should be used within the cell?
+a.
+b.
+c.
+d.
+
+Straight-through
+U-shaped
+L-shaped
+Comb or spine
+
+Cells may be physically arranged into one of four basic flow patterns. (See Figure 14).
+While the U-shape is frequently advocated and very common, the other patterns do have
+occasional advantages and appropriate uses. Your authors believe that the best cell layouts
+are achieved when the planning team forces itself to consider at least two alternative flow
+patterns, if only to stimulate discussion.
+Basic Cell Flow Patterns and Their Benefits
+Straight Thru
+
+1. Easy to understand, follow, schedule, and control.
+2. Allows straight, inexpensive handling methods.
+3. Easy access on two sides.
+4. Avoids congestion at point of delivery and take away.
+
+U-Shape or Circular
+
+1. Automatically returns product, holding fixtures, and mobile
+handling equipment to cell entrance.
+2. Delivery and take away point are the same; allows
+convenient handling to and from the cell.
+3. Workers in center can assist one another more readily.
+4. Easier to assign multiple operations to an operator.
+Allows easier line balancing.
+
+L-Shape
+
+1. Allows fitting lengthy series of operations into limited space.
+2. Lets feeding cells start on an aisle and end at point of use.
+3. May allow isolation of dangerous or costly-to-move
+equipment in the elbow, with savings in implementation
+cost and/or two directions for expansion.
+4. Easy to segregate in-flow and out-flow of physically different
+materials, products, supplies, and special services.
+
+Comb or Spine
+
+1. Lends itself to two-way flow.
+2. Well suited to cells with highly variable routings.
+3. Allows "fingers/teeth" to be segregated for special
+requirements.
+4. Well-suited to functional cells.
+
+Figure 14. Basic cell flow patterns. From the book: Planning Manufacturing Cells, © Copyright
+2002 Richard Muther & Associates.
+
+RMA – 1570 © Copyright 2002. RICHARD MUTHER & ASSOCIATES
+
+ALL RIGHTS RESERVED
+
+RMA Planning Guide # 1570
+How to Plan a Manufacturing Cell
+
+Page 24 of 29
+
+2. How does the choice of flow pattern fit with the overall plant layout and material flow?
+When deciding on the internal flow pattern for each cell, do not overlook its relationship
+to and impact upon the overall plant layout. The layout of aisles and general flow pattern
+in the factory may favor or even force a particular flow pattern within the cell.
+Handling and Storage
+1. What are the groups or classes of material to be moved? General categories to be
+examined include:
+a. Incoming parts and materials to the cell
+b. Work in process between workstations within the cell
+c. Outgoing parts and materials leaving the cell
+2. Classes should be defined with an eye toward common handling and storage methods.
+The classes for work-in-process should have already been defined through parts
+classification and analysis of the process. But a review of incoming and outgoing parts
+and materials may introduce additional classes, not yet identified or considered.
+3. What handling equipment should be used for each class of material? Typical choices
+include: forklifts, tugs and carts, push-carts, walkie pallet jacks, conveyors, slides,
+chutes, overhead handling devices, or simply the operators themselves, hand carrying
+parts or materials.
+4. What containers or transport units will be used? Typical choices include pallets, skids,
+bulk or large containers, small containers and totes, cartons, or in some cases, the items
+themselves.
+5. Where and how will materials be stored or staged? What equipment will be used?
+Typical choices include: the floor, flow racks, shelves, pallet racks, cabinets, cartridges
+or magazines integrated directly into machines, or directly on work benches themselves.
+6. How much material will be staged or stored? Typically expressed in minutes, hours, or
+days of coverage at an expected production rate.
+7. How much staging or storage space will be required? And where should it be placed in
+the layout?
+Supporting Services & Utilities
+1. What process-related supporting services are required? Space and equipment are often
+required for tool & die storage, fixture storage, gage tables and benches, tool set-up,
+inspection areas, supplies, trash, and empty containers.
+2. What personnel-related supporting services are required? Typicals include: shop desks
+and work areas; team meeting area; computer terminals and printers, telephones and
+public address speakers, document storage, bulletin boards, etc.
+RMA – 1570 © Copyright 2002. RICHARD MUTHER & ASSOCIATES
+
+ALL RIGHTS RESERVED
+
+RMA Planning Guide # 1570
+How to Plan a Manufacturing Cell
+
+Page 25 of 29
+
+3. What special utilities are required? Water and drains? Special electrification? Special
+ventilation or exhausts? Lighting?
+Procedural Questions
+Quality Assurance/Control
+1. Who will be responsible for quality? Will operators inspect their own work? Each
+other’s work? Or, will dedicated inspectors be used? From within the cell or from
+outside?
+2. What techniques will be used? e.g. visual, statistical process control, mistake proofing,
+etc.
+3. Will special equipment be required?
+4. What specifications or procedures are relevant or should be incorporated into the plan?
+Engineering
+1. Who is responsible for engineering the parts and processes involved?
+a. Product engineering
+b. Manufacturing/process/industrial engineering
+3. How will tooling be managed? Externally by a central organization, or internally within
+the cell? Will tools be shared or dedicated to each machine?
+4. Where will tools be stored? External to the cell? Internal? Centrally or at each work
+place or machine?
+5. Who will be responsible for set-up? External or internal specialists? Operators
+themselves? Teams?
+Materials Management
+1. How will production be reported? Aggregate or total units only? Each unit as
+completed? First and/or last operation as performed? At the completion of each
+operation?
+2. How will reporting be accomplished? Using paper forms? Key entry? Bar code
+scanning or other electronic method?
+3. How will the cell be scheduled and by whom?
+4. How will specific parts and jobs be sequenced? Who will be responsible?
+5. Is line balancing needed?
+
+RMA – 1570 © Copyright 2002. RICHARD MUTHER & ASSOCIATES
+
+ALL RIGHTS RESERVED
+
+RMA Planning Guide # 1570
+How to Plan a Manufacturing Cell
+
+Page 26 of 29
+
+6. What is the strategy for workload and capacity management? How will the cell respond
+to changes in product mix, bottlenecks and peaks?
+a.
+b.
+c.
+d.
+e.
+f.
+g.
+
+With extra, idle machine capacity?
+With extra labor or floating personnel?
+With overtime?
+With help from adjacent cells?
+By off-loading work?
+By building ahead to inventory?
+By rebalancing or reassigning operators?
+
+Maintenance
+1. Who will be responsible for maintaining machinery and equipment? External by a
+central organization, or internally by cell operators?
+2. Have specific maintenance duties and frequencies been defined?
+3. Who will be responsible for housekeeping? Cell operators or external personnel?
+4. Are preventive maintenance procedures required?
+5. Are statistical or predictive maintenance procedures appropriate or necessary?
+6. Will the cell require special equipment or services to hold or recycle waste, chips, oils
+coolant, scrap, etc?
+Accounting
+1. Will new accounting or reporting procedures be required? For costs? For labor? For
+material usage?
+2. Will the cell be treated as a single work or cost center for reporting purposes? Or, will
+costs be charged to specific operations within the cell?
+3. Will labor reporting distinguish between direct and indirect activities?
+4. Will labor be reported against specific jobs or orders?
+5. Will inventory be charged or assigned to the cell? Will the cell be a controlled inventory
+location?
+6. How will scrap and rework be tracked and reported?
+
+RMA – 1570 © Copyright 2002. RICHARD MUTHER & ASSOCIATES
+
+ALL RIGHTS RESERVED
+
+RMA Planning Guide # 1570
+How to Plan a Manufacturing Cell
+
+Page 27 of 29
+
+Personnel-related Questions
+Supervision & Performance Measurement
+1. Will the cell have a designated supervisor or team leader? Or will the cell operate as a
+self-directed team?
+2. How will cell performance be measured and reported, and to whom?
+Job Definitions and Assignments
+1. Will new positions be required? Have they been defined?
+2. Will cell operators be specialists or cross-trained to work anywhere in the cell?
+3. Will operators rotate assignments on a regular basis?
+4. How will the initial cell operators be recruited or assigned? Will the opportunity be
+posted plant-wide?
+5. How will future operators be assigned?
+Compensation & Incentives
+1. Will operators be compensated on a different basis from other parts of the plant?
+2. Will operators be paid for skills or cross training?
+3. Will a group incentive be used? How will it be calculated?
+Systematic Planning and Involvement
+The planner can generally achieve a good result by planning each individual cell with the
+six-step procedure outlined in this Planning Guide. As each cell is planned, look first at the
+physical, then the procedural, and finally at the personal aspects of the project. At every step, be
+sure to involve prospective operating personnel and others from the relevant supporting groups.
+Working as a group to answer the questions above will assure that the final, selected plan will
+have a smooth implementation and deliver the benefits desired.
+
+RMA – 1570 © Copyright 2002. RICHARD MUTHER & ASSOCIATES
+
+ALL RIGHTS RESERVED
+
+RMA Planning Guide # 1570
+How to Plan a Manufacturing Cell
+
+Page 28 of 29
+
+REFERENCES AND ADDITIONAL INFORMATION
+If the project is large or complex, and involves multiple cells, the planner should apply
+our complete method: Systematic Planning of Manufacturing Cells (SPMC), as described in
+Reference 3 below and on our website at: www.hpcinc.com/rma.html
+1. The Working Forms shown in Figures 2, 3, 7 and 9, plus more than a dozen additional
+forms for various aspects of cell planning are available at our website:
+2. For more detail on the six-step procedure described in this guide, see the booklet:
+Simplified Systematic Planning of Manufacturing Cells,
+By Richard Muther, William E. Fillmore, and Charles P. Rome.
+ISBN: 0933684-13-4.
+Order from Management & Industrial Research Publications,
+P.O. Box 7133, Kansas City, Missouri, USA 64113
+Phone: 816-444-6622. Fax: 816-444-1140
+Price (2002): $12.00 (Included free with the SME Fundamentals of Manufacturing Cell Planning video and
+training package above).
+
+3. For a complete guide to our popular method: Systematic Planning of Manufacturing Cells
+(SPMC), see the textbook:
+Planning Manufacturing Cells,
+By H. Lee Hales and Bruce Andersen,
+Society of Manufacturing Engineers, Dearborn, Michigan, 2002.
+ISBN: 0-87263-549-X
+Price (2002): $79/SME members $67
+Included free with Fundamentals of Cell Planning Video and Training Package.
+Order from Society of Manufacturing Engineers,
+P.O. Box 930, Dearborn, Michigan, USA 48121.
+Phone: 800-733-4763 or 313-271-1500 (ext. 1600).
+Order code: BK02PUB2-4695
+On-line/e-mail: www.sme.org or: service@sme.org
+
+4. For classroom case exercises and discussion problems, or to practice Systematic Planning
+of Manufacturing Cells (SPMC), see the workbook:
+Planning Manufacturing Cells (Workbook)
+By Richard Muther & Associates,
+Society of Manufacturing Engineers, Dearborn, Michigan, 2002.
+ISBN: 0-87263-550-3
+Price (2002): $20. One copy included with Fundamentals of Cell Planning Video & Training Package.
+Order from Society of Manufacturing Engineers,
+P.O. Box 930, Dearborn, Michigan, USA 48121.
+Phone: 800-733-4763 or 313-271-1500 (ext. 1600).
+Order code: BK02PUB3-4695
+On-line/e-mail: www.sme.org or: service@sme.org
+
+RMA – 1570 © Copyright 2002. RICHARD MUTHER & ASSOCIATES
+
+ALL RIGHTS RESERVED
+
+RMA Planning Guide # 1570
+How to Plan a Manufacturing Cell
+
+Page 29 of 29
+
+5. For self-instruction, classroom training, and orientation of cell-planning teams.
+Fundamentals of Manufacturing Cell Planning (Three-tape Video and Training Package, includes live
+footage of installed cells, plus a step-by-step illustration of successful cell planning using Systematic
+Planning of Manufacturing Cells (SPMC). Training package includes: text, workbook, Simplified SPMC
+booklet on planning small cells, and pencil-ruler kit for process charting and cell flow diagramming)
+By: H. Lee Hales, Bruce Andersen, and William E. Fillmore,
+Society of Manufacturing Engineers, Dearborn, Michigan, 2002.
+Price (2002): $799/SME members $715
+Order from Society of Manufacturing Engineers,
+P.O. Box 930, Dearborn, Michigan, USA 48121.
+Phone: 800-733-4763 or 313-271-1500 (ext. 1600).
+Order code: PK02PUB2-4695
+On-line/e-mail: www.sme.org or: service@sme.org
+
+6. For in-house training in cell planning, please visit our website. Course outlines of
+various lengths are available for review.
+To learn more about our other planning methods, visit our website at:
+www.hpcinc.com/rma.html, or contact us at:
+Richard Muther & Associates
+151 Village Parkway, Building 6
+Marietta, Georgia, 30067 USA
+Phone: 770-859-0161
+Fax: 770-859-0166
+
+RMA – 1570 © Copyright 2002. RICHARD MUTHER & ASSOCIATES
+
+ALL RIGHTS RESERVED
+
+Measure what Matters
+Align Behaviors with Performance
+Identify Cause & Effect Relationships
+
+Create Value for the Customer
+
+Results
+
+Create Constancy of Purpose
+Think Systemically
+
+Enterprise Alignment
+
+SUPPLY
+
+OPERATIONS
+
+ADMINISTRATION
+
+CUSTOMER
+RELATIONS
+
+PRODUCT &
+SERVICE
+DEVELOPMENT
+
+Focus on Process
+Embrace Scientific Thinking
+Flow & Pull Value
+Assure Quality at the Source
+Seek Perfection
+
+Lead with Humility
+Respect Every Individual
+
+See Reality
+Focus on Long-term
+Align Systems
+Align Strategy
+Standardize Daily Management
+
+Continuous Process
+Improvement
+
+Cultural Enablers
+
+Stabilize Processes
+Rely on Facts & Data
+Standardize Processes
+Insist on Direct Observation
+Focus on Value Stream
+Keep it Simple & Visual
+Identify & Eliminate Waste
+No Defects Passed Forward
+Integrate Improvement with Work
+
+Assure a Safe Environment
+Develop People
+Empower & Involve Everyone
+
+™ The Shingo Prize
+
+GUIDING PRINCIPLES
+
+SUPPORTING CONCEPTS
+
+Mission
+The mission of The Shingo Prize for Operational Excellence is to create excellence
+in organizations through the application of universally accepted principles
+of operational excellence, alignment of management systems and the wise
+application of improvement techniques across the entire organizational enterprise.
+We do this by teaching correct principles and new paradigms that accelerate the
+flow of value, align and empower people and transform organizational culture.
+
+Vision
+Our vision is to be the global standard of excellence in every industry; because
+The Shingo Prize roots are in organizational recognition, we have learned three
+very important principles:
+Key insights from 25 years of organizational assessment
+1. Evaluating organizations for recognition requires a clearly defined, very high and
+universally consistent standard of excellence.
+2. True excellence cannot be fleeting; therefore, assessment must determine the
+degree to which the principles that create excellence are deeply embedded into
+culture.
+3. For any organization to be successful, they must be able to see the truth about
+where they are in the development of a high-performing, principle-based culture.
+
+THE SHINGO MODEL
+
+1
+
+Select organizations with whom The Shingo Prize for Operational
+Excellence has engaged:
+
+Healthcare
+
+Manufacturing
+
+Christie Clinic
+Cleveland Clinic
+Denver Health
+Lehigh Valley Healthcare
+ThedaCare Center for Healthcare Value
+Toyota Memorial Hospital
+Martin’s Point Health Care
+
+Autoliv
+The Boeing Company
+Boston Scientific
+Baxter Healthcare
+Caterpillar Inc.
+Daimler
+Delphi
+GE
+Goodyear
+Jaguar Land Rover
+John Deere
+Johnson & Johnson
+Leyland Trucks
+Lockheed Martin
+Lundbeck
+OC Tanner
+Pentair
+Rexam
+US Synthetic
+Visteon
+
+Service
+Export Development Canada
+Overstock.com
+Royal Bank of Scotland
+State Farm Life Insurance
+Stephen Covey Group
+Verizon
+UL
+
+2
+
+Forward
+Dear colleagues and friends,
+In my associations, many people have asked
+the following questions: How did The Shingo
+Prize come about? How has it arrived where
+it is today? And what does the organization
+actually do?
+As we release this new book, I’d like to
+take the opportunity to tell you the brief
+version of our story. My hope is that the
+given context will provide you with additional
+value as you study the Shingo model and
+implement it as part of your organization’s
+cultural transformation.
+The Beginning
+Few individuals have contributed as much to
+the development of the ideas we call TQM,
+JIT and lean as did Shigeo Shingo. Over
+the course of his life, Dr. Shingo wrote and
+published 18 books, eight of which were
+translated from Japanese into English. Many
+years before they became popular in the
+Western world, Dr. Shingo wrote about
+the ideas of ensuring quality at the source,
+flowing value to customers, working with
+zero inventories, rapidly setting up machines
+through the system of “single-minute
+exchange of dies” (SMED) and going to the
+actual workplace to grasp the true situation
+there. He worked extensively with Toyota
+executives, especially Mr. Taiichi Ohno, who
+
+helped him to apply his understanding of
+these concepts in the real world.
+Always on the leading edge of new ideas,
+Dr. Shingo envisioned a collaboration with an
+organization that would further his life’s work
+through research, practical-yet-rigorous
+education and a program for recognizing the
+best in operational excellence throughout the
+world. In 1988, Shingo received his honorary
+Doctorate of Management from Utah State
+University and, later that year, his ambitions
+were realized when The Shingo Prize for
+Excellence in Manufacturing was organized
+and incorporated as part of the university.
+In 2007, the organization was renamed The
+Shingo Prize for Operational Excellence due
+to its relevance within every industry – not
+exclusively the area of manufacturing.
+Guiding Principles and Shifting Paradigms
+One of Dr. Shingo’s little known, but perhaps
+most important contributions, was his
+understanding of the relationship between
+concepts (principles), systems and tools.
+Unfortunately, over the years, most of us
+have gravitated to and exalted the tools
+associated with effective operations and
+have paid too little attention to the power of
+the principles. Dr. Shingo taught that
+understanding the principles behind the tools
+leads to higher-order thinking and answers
+the question, “why?” When people
+
+THE SHINGO MODEL
+
+3
+
+understand more deeply the why behind
+the how and the what, they become
+empowered to innovate and take individual
+initiative. As more and more people within
+a single organization begin to act
+independently based on their understanding
+and commitment to the principles, culture
+begins to shift.
+This fundamental truth is the basis for The
+Shingo Prize and the Shingo model.
+Building on the work of Dr. Shingo, the
+mission of The Shingo Prize is to assist
+organizations of all kinds to create lasting
+cultures of operational excellence. We
+achieve our mission by focusing our efforts
+on timeless and universal principles.
+As part of our efforts, we teach five
+fundamental paradigm shifts:
+1. Operational excellence requires a focus
+both on results and behaviors.
+2. Ideal behaviors in an organization are
+those that flow from the principles that
+govern the desired outcomes.
+3. Principles construct the only foundation
+upon which a culture can be built if it is to
+be sustained over the long-term.
+4. Creating ideal, principle-based behaviors
+requires alignment of the management
+systems that have the greatest impact on
+how people behave.
+
+4
+
+5. The tools of lean, TQM, JIT, Six Sigma,
+etc. are enablers and should be strategically
+and cautiously inserted into appropriate
+systems to better drive ideal behavior and
+excellent results.
+All Shingo recognition is based on the
+degree to which these paradigms are
+broadly understood and deeply embedded
+into the behavioral fabric of an organization,
+top-to-bottom and side-to-side.
+The Shingo Standard: A Story
+The Shingo standard is, by design, the most
+rigorous in the world. We believe Dr. Shingo
+would only want to associate his name with
+the very best. Applicants for recognition are
+held to an identical standard no matter
+where they are located in the world.
+Our standard has not always been so high.
+For 18 years The Shingo Prize evaluated
+organizations by noting their application of
+lean tools, the quality of their lean program
+deployment and, to some degree, the
+engagement of their management teams.
+This process consistently resulted in eight
+to 10 organizations receiving The Shingo
+Prize each year. All was fine until we realized
+that it wasn’t.
+We began to see small signs of fracture
+along the edges. Critics of our selection
+process began to emerge in blogs and
+websites and eventually began to confront
+us directly. There is an adage that states,
+“Your best friends are the ones that tell you
+the truth, even when it is hard to hear.”
+
+Fortunately, we had very good friends in
+the Association for Manufacturing
+Excellence (AME) and the Society of
+Manufacturing Engineers (SME). They told
+us they were beginning to lose confidence
+in recommending, carte blanche, our
+recipients as benchmarking sites for their
+members. As much as this hurt, it forced
+us to begin a deep and earnest assessment
+of our past recipients; specifically, which
+ones had sustained their improvements
+and which ones had lost ground. Our
+findings were alarming!
+We learned that even the best of the best
+had an extremely difficult time sustaining
+the gains we had observed during their
+assessments. Furthermore, we discovered
+that our assessment criteria had two major
+flaws: (1) our standard for what excellence
+looked like was based too much on
+outward appearance and not enough
+on the deeply embedded culture of the
+organization, and (2) we did not know how
+to accurately evaluate and measure the
+truth regarding an organization’s culture.
+Our insights sparked a yearlong study
+to determine what did and did not work
+in sustaining improvement efforts and to
+understand the reasons behind success
+or failure. At the same time, we began to
+dig back through all of Dr. Shingo’s books
+to see if we could discover what it was
+that we were missing. To our surprise and
+delight, working from either end and toward
+the middle, we arrived at a unanimous
+conclusion. The difference between
+successful and unsuccessful efforts was
+
+always in the organizations’ ability to get
+past the tools, events and programs and to
+align management systems with principles.
+When such alignment took place, ideal
+behaviors followed and perpetuated a
+deep culture of operational excellence.
+Based on our findings, we developed
+the Shingo model that consists of an
+organized collection of guiding principles
+(the House) and a transformation process
+(the Diamond). Together, this framework
+has become the basis for everything we
+do.
+Education, Assessment and Recognition
+The Shingo Prize has three areas of focus:
+education, assessment and recognition.
+We teach leaders to better understand
+their role in building a culture of operational
+excellence and we teach managers how
+to better align systems to drive ideal,
+principle-based behaviors.
+Our focus on assessment is not as much
+on awarding The Shingo Prize, but more
+on using the Shingo model as the basis for
+honest, self- and organizational-evaluation
+and initiating lasting improvements to the
+culture. In fact, we often say that The “True”
+Shingo Prize is the culture of operational
+excellence that comes from a disciplined
+application of the Shingo model into your
+organization.
+Recognition is given each year to
+successful challengers from around the
+world at the Annual Shingo Prize
+
+THE SHINGO MODEL
+
+5
+
+International Conference & Awards
+Ceremony and Gala. Recipients may come
+from any industry and any part of the world.
+While many warned us that the standard
+was too high and, consequently, no
+organization would apply, we have found
+the opposite to be the case.
+Every year we have more and more
+applications for assessment and recognition.
+While the number of recipients of The
+Shingo Prize has been reduced dramatically,
+we now recognize 10-20 companies each
+year for their progress toward building this
+highly coveted culture with either a Shingo
+Bronze or a Shingo Silver Medallion.
+I congratulate you and your organization on
+your commitment to improvement. I am
+confident that, as you study and implement
+the Shingo model, your efforts will be
+
+6
+
+rewarded with a culture that unleashes
+potential and achieves extraordinary results.
+I am sincerely looking forward to our
+association one with another and anticipate
+taking this journey to excellence together!
+I recommend a thoughtful reading of this
+primer. Mark it up, make notes and then
+discuss it with your colleagues. I am certain
+that you will gain many new insights that will
+help you to refine your target and accelerate
+your upward trajectory.
+Sincerely,
+
+Robert D. Miller
+Executive Director
+The Shingo Prize for Operational Excellence
+
+Table of Contents
+08
+
+The Shingo Model
+
+17
+
+Dimension One
+Cultural Enablers
+
+22
+
+Dimension Two
+Continuous Process Improvement
+
+31
+
+Dimension Three
+Enterprise Alignment
+
+37
+
+Dimension Four
+Results
+
+41
+
+Scope of Transformation
+
+44
+
+Summary
+
+47
+
+Contact
+
+The Shingo Model
+
+THE SHINGO PRIZE FOR OPERATIONAL EXCELLENCE
+
+The Shingo Model
+The search for improvement is instinctive.
+For businesses and indeed any organization to be successful in the long term, they
+must be engaged in a relentless quest to
+make things better. Failure to make this an
+organizational priority will inevitably result
+in organizational decline. Excellence must
+be the pursuit of all great leaders. In fact,
+the passionate pursuit of perfection, even
+knowing it is fundamentally impossible to
+achieve, brings out the very best in every
+human being.
+Why So Many Fail
+Improvement is hard work! It requires great
+leaders, smart managers and empowered
+people. Improvement cannot be delegated
+down, organized into a program or trained
+into the people. Improvement requires
+more than the application of a new tool set
+or the power of a charismatic personality.
+Improvement requires the transformation
+of a culture to one where every single
+person is engaged every day, in most often
+small, but from time to time, large change.
+In reality, every organization is naturally in
+some state of transformation. The critical
+questions are, “To what end is the organization being transformed and who are
+the architects of the transformation?” The
+Shingo model of operational excellence
+
+asserts that successful organizational
+transformation occurs when leaders
+understand and take personal responsibility for architecting a deep and abiding
+culture of continuous improvement. This
+is not something that can be delegated to
+others. As the CEO of a very successful
+organization recently said, “Leaders lead
+culture!”
+A Culture Built on Correct Principles
+Stephen R. Covey described principles
+as fundamental truths. He defined a principle as a natural law that is universally
+understood, timeless in its meaning and
+fundamentally inarguable because it is
+self-evident. Dr. Covey taught that values
+govern our actions but principles govern
+the consequence of our actions.
+Values are cultural, personal, interpretable
+and variable. Our personal values influence how we see the world and ultimately
+our choices for how to behave. Principles
+govern the outcomes of our choices. In
+other words, the values of an unprincipled
+person will very likely lead to behaviors that
+are far from ideal.
+Principles govern everything that happens
+in the natural world. Scientists the worldover continually search to understand
+
+THE SHINGO MODEL
+
+9
+
+more of the principles that govern the
+universe. They do not invent them; they
+only discover their existence and seek to
+do good by taking purposeful action based
+on knowledge of the guiding principle.
+Principles govern the laws of science; they
+determine the consequences of human
+relationships; and ultimately, principles
+influence the successful outcome of every
+business endeavor.
+
+Principles Predict Performance
+One of the most powerful aspects of principles is their ability to predict outcomes.
+Principles govern the outcome or consequence of the behavioral choices we
+each make. The closer our actual behavior
+aligns with the ideal behavior that is linked
+to the principle, the greater the likelihood
+the outcomes of our behavior can be predicted. This is profound given that very few
+things in any business can be predicted
+with a high degree of certainty. A culture
+where every employee understands and
+is committed to principle-based behavior
+will be a culture with a very high likelihood
+of achieving predictably excellent results.
+Similarly, a corporation not well grounded
+in principles will result in a wide variety of
+personal interpretations of how to apply
+their values in work situations.
+
+Why Operational Excellence?
+For decades we have watched, and all
+too often experienced, the disappointing efforts of programmatic improvement
+initiatives, leaving in their wake a trail of
+
+10
+
+unintended negative consequences rarely
+resulting in lasting improvement. Quality
+Circles, Just-in-Time, Total Quality Management, Business Process Re-engineering, Six Sigma and, most recently, Lean
+are a few illustrations of well-intentioned
+initiatives that have far under-delivered on
+their promised benefits. Our study of these
+programs over the last 25 years has led
+us to believe that the problem has nothing
+to do with the concepts and everything to
+do with the programmatic, tool-oriented
+deployment of them.
+The Shingo model is based on a systematic study of each of these improvement
+initiatives. Our approach bi-passes the
+tools that each program has engendered
+and focuses rather on the underlying/guiding principles and supporting key concepts
+behind them. We recognize the necessity
+of good improvement tools but focus on
+them only within the context of enabling
+a system to better drive ideal, principlebased behaviors. The Shingo “house”
+provides a summary and categorization
+of this collection of guiding principles and
+supporting concepts.
+When taken in their totality, these timeless
+principles become the basis for building a
+lasting culture of excellence in the execution of one’s mission statement. We call
+this relationship between business results
+and principle-based behavior, “operational
+excellence.”
+
+Operational excellence cannot be a program, another new set of tools or a new
+management fad. Operational excellence
+is the consequence of an enterprise-wide
+practice of ideal behaviors based on correct principles. As long as improvement is
+seen as something outside the core work
+of the business, as long as it is viewed
+as “something else to do,” operational
+excellence will remain elusive.
+When leaders anchor the corporate
+mission, vision and values to principles
+of operational excellence and help associates to connect and anchor their
+own values to the same principles, they
+enable a shift in the way people think and
+behave. Changing the collective behavior
+of the group changes the culture. This
+is a leadership responsibility that cannot
+be delegated.
+
+Principles of Operational Excellence
+(The Shingo House)
+In his book “Key Strategies for Plant
+Improvement,” Dr. Shingo said, “Think
+in terms of categorical principles.” The
+Shingo house is a categorization of the
+guiding principles of operational excellence. Associated with each category are
+also listed many important supporting
+concepts.
+The principles are categorized into four
+dimensions: cultural enablers, continu-
+
+ous process improvement, enterprise
+alignment and results – the ultimate end
+of all business initiatives. These four dimensions overlay five core business
+systems: product/service development,
+customer relations, operations, supply
+and a variety of management or administrative support systems.
+
+Guiding Principles
+The Shingo Prize for Operational Excellence did not create the 10 guiding principles of operational excellence, but rather
+they have always existed. In truth, there
+is ample evidence that these principles
+have been well understood, more or less,
+at different times for thousands of years.
+As the world has gone through cycles of
+advancement and decline, it seems these
+principles are routinely lost and forgotten and must be re-discovered. Emerging from the dark ages into a period of
+enlightenment and industrialization, the
+impact of these principles are only now
+beginning to be understood again.
+Certainly, and even surprisingly, most
+business schools do not emphasize
+these principles even though they are
+the driver for business execution excellence. The cause for this may be that
+these fundamental business principles
+have been lost in management fads and
+tool boxes that become programs or
+“flavors of the month.”
+
+THE SHINGO MODEL
+
+11
+
+Measure what Matters
+Align Behaviors with Performance
+Identify Cause & Effect Relationships
+
+Create Value for the Customer
+
+Results
+
+Create Constancy of Purpose
+Think Systemically
+
+Enterprise Alignment
+
+SUPPLY
+
+OPERATIONS
+
+ADMINISTRATION
+
+CUSTOMER
+RELATIONS
+
+PRODUCT &
+SERVICE
+DEVELOPMENT
+
+Focus on Process
+Embrace Scientific Thinking
+Flow & Pull Value
+Assure Quality at the Source
+Seek Perfection
+
+Lead with Humility
+Respect Every Individual
+
+See Reality
+Focus on Long-term
+Align Systems
+Align Strategy
+Standardize Daily Management
+
+Continuous Process
+Improvement
+
+Cultural Enablers
+
+Stabilize Processes
+Rely on Facts & Data
+Standardize Processes
+Insist on Direct Observation
+Focus on Value Stream
+Keep it Simple & Visual
+Identify & Eliminate Waste
+No Defects Passed Forward
+Integrate Improvement with Work
+
+Assure a Safe Environment
+Develop People
+Empower & Involve Everyone
+
+™ The Shingo Prize
+
+GUIDING PRINCIPLES
+
+SUPPORTING CONCEPTS
+
+For organizations to be successful over the long term, leaders must deeply and
+personally understand the principles that govern their success. Furthermore,
+they must ensure the behaviors of every person who contributes to the business
+are in harmony with these principles. In short, the organizational culture they
+build must be grounded in correct principles.
+
+12
+
+The Shingo Prize for Operational Ex- ability requires focusing on the culture;
+cellence has made a diligent search of that’s the easy part. The difficult part is
+thought leaders over the last 100 years. in knowing how to really affect change.
+Their work has been carefully analyzed The Shingo transformation process is a
+and dissected, and the unique concepts methodology for accelerating a personal
+or principles from each have been ex- and enterprise-wide transformation to
+tracted. Compiling, distilling and pri- a culture of operational excellence. The
+oritizing the list led to the 10 guiding process is based on the teaching of Dr.
+principles on the left side
+of the house and the sup“Organizations can never sufficiently
+porting concepts for each
+release the full potential of their people
+dimension on the right
+by creating a tool-oriented culture.”
+side. Supporting concepts
+are critical to pay attention
+to but may not stand up to the rigor of Shingo who recognized that business
+being universal, timeless and self-evident improvement comes through underlike the guiding principles.
+standing the relationship between principles, systems and tools.
+The dimensions are the result of “thinking categorically about the principles.” Dr. Shingo understood that operational
+It is clear that all four dimensions of the excellence is not achieved by superficial
+model require focus in order to achieve imitation or the isolated and random use
+excellence. In the same way that we of tools and techniques (“know how’”).
+need to comprehend objects in three Instead, achieving operational excellence
+dimensions to truly appreciate all of their requires people to “know why” (i.e., an
+characteristics, operational excellence understanding of underlying principles.)
+must be viewed in these four dimensions In the 1940s, the work of French social
+in order to fully appreciate the power scientist, Jean Piaget, led us to underof the principles to affect business out- stand that learning occurs when people
+comes.
+come to deeply understand the meaning behind the methodology. People
+Transforming a Culture
+naturally search first for meaning, the
+(Shingo Transformation Process)
+principle and then attempt to organize
+Many organizations and their leaders them somehow into a system or some
+are coming to understand that sustain- kind of order. Finally, they create tools to
+
+THE SHINGO MODEL
+
+13
+
+INDIVIDUAL FOCUS
+
+Core Values Anchored to
+
+GUIDING PRINCIPLES
+AL
+
+M
+
+IG
+IV
+E
+
+DR
+
+N
+
+ORGANIZATIONAL FOCUS
+
+E
+IV
+
+DR
+
+AF
+
+R
+FI
+
+Culture
+
+RESULTS
+
+SYSTEMS
+
+(Behavioral Evidence)
+
+RE
+FI
+
+A
+EN
+
+NE
+
+AC
+HI
+EV
+
+E
+SE
+
+LE
+
+CT
+
+™
+
+Th
+
+e
+
+Sh
+
+in
+
+go
+
+Pr
+
+iz
+
+e
+
+E
+
+TOOLS
+
+BL
+
+better enable the systems to accomplish
+
+tually and then what they mean person-
+
+the purpose for which they were created.
+
+ally. It is impossible for a leader to lead
+the development of a principle-based
+
+14
+
+Learning and Teaching the Principles
+
+culture until he or she has gone through
+
+The first step a leader must take in lead-
+
+the deep personal reflection required to
+
+ing cultural transformation is a personal
+
+begin a cultural transformation. This is
+
+journey to understand what each of
+
+no trivial task. For many and perhaps
+
+these guiding principles mean concep-
+
+most, fully embracing these principles
+
+requires a fundamental re-thinking of the
+rules of engagement used to get to where
+they are.
+At a minimum, leaders must be curious
+enough to experiment with the principle.
+John Shook at the Lean Enterprise Institute taught us that it is often impossible to “think our way into a new way
+of acting.” Rather, guided by correct
+principles, one may do, observe, learn
+
+If we encourage, enable or simply allow
+a culture to emerge where employees
+are thought of merely as an unfortunate cost burden or that the smartest
+people are those that rise to the top,
+the consequence will be a workforce
+that is not fully engaged. Ideas for improvement are never articulated and
+acted on, people feel unfulfilled in their
+work and turnover is very high. Labor
+costs become excessively high, busi-
+
+The passionate pursuit of perfection, even
+knowing it is fundamentally impossible to achieve,
+brings out the very best in every human being.
+and then do something else until we “act
+our way into a new way of thinking.” By
+carefully analyzing the cause-and-effect
+relationship between principles and results, a leader will begin to shift their own
+beliefs about what drives optimal business performance. After gaining this new
+insight, it becomes the effective leader’s
+primary responsibility to see that others
+in his/her organization have experiences
+where they can gain the same insight.
+Leaders who choose to disregard the
+principles that govern business outcomes do so at great peril. Whether
+we acknowledge them or not, the
+principles of operational excellence
+always govern the consequence of
+our leadership and management
+behaviors. An example may help.
+
+ness systems stagnate and innovation
+is not fast enough to compete in a rapidly changing business climate. Unwise
+leaders see this as a validation of what
+they believed rather than the disappointing end of a self-fulfilling prophesy.
+When people understand principles for
+themselves, the “why,” they become
+empowered to take personal initiative.
+Leaders who teach associates the
+principles behind the tactics or the tools
+can be confident that innovation from
+each individual will be pointed in the right
+direction. It is not necessary for a leader
+to define every ideal behavior for others.
+If the principle is truly a principle, people
+Dr. Shingo understood this and taught that the
+primary role of a leader is to drive the principles of operational excellence into the culture.
+
+THE SHINGO MODEL
+
+15
+
+with different values will readily be able to
+define ideal behavior for themselves and,
+over time, behaviors become consistent
+even in a diverse environment.
+
+strategically influence people’s behavior
+
+When leaders precisely define the
+detailed and expected behaviors for
+everyone else, resentment builds. It
+conveys mistrust and makes people
+feel incompetent.
+
+A tool is nothing more than a point solution
+
+Aligning the Systems with
+Principles
+All work in organizations is the outcome
+of a system. Systems must be designed
+to produce a specific end goal, otherwise
+they evolve on their own. Systems drive
+the behavior of people or rather they
+create the conditions that cause people
+to behave in a certain way. One of the
+outcomes of poorly designed systems is
+enormous variation in behavior or even
+consistently bad behavior. Variation in
+behavior leads to variation in results.
+Operational excellence requires ideal
+behavior that translates into consistent
+and ideal results.
+
+16
+
+toward the ideal.
+The Enabling Role
+of Improvement Tools
+or a specific means to a specific end. Dr.
+Shingo referred to tools as techniques
+for problem-solving, necessary but not
+sufficient. He taught that tools should be
+selected to enable a system to perform
+its intended purpose. In many ways, a
+system may be thought of as a collection
+of tools working together to accomplish
+an intended outcome. A successful
+enterprise is usually made up of complex
+business systems that can be further
+divided into layers of sub-systems, each
+having embedded in them the necessary
+tools to enable the successful outcome
+of the system.
+Powerful organizations are made up of powerful people who understand the principles
+that govern their successful contribution.
+Perhaps the largest mistake made by
+
+Dr. Shingo also taught that the primary role
+of managers must shift from firefighting to
+designing, aligning and improving systems.
+
+corporations over the last three or four
+
+The Shingo transformation process
+illustrates the critical need to align every
+business, management and work system
+of the organization with the principles of
+operational excellence.When systems
+are properly aligned with principles, they
+
+for their improvement efforts. Tools do
+
+decades has been the inappropriate
+focus on a specific tool-set as the basis
+not answer the question of “why” only the
+question of “how.” Knowing the “how”
+without understanding fully the “why”
+leaves people waiting for instructions and
+powerless to act on their own.
+
+Dimension One
+
+D 1 : Cultural Enablers
+
+18
+
+Cultural enablers make it possible for
+people within the organization to engage
+in the transformation journey, progress
+in their understanding and, ultimately,
+build a culture of operational excellence.
+
+There is also a need for humility on the part
+
+Operational excellence cannot be
+achieved through top-down directives
+or piecemeal implementation of tools.
+It requires a widespread commitment
+throughout the organization to execute
+according to the principles of operational
+excellence. A culture must be developed
+where every person in the organization
+demonstrates a high level of respect for
+every other person. Developing a culture
+of mutual respect and humility takes a
+consistent commitment over a sustained
+period of time.
+
+willing to abandon ownership, bias and
+
+Principle – Lead with Humility
+One common trait among leading practitioners of operational excellence is a
+sense of humility. Humility is an enabling
+principle that precedes learning and
+improvement. A leader’s willingness to
+seek input, listen carefully and continuously learn creates an environment where
+associates feel respected and energized
+and give freely of their creative abilities.
+
+systems embody a philosophical and
+
+of all members of an organization. Ideas
+can come from anywhere. One can learn
+something new from anyone. Improvement is only possible when people are
+prejudice in their pursuit of a better way.
+
+Supporting Concept
+Assure a Safe Environment
+
+There is no greater measure of respect
+for the individual than creating a work
+environment that promotes both the
+health and safety of employees and the
+protection of the environment and the
+community. Environmental and safety
+cultural commitment that begins with
+leadership. When leadership is committed, then the organization creates
+and supports appropriate systems and
+behaviors.
+
+In short, safety is first!
+
+Supporting Concept
+Develop People
+
+People development has emerged as an
+important and powerful cultural enabler
+and goes hand-in-hand with principles of
+operational excellence. Through people
+development, the organization creates
+the “new scientists” that will drive future
+improvement. People development is
+far greater than just classroom training. It includes hands-on experiences
+where people can experience new ideas
+in a way that creates personal insight
+and a shift in mindsets and behavior.
+An organization’s leaders must be committed to developing people and expanding the knowledge base. Leaders come
+to realize that expenses for education and
+training are necessary investments for
+long-term health; as such, the commitment to this investment does not waver.
+
+Supporting Concept
+Empower and Involve Everyone
+
+For an organization to be competitive,
+the full potential of every single individual
+must be realized. People are the only
+organizational asset that has an infinite
+capacity to appreciate in value. The
+challenges of competing in global
+markets are so great that success can
+
+only be achieved when every person at
+every level of the organization is able
+to continuously innovate and improve.
+Elimination of barriers to that innovation
+becomes the responsibility of management.
+Fundamental to the Shingo model is the
+concept of teaching people the key principles (the “why”) behind everything they
+do. When people understand why, they
+become empowered to take personal
+initiative. Managing a team of people who
+share a deep understanding and commitment to the key concepts and principles
+is much easier than managing the work
+of those who are only doing what they
+are told. Empowered employees who
+understand relevant principles are far
+more likely to make good decisions
+about the direction and appropriateness
+of their ideas for improvement.
+Similarly, when employees have a clear
+sense of direction and strategy and have
+a real-time measure of contribution, they
+become a powerful force for propelling
+the organization forward.
+Principle – Respect Every Individual
+Respect is a principle that enables the
+development of people and creates an
+environment for empowered associates
+to improve the processes that they
+“own.” This principle is stated in the
+
+THE SHINGO MODEL
+
+19
+
+Lead with Humility
+Because I lead with humility (the principle); therefore, I am open to good
+ideas and innovation from anywhere in the organization (the value). Because I
+lead with humility (the principle); therefore, I accept responsibility and enable
+change (the value). Because I possess humility (the principle); therefore, I seek,
+trust and follow the direction of those with a responsibility to lead (the value).
+
+Respect Every Individual
+Because we respect every individual (the principle); therefore, we always place safety
+first (the value). Because we have respect for every individual (the principle); therefore,
+we empower people to act independently (the value). Because we have respect for
+every individual (the principle); therefore, we make all of our key communications open.
+
+context of “every individual” rather than
+“for people” as a group. Respect must
+become something that is deeply felt for
+and by every person in the organization.
+Respect for every individual naturally
+includes respect for customers, for suppliers, for the community and for society
+in general. Individuals are energized
+when this type of respect is demonstrated. Most associates will say that
+to be respected is the most important
+thing they want from their employment.
+When people feel respected, they give
+far more than their hands; they give their
+minds and hearts.
+
+such as safety first, empowerment or
+open communication often fails to create
+uniform ideal behaviors throughout the
+enterprise. This is because these values
+are “whats” that fail to answer for people
+the question of “why.” The principle
+“Respect Every Individual” answers the
+question of “why.”
+
+Respect for every individual becomes a
+powerful “why” for many of the values
+espoused by great organizations. For
+example, simply stating important values
+The table on the following page will provide examples of ideal behavior for leaders, managers and associates.
+The list is intended to provide examples of ideal behavior that flow from two guiding principles and should not in
+any way be considered as an exhaustive list.
+
+20
+
+Examples of Ideal Principle-based Behavior
+Leaders
+
+All leaders routinely spend time at the actual work locations where the
+actual work is performed.
+Leaders continuously seek the input of others, listen to their input and
+adapt their actions based on what they learn.
+Leaders in all areas demonstrate a willingness to learn and publicly acknowledge important insights they have gained.
+Leaders take responsibilitiy for applying principles of operational excellence in their own lives and ensure these principles become the foundation of organizational culture.
+Leaders engage people at all levels in defining ideal, principle-based
+behaviors and support managers in the alignment of all business and
+management systems.
+Leaders develop systems to ensure they remain publicly accountable for
+their own principle-based behavior seeking feedback from all levels and
+across the entire enterprise.
+Leaders ensure products and services do not have an unintended negative impact on the sustainability of communities and the planet.
+
+Managers
+
+All managers constantly work with others to better align systems with
+ideal behaviors as defined by the guiding principles.
+Managers act as coaches and mentors to others in the execution of
+principle-based systems and are constantly receiving personal and organizational feedback for improvement.
+All managers are visible in the work space and demonstrate an openness to listen and learn from others.
+Managers across the enterprise ensure associates have the information
+they need to be successful in their work and push decisions out and
+down to the appropriate levels.
+Managers create a safe and productive work environment, keeping the
+safety of all associates as the highest of all priorities.
+Managers regularly review the skills and competencies required of all associates and work with each one to provide appropriate opportunities for
+associates to gain new insight.
+Managers ensure appropriate systems are in place to protect the environment and support for the communities where they are located.
+
+Associates
+
+All associates, every day, demonstrate a commitment to the policies,
+principles and standards developed for the areas in which they work.
+Associates seek out and learn from others in the organization including leaders, managers and peers.
+All associates take full responsibility for their own personal development
+in relation to their contribution to the enterprise.
+Associates demonstrate an eagerness to learn new skills, take initiative and
+share their learning and success with others.
+THE SHINGO MODEL
+
+21
+
+Dimension Two
+
+22
+
+D2: Continuous Process
+Improvement
+Continuous improvement begins by
+clearly defining value through the eyes of
+customers. Expectations must be clearly
+communicated so systems can be designed to meet customer needs. Every
+employee must know “what good is,”
+whether his or her process is creating
+good product or service, and they must
+know what to do if it is not.
+As associates learn to identify and eliminate waste, they will, by necessity,
+follow Dr. Shingo’s advice: “Improvement means the elimination of waste,
+and the most essential precondition for
+improvement is the proper pursuit of
+goals. We must not be mistaken, first
+of all, about what improvement means.
+The four goals of improvement must be
+to make things easier, better, faster and
+cheaper.” Particular emphasis is placed
+on a quicker, more flexible response
+throughout the system.
+The focus for continuous improvement
+cannot be only quality or cost but instead must incorporate all aspects of
+value as perceived by the customer, including innovation, quality, cost, flexibil-
+
+ity, quick delivery and a comprehensive
+view of environmental health and safety.
+Continuous improvement focused on
+flow of value requires both scientific
+thinking and the capacity to identify and
+eliminate waste (things that interrupt the
+continuous flow of value).
+Principle – Focus on Process
+A process focus recognizes that all outputs, whether product or service, are created by processes acting upon inputs.
+This simple truth is often overlooked:
+Good processes will produce the intended output, as long as proper inputs
+are provided.
+Process focus also helps focus problem-solving efforts on process rather
+than people. A complete shift to process focus eliminates the tendency to
+find the culprit (person) who made the
+mistake but rather leads to a pursuit of
+the real culprit (process) that allowed
+the mistake to be made. Thus, process
+focus also supports the cultural enablers,
+creating an environment where learning
+
+THE SHINGO MODEL
+
+23
+
+“Simplicity is the ultimate
+sophistication.” Leonardo Da Vinci
+from mistakes can become a powerful element of continuous improvement.
+Principle –
+Embrace Scientific Thinking
+A focus on process lends itself to scientific thinking, a natural method for learning and the most effective approach
+to improvement. All associates can be
+trained to use scientific thinking to improve the processes with which they
+work, creating a culture that provides
+common understanding, approach and
+language regarding improvement. Scientific thinking is also results-based,
+placing a premium on defining and communicating desired outcomes throughout the organization.
+There are a variety of models for scientific thinking, such as PDCA (plan,
+
+Principle – Flow and Pull Value
+Flow thinking is the focus on shortening
+lead-time from the beginning of the value
+stream to the end of the value stream
+and on removing all barriers (waste) that
+impede the creation of value and its delivery to the customer. Flow is the best
+driver to make processes faster, easier,
+cheaper and better. Other potential drivers such as unit cost or process variability are too narrowly focused, distorting
+priorities and delivering suboptimal results. A cost focus is particularly dangerous when it creates perverse incentives
+and budget manipulations incidental to
+actual improvement.
+Pull is the concept of matching the rate
+of production to the level of demand,
+the goal in any environment. Yet pull
+is not feasible or cost-effective without
+the flexibility and short lead times that
+result from flow.
+
+do, check and adjust), the QI Story, A3
+thinking and DMAIC (define, measure,
+analyze, improve and control).
+
+24
+
+Flow and pull create enormous
+positive benefits in all aspects in any
+
+business. Focusing on flow will lead to
+improvements, including better safety
+and morale, more consistent quality
+with fewer defects, increases in ontime delivery and flexibility and lower
+costs, without running into the traditional
+trade-offs. In addition, daily and weekly
+results become more consistent and
+predictable.
+
+Principle – Seek Perfection
+It is important to understand that the
+continuous process improvement journey has no end. This explains Dr. Shingo’s philosophy that one should always
+look for problems where there doesn’t
+appear to be any. This is contrary to the
+traditional belief: “If it isn’t broken, don’t
+fix it.” The pursuit of perfection reveals
+
+Principle –
+Assure Quality at the Source
+Assuring quality at the source is
+the combination of three important
+concepts: (1) do not pass defects
+forward, (2) stop and fix problems and
+(3) respect the individual in the process.
+Defects are a source of instability and
+
+that there are always opportunities for
+improvement. There is always waste,
+and the more a process is observed the
+more waste will be seen. While focus
+on process guides and directs the improvement efforts, seeking for perfection is the engine that keeps improve-
+
+The pursuit of perfection reveals that there
+are always opportunities for improvement.
+waste so assuring quality at the source
+requires the establishment of processes
+for recognizing errors in the process
+itself. Organizations must commit to
+stopping and fixing processes that are
+creating defects, rather than keeping
+products or services moving while
+planning to fix the issue later. Proper use
+of the human element in the process for
+thinking, analysis, problem solving and
+the implementation of countermeasures
+is vital to continuous improvement.
+
+ment energized and moving forward at
+an aggressive pace. The term problemsolving may imply that after a solution
+is implemented, improvement is done.
+Seeking perfection and scientific thinking combine to find countermeasures,
+not game-ending solutions, and then
+revisits the issue again and again, pursuing perfection without really expecting to find it.
+
+THE SHINGO MODEL
+
+25
+
+Supporting Concept
+Stabilize Processes
+
+Stability in processes is the bedrock
+foundation of any improvement system,
+creating consistency and repeatability.
+Stability is a prerequisite for improvement providing a basis for problem
+identification and continuous improvement. Almost all of the continuous improvement principles rely on stability.
+
+Supporting Concept
+Insist on Direct Observation
+
+Stability is the precursor to achieving
+flow. Many of the rationalizations for
+waste are based on the instability of processes, as if they are beyond our control.
+Instead, we should apply the basic tools
+available to reduce or eliminate instability and create processes that enable the
+identification and elimination of waste.
+
+Direct observation is a supporting principle tied to scientific thinking. It is in fact
+the first step of the scientific method.
+Direct observation is necessary to truly
+understand the process or phenomenon being studied. All too frequently,
+perceptions, past experience, instincts
+and inaccurate standards are misconstrued as reality. Through direct observation, reality can be seen, confirmed
+and established as the consensus.
+
+Supporting Concept
+
+Supporting Concept
+
+S u p p o rStandardize
+ting
+Concept
+–
+Processes
+Standardize
+Processes
+While stability is a necessary precondition for creating flow and improvement,
+standardization builds control into the
+process itself. Standardization is the
+supporting principle behind maintaining improvement, rather than springing
+back to preceding practices and results.
+Standardization also eliminates the need
+to control operations through cost standards, production targets or other traditional supervisory methods. When stan-
+
+26
+
+dardization is in place, the work itself
+serves as the management control
+mechanism. Supervisors are freed up for
+other tasks, when they are not “required”
+to monitor and control the work process.
+
+Focus on Value Stream
+
+Flow and pull value combined with focus
+on process lead to the necessity of defining value streams and focusing organizational attention on them. A value
+stream is the collection of all of the necessary steps required to deliver value to
+the customer. Defining what customers
+value is an essential step to focus on
+the value stream. Clearly understanding
+the entire value stream, however, is the
+only way for an organization to improve
+
+the value delivered and/or improve
+the process by which it is delivered.
+
+Supporting Concept
+
+Supporting
+Concept
+Keep
+it Simple–&Keep
+Visualit Simple
+& Visual
+In society today there is frequently a
+bias toward complex solutions and a
+premium paid to those who seem to
+manage complexity well. However, it is
+usually the case that better results at a
+lower cost can be achieved by simplification. Dr. Shingo’s life work in mistake
+proofing is centered on this principle.
+Many of the seven forms of waste are
+in fact the result of information deficits.
+Making information visual is the supporting principle that when combined with simplification solves the information deficits.
+
+Supporting Concept
+
+Supporting
+Concept
+–
+Identify
+and Eliminate
+Waste
+Identify and Eliminate Waste
+Identification and elimination of waste
+is a practical concept for making processes flow, thus it becomes a primary
+focus of continuous improvement. Waste
+elimination is a powerful supporting principle because it is easily understood by
+everyone associated with a value stream,
+compared to the complex concepts and
+computations often associated with cost
+per unit, cost variances, statistical variability and other complex metrics. Focus-
+
+ing on the elimination of waste will consistently drive appropriate behavior, while
+the wrong focus can frequently become
+a barrier to improvement, large inventory write-downs, fire sales or scrap.
+One way to view waste is that it is
+anything that slows or interrupts the
+continous flow of value to customers. In the end, identifying and eliminating waste is a concept that effectively engages the entire organization
+in the continuous improvement effort.
+
+Supporting Concept
+
+Supporting
+Concept
+– Forward
+No Defect
+Passed
+No Defect Passed Forward
+This concept is essential for operational excellence from many different
+points of view. From a leader’s perspective, it requires great courage to
+stop the process long enough to understand the root cause and take counter-measures that prevent the process
+from reoccurring. For the leader, this
+often means trading any short-term
+loss for substantial long-term gain.
+From a manager’s perspective, systems must be in place to ensure that
+any result that varies from the standard, even slightly, creates an expectation of and support for immediate
+action. We often call this “swarming.”
+From an associate’s point of view, “no
+defect passed forward” requires a mindset of ownership and accountability. If
+
+THE SHINGO MODEL
+
+27
+
+standards are clearly defined, every
+
+that will enhance the value (or eliminate
+
+person should know what good is. Lead-
+
+the waste) and thus pursue perfection.
+
+ers and managers should role model
+
+Each person in an organization per-
+
+then create the conditions for associ-
+
+forms daily work. When improvement
+
+ates to develop the mindset of personal
+
+is integrated with work, each person
+
+integrity; meaning, that no one would
+
+accepts responsibility for improvement
+
+“Everything should be made as simple as
+Albert Einstein
+possible but not simpler.”
+ever knowingly or willingly forward the
+
+of the daily work processes. Executives
+
+outcome of their value contribution to
+
+are responsible for improving strategy
+
+someone else if it contained the slight-
+
+setting processes or perhaps resource
+
+est variation from the standard.
+
+alignment processes. They are primarily responsible to deploy mission-critical
+
+This supporting concept feeds the mind-
+
+strategy and metrics down into the orga-
+
+set and tools of continuous improvement
+
+nization such that every person not only
+
+and creates the conditions for seeking
+
+has a clear line of sight to what matters
+
+perfection. It is possible to achieve per-
+
+the most but are also motivated by the
+
+fection in the application of this concept.
+
+mission in a way that creates a compelling case for improvement.
+
+Supporting Concept
+
+Supporting Concept –
+
+Managers are responsible for improving
+
+Integrate Improvement with Work
+
+quality systems, or performance devel-
+
+As the migration toward a principle-
+
+opment systems or value stream flow.
+
+based culture occurs, the activities and
+
+Line workers are responsible for improv-
+
+approaches for continuous improvement
+
+ing their cycle times, or quality of work
+
+become a part of the everyday work of
+
+or yields. Integrating improvement with
+
+every employee in an organization. Asso-
+
+work is more than assigning responsi-
+
+ciates become “scientists” who continu-
+
+bility. It entails the creation of standard-
+
+ally assess the current state of their pro-
+
+ized work that defines systems for im-
+
+cesses and pursue a better future state
+
+provement.
+
+Integrate Improvement with Work
+
+28
+
+Supporting Concept –
+Supporting Concept
+Rely on Data
+Facts
+Rely&on
+Data & Facts
+Shingo emphasized the importance
+of being data-driven in the pursuit of
+continuous improvement. He frequently
+shared examples of specific situations
+where data was collected, but it was
+not the correct data or the data wasn’t
+actually being used in the improvement
+process. Finally, he was adamant
+that the understanding of the actual
+process be so detailed that when
+
+implementing a change in the process,
+the improvement, as evidenced by
+the data, could be predicted. Thus,
+reconciliation is required between the
+predicted results and the actual results,
+making the improvement process truly
+data-driven. The principle is that when
+data is treated loosely or imprecisely,
+there is a tendency to leave potential
+improvement on the table or, even
+worse, to not achieve any improvement
+at all.
+
+The following table provides examples of ideal behavior for leaders, managers and associates. The list is intended
+to provide examples of ideal behavior that flow from this single guiding principle and should not in any way be
+considered as an exhaustive list.
+
+Examples of Ideal Principle-based Behavior
+Leaders
+
+Every leader devotes a significant amount of his/her time (up
+to 80 percent) ensuring the principles of continuous improvement are deeply embedded into every facet of the organizational culture.
+Every leader consistently evaluates their own behavior related
+to each of the principles.
+Leaders ensure continuous improvement is a part of their
+daily standard work and are accountable to others for their
+improvement.
+Leaders in all areas create a healthy tension between celebrating accomplishments and setting goals to move to the next
+level.
+All leaders in every area of the organization encourage the
+establishment of stretch goals and encourage managers and
+associates to push themselves to levels of performance that
+do not seem possible.
+
+THE SHINGO MODEL
+
+29
+
+Leaders consistently ask for and expect to see the application
+of appropriate tools to understand root cause prior to implementing countermeasures.
+Leaders expect and support the role of managers in designing
+and constantly improving systems at the business, management, improvement and work levels as the first course of
+action when results are less than expected.
+Every leader understands and balances the organizational
+focus on both behaviors and results, holding themselves and
+others accountable for both.
+
+Managers
+
+Managers in all areas devote a significant amount of their time
+(up to 80 percent) ensuring the management systems of the
+organization are perfectly aligned to drive ideal principle-based
+behavior.
+All managers participate with associates as required on improvement initiatives.
+Managers demonstrate knowledge of appropriate tools and
+use them regularly to solve problems related to their areas
+of responsibility.
+All managers watch for and appropriately recognize associates for both demonstrating ideal behavior and for achieving
+business goals.
+
+Associates
+
+Every associate in every part of the organization is engaged
+every day in using the appropriate tools of continuous improvement to eliminate waste and maximize value creation.
+Associates everywhere seek to understand the principles (the
+why) behind the tools (the how); they learn and use that knowledge to continuously improve the application of the tools.
+All associates demonstrate the courage and integrity to tell the
+truth, stop production and be accountable for defects they
+observe or create themselves.
+Associates share their expertise in developing best practice standard work and demonstrate the discipline to follow it until a better
+way has been developed.
+
+30
+
+Dimension Three
+
+THE SHINGO MODEL
+
+31
+
+D3: Enterprise Alignment
+One of the most significant failures of
+modern management is its focus on
+
+when business strategies are aligned
+with correct principles.
+
+strategy and planning without considering execution. To succeed, organizations must develop management systems that align work and behaviors with
+principles and direction in ways that are
+simple, comprehensible, actionable and
+standardized. We call this “Principlebased Strategy Deployment.” Individual leaders cannot develop individual
+approaches to management without introducing massive waste into an organization.
+Strategy deployment requires a management system built around scientific
+thinking, with more emphasis on cycles
+of learning than on perfect plans. It is essential to establish effective communication, a process for gaining consensus,
+clear accountability and systems where
+execution and countermeasures are
+planned and tracked, whether through
+
+The sum of individual efforts rarely even
+approximates the effective alignment
+of the pieces into a single integrated
+whole. Creating value for customers is
+ultimately accomplished through the effective alignment of every value stream
+in an organization.
+Principle –
+Create Constancy of Purpose
+Almost every aspect of any organization is always in a constant state of
+change. Customers change, customer’s expectations change, competitors
+change, markets change, technology
+changes, leadership and management
+changes, processes change, products
+change, strategies change, even values
+or the implied meaning of those values
+change. Even knowing this, the first of
+W. Edwards Deming’s “14 Points” is to
+create constancy of purpose. How is
+this possible?
+
+PDCA or a similar methodology. In essence, operational excellence is the definition of successful strategy deployment
+
+32
+
+Purpose, at the highest level answers the
+question: “Why does this organization
+
+exist?” It is incumbent upon leaders to
+find agreement on philosophical and
+strategic direction that provides a unifying vision. This sense of direction helps
+people keep their eyes on the horizon
+so that when tactical decisions require
+a temporary detour, they understand
+why and can contribute to getting back
+on track.
+The second category for where constancy of purpose can be achieved is
+in the establishment of the guiding principles upon which the organization is
+grounded. Principles are universal, timeless and self-evident laws that govern
+the consequences of our actions. The
+degree to which principles are adhered
+will always impact the long-term success
+of any organization. Leaders must come
+to understand which principles have the
+greatest impact on their results and then
+make certain every aspect of the organization is aligned to drive behavior that is
+in greatest harmony with the principles.
+Having established direction and guiding
+principles, a leader must align strategy
+and performance metrics broadly and
+deeply into the organization. A system
+must be built to ensure constant communication, both up and down.
+Changes in direction, guiding principles
+and key metrics should be treated like
+
+changes in the national constitution. Organizations that frequently redirect philosophies and strategies fail to recognize the tremendous waste associated
+with instability, fluctuation and, perhaps
+most importantly, the loss of human
+commitment.
+Principle – Think Systemically
+Systemic thinking is the principle that
+unifies all the other principles of operational excellence and enables organizations to sustain their culture of continuous improvement and develop a
+constancy of purpose.
+Systemic thinking requires organizations
+to both analyze and synthesize. Analysis, or convergent thinking, is focused on
+taking things apart to see what can be
+learned from the various components.
+We call this “looking into things.” Convergent thinking is what leads us to focus
+on the “how.” Synthesis, or divergent
+thinking, is focused on seeing how things
+might work together. We call this “looking
+out of things.” Divergent thinking is what
+leads us to focus on the “why.” Operational excellence requires both.
+Leaders realize that the impact of synergy — how things work together — is
+far greater than the sum of the parts.
+As managers design and align systems
+with correct principles, they must shift
+
+THE SHINGO MODEL
+
+33
+
+from thinking purely analytically to thinking systemically.
+As managers move into systemic thinking, the full value of operational excellence is realized across the organization, the enterprise and ultimately the
+entire value chain. As associates adopt
+systemic thinking practices, they gain
+the necessary perspective to safely initiate improvement projects on their own.
+Ultimately, this understanding is what
+allows improvement effort to transition
+from being solely top-down to more of
+a grassroots effort.
+
+Supporting Concept
+
+Supporting Concept
+–
+See Reality
+See Reality
+This is a very important concept. Most
+managers and leaders consider themselves quite capable of seeing the world
+around them and assessing the current
+situational realities. However, Dr. Shingo
+teaches that people can have blind spots
+created by long-held paradigms, experience, history, expectations, etc. Thus
+the practice of “go and see” was developed based on the principle that reality
+needs to be perceived and understood
+based upon the five senses.
+Most organizations create barriers that
+make it very difficult for people to see
+and tell the truth about what they see.
+
+34
+
+A recently retired US senator wrote that
+having travelled on numerous trips with
+other political and military leaders to
+areas of serious world conflict, his greatest disappointment was that virtually all
+of their assessments of progress were
+greatly distorted from the actual data
+they observed.
+Further, most organizations unintentionally build cultures that prevent the free
+flow of information that communicates
+an honest picture of reality. Max De Pree
+said, “The first responsibility of a leader is
+to define reality.” A leader must establish
+systems that make organizational performance and associate behavior transparent to all.
+No leader can effectively lead without
+having a firm grasp of the current business realities.
+
+Supporting Concept
+
+Supporting
+Concept
+– Term
+Focus
+on Long
+Focus on Long-term
+Jeffrey Liker highlights the principle
+of long-term focus, which provides a
+foundation of stability in the executive
+suite that can be achieved in no other
+way. When an organization creates a
+long-term focus, it is more likely that
+decisions will in fact pursue safety,
+quality, delivery and cost rather than just
+monthly or quarterly financial targets or
+
+bonus cut-offs. In conjunction with taking
+care of the short- and medium-term
+priorities, thinking in terms of 20- to 50year legacy goals significantly reduces
+the tendencies for knee-jerk reactions
+to urgent pressures.
+
+empowering the organization through
+cascading levels of detail to achieve
+those objectives. Because so many
+people are involved, clarity is critical. An
+aligned strategy helps keep everyone,
+literally, on the same (single) page and
+pointed in the same direction.
+
+Supporting Concept
+
+Supporting
+Concept
+–
+Align Systems
+Align Systems
+From the stakeholders’ perspective,
+the full potential is realized only when
+most critical aspects of an enterprise
+share a common platform of principles
+of operational excellence, management
+systems and tools. While it is expected
+that organizations develop some unique
+elements of their local culture, it is also
+expected that principles become a
+common, unifying part of each locale.
+Top-level leadership, staff and business
+processes should exemplify the same
+principles, systems and tools as do
+the operational components of the
+enterprise.
+
+Supporting Concept
+
+Supporting
+Concept
+–
+Align Strategy
+Align Strategy
+Policy deployment is a planning and
+implementation system, based on
+scientific thinking, employee involvement
+and respect for the individual. At the
+strategy level, policy deployment provides
+leadership with the necessary principles,
+systems and tools to carefully align key
+objectives and execution strategies while
+
+Supporting Concept
+
+Supporting
+Concept
+Standardized
+Daily– Management
+Standardized Daily Management
+The concept of having some level of
+detailed work description for how to
+actually do daily work applies at all levels
+of the organization. Regardless of the
+perception among many leaders, their
+work can and should be organized into
+standard components.
+Standard daily management creates a
+reference point from which continuous
+improvement can be based. Standard
+daily management can lead to greater
+process control, reduction in variability,
+improved quality and flexibility, stability
+(i.e. predictable outcomes), visibility of
+abnormalities, clear expectations and a
+platform for individual and organizational
+learning. Standard daily management
+enables creativity that is focused and
+controlled rather than ad hoc.
+Leaders who follow standard work send
+a clear message that they are serious
+and no one is above continuous
+improvement.
+
+THE SHINGO MODEL
+
+35
+
+The following table provides examples of ideal behavior for leaders, managers and associates. The list is intended
+to provide examples of ideal behavior that flow from these two guiding principles and should not in any way be
+considered as an exhaustive list.
+
+Examples of Ideal Principle-based Behavior
+Leaders
+
+All leaders share a common, clear and compelling vision of the
+future and talk about it in a consistent way everywhere they
+go.
+Leaders create and consistently execute a system of “catch
+ball” to present ideas on strategy down and across the organization, receive feedback and build organizational consensus.
+Leaders establish a simple system of metrics and accountability that aligns and prioritizes the work, decision making and
+improvement efforts of the organization.
+Leaders focus both on results and behavior, setting targets
+and accountability for both.
+
+Managers
+
+Managers ensure a continuous flow of information (both
+horizontally and vertically) to associates, making sure they fully
+understand the context for their work and the goals they set.
+Managers develop systems to ensure all associates understand
+strategy, tactics and metrics and know how their work contributes.
+All managers ensure people have enough information and a
+broad enough perspective to know the implications of their
+recommendations and actions.
+
+Associates
+
+Associates ask questions that expand thinking to the broader
+context beyond their own jobs.
+
+Associates seek job experiences that broaden their perspective.
+All associates know the performance and behavioral metrics
+for their area, use them to create personal and team improvement and connect their work with company goals.
+
+36
+
+Dimension Four
+
+THE SHINGO MODEL
+
+37
+
+D4: Results
+All leaders of organizations share one
+common responsibility: they are responsible for results. Great results are
+the outcome of following the principles
+that govern the results. Ideal results require ideal behavior. This is what we call
+operational excellence.
+
+Principle –
+Create Value for the Customer
+Every aspect of an organization should
+be focused on creating value for the
+customer. It is helpful to consider this
+true-north concept that should guide
+decision making and continuous improvement. An organization should drive
+all aspects of value, including quality,
+cost, delivery, safety and morale.
+
+Supporting Concept
+
+Supporting
+Concept
+Measure
+what– Matters
+Measure what Matters
+Historically, measurement has been focused on management – what management needed to know to be able
+to plan, organize and control. Within a
+model where widespread involvement
+is essential for continuous improvement
+
+38
+
+and consistent performance, it is important to define measures that matter to
+those who will be using them. Therefore,
+line associates need different measures
+than leaders responsible for the overall enterprise. Many thought leaders on
+measurement have suggested the new
+measurements need to: 1) be directly
+tied to strategic priorities – move the
+dial, 2) be simple and easy to capture,
+3) give timely feedback that is tied to the
+cycle of work and 4) drive improvement.
+Measures that matter can be created
+throughout the organization to assure
+that everyone is focused on the appropriate strategic activities and driving
+continuous improvement that moves
+the whole enterprise ahead.
+
+Supporting Concept
+Align Behaviors with Performance
+
+Ideal behavior drives long-term results.
+This happens when the systems are
+aligned with principles of operational
+excellence. Managers should help each
+person anchor their own personal values
+with these same principles. Personal
+
+values are what ultimately drive individual behaviors. Leaders are responsible for creating the environment and
+the process for people to evaluate the
+correctness of their own values relative
+to the performance results required of
+the organization.
+One business set a goal to reduce customer complaints only to find that as
+they did, they began to lose valuable
+customers. The measure was driving
+behavior that made complaining such a
+painful experience that they just stopped
+calling. A better measure might have
+been to increase the number of complaints so that every single disappointment is given an opportunity to be resolved.
+
+So, the “dial” is the speedometer. What
+moves the dial? Pressing on the gas
+pedal. Why does this work? Because
+there is a physical linkage from the pedal
+to the engine to the axle. There is a clear
+cause-and-effect relationship.
+Organizations must follow the linkages to determine the cause-and-effect relationships and how goals can
+be achieved. This is the same concept
+as root-cause analysis but applied to
+creating value.
+
+Supporting Concept
+
+Supporting
+Concept
+– Relationships
+Identify Cause
+and Effect
+Identify Cause & Effect Relationships
+When we want to make a car go faster,
+we simply press more on the gas pedal.
+
+The following table provides examples of ideal behavior for leaders, managers and associates. The list is intended
+to provide examples of ideal behavior that flow from this single guiding principle and should not in any way be
+considered as an exhaustive list.
+
+THE SHINGO MODEL
+
+39
+
+Examples of Ideal Principle-based Behavior
+Leaders
+
+Leaders make sure the company scorecard is balanced between results and behavior.
+Leaders ensure the voice of the customer is clearly heard
+throughout the entire organization.
+Leaders systematically discuss all business results with employees, encouraging questions and discussion.
+
+Managers
+
+All managers implement systems that place value creation and
+waste elimination at the heart of management and improvement efforts.
+Managers routinely discuss with associates the relationship
+between actual results and the systems and principles that are
+creating them.
+Managers make sure that established metrics are aligned
+upward and side-to-side and are understood and committed
+to by the people who affect them, so people can see instantly
+where they are relative to the targets and they know how to
+move the dial.
+
+Associates
+
+All associates systematically review results and ask questions
+to understand cause-and-effect.
+Associates use results metrics to prioritize and take personal
+initiative to make improvements that impact the areas where
+improvement is needed most.
+Associates demonstrate a strong commitment to provide the
+greatest value for customers with the least amount of nonvalue-added resource.
+All associates seek to understand issues from the customers’
+point of view and strive to maximize the uninterrupted flow of
+value to them.
+
+40
+
+Scope of Transformation
+
+THE SHINGO MODEL
+
+41
+
+Scope of Transformation
+Business & Management Systems
+The principles of operational excellence must be applied across all the
+business and management systems.
+The pie in the center of the house represents the scope of transformation within
+an organization, including all basic customer-facing business systems and all
+management support systems. The
+systems associated with each of five
+typical business areas could include:
+
+• Market segmentation and selection
+• Research
+• Development of products or services,
+processes and prototypes
+• New product or service launch
+
+Customer Relations
+
+Operations
+
+• Sales
+
+• Product or service delivery
+
+• Advertising/promotion
+
+• Materials management
+
+• Order processing and tracking
+
+• Process engineering
+
+• Responsive/flexible scheduling
+
+• Maintenance
+
+• Invoicing and collections
+
+• Quality assurance and reliability
+
+• Warranty
+
+• Testing
+
+• Product/service development
+• Business processes
+
+42
+
+Product or Service Development
+
+Supply
+• Supplier selection and qualification
+• Supplier development and partnering
+
+Administration
+• Recruiting
+• Compensation and benefits
+• Training and employee development
+• Employee relations and satisfaction
+• Capital budgeting
+• Budgeting
+• Financial reporting
+• Management accounting reporting
+
+Many, if not all, of these management
+support processes are fundamentally
+non-value-added in a pure lean sense;
+that is, the customer would not pay
+extra for these. However, some part of
+each process is “necessary non-valueadded work” that is currently vital to the
+proper functioning of the organization
+and the eventual effectiveness of the
+value-added processes, (i.e., a company
+needs to pay taxes), but the customer
+doesn’t necessarily get value from the
+process. Applying the principles to these
+processes will help to make sure that
+they are completed as quickly as possible with the fewest possible resources.
+Principles of operational excellence
+should be applied conscientiously in
+all of these business and management
+support processes. As understanding deepens and application spreads
+throughout the entire enterprise, a
+consistent culture develops which is
+self-perpetuating and self-directing.
+
+• Accounts receivable and accounts
+payable (A/R and A/P)
+• Asset management
+• Computer systems and support
+• Computer application design and/or
+support
+• Networking systems and support
+
+THE SHINGO MODEL
+
+43
+
+Summary
+
+44
+
+Summary
+Operational excellence is the vision that
+many organizations have established to
+drive improvement. Programs, names,
+tools, projects and personalities are
+insufficient to create lasting change. Real
+change is only possible when timeless
+principles of operational excellence are
+understood and deeply embedded
+into culture. The focus of leaders must
+change to become more oriented toward
+driving principles and culture while the
+manager’s focus becomes more on
+designing and aligning systems to drive
+ideal principle-based behavior.
+The ultimate mission of The Shingo Prize
+for Operational Excellence is to assist
+organizations of all kinds in building
+operational excellence. The Shingo
+model may be used as a benchmark
+for what excellence at the highest level
+should look like. It may be used to align
+all elements of an organization around a
+common set of guiding principles and a
+proven methodology for transformation.
+Some use the Shingo model as the
+basis for organizational assessment
+and improvement planning. A few use
+the Shingo model as a way to recognize
+their associates for excellent work, and
+others use it to demonstrate to current
+and prospective customers that they can
+
+compete with anyone in the world. Some
+use the Shingo model for all of the above.
+The real Shingo Prize, however, is
+the business results that come from
+the relentless pursuit of a standard of
+excellence that is, without question,
+the most rigorous in the world. Those
+who use the Shingo model will embark
+on a journey that will accelerate the
+transformation of their organization into
+powerful, dynamic, nimble competitors.
+No obstacle – affordable healthcare,
+efficient transportation, emerging
+global environmental concerns – will be
+beyond the reach of those who embrace
+principles of operational excellence.
+Leaders must make certain that every
+person deeply understand the principles
+that govern the consequence of their
+behaviors.
+Principles of operational excellence
+are the only foundation on which
+organizational culture can be built with
+confidence that it will stand the test of
+time. Cultures built on principles and
+eliminate much of the normal variation
+of business and, to a large extent,
+become more predictable in their ability
+to execute on business strategy.
+
+THE SHINGO MODEL
+
+45
+
+THE SHINGO PRIZE
+for OPERATIONAL EXCELLENCE
+
+TM
+
+a world standard...for a global economy
+
+46
+
+THE SHINGO PRIZE FOR OPERATIONAL EXCELLENCE
+Jon M. Huntsman School of Business
+Utah State University
+3521 Old Main Hill
+Logan, UT 84322-3521
+(435) 797-2279
+The Shingo Prize for Operational Excellence is a not-for-profit organization housed at
+Utah State University and named after Japanese industrial engineer Shigeo Shingo.
+The Mission of The Shingo Prize is to create excellence in organizations through the
+application of universally accepted principles of operational excellence, alignment of
+management systems and the wise application of improvement techniques across
+the entire organizational enterprise. We do this by teaching correct principles and
+new paradigms that accelerate the flow of value, align and empower people, and
+transform organizational culture.
+
+http://www.shingoprize.org/
+
+THE SHINGO MODEL
+
+47
+
+Acknowledgements
+We wish to thank various people at The Shingo Prize for Operational Excellence
+and the Jon M. Huntsman School of Business who made up the team that
+provided scholarly work, ideas that significantly enhanced the clarity of the model
+and guidelines, and the content editing. Those most closely involved with the
+project include: Robert Miller, Jacob Raymer, Randall Cook, and Shaun Barker. A
+special thanks to Brian Atwater for his contribution regarding systemic thinking,
+especially the idea to create a systematic process model. We would also like to
+thank the members of our Board of Governors who provided practical insights
+and critical feedback through the years as the Shingo model evolved. Finally,
+each time we teach a course we receive valued input and ideas from our Shingo
+affiliates, whose expertise and friendship we truly value.
+
+THE SHINGO MODEL
+
+48
+
+INDIVIDUAL FOCUS
+
+Core Values Anchored to
+
+GUIDING PRINCIPLES
+AL
+IG
+
+ORGANIZATIONAL FOCUS
+
+E
+
+I
+
+IV
+
+DR
+
+VE
+
+N
+
+FI
+
+DR
+
+AF
+
+RM
+
+Culture
+
+RESULTS
+
+SYSTEMS
+
+(Behavioral Evidence)
+
+RE
+FI
+AC
+
+NE
+
+E
+
+HI
+EV
+iz
+e
+Pr
+go
+in
+Sh
+e
+Th
+™
+
+E
+
+TOOLS
+
+B
+NA
+
+LE
+L
+SE
+
+EC
+
+T
+
+THE SHINGO PRIZE
+for OPERATIONAL EXCELLENCE
+
+TM
 
 
