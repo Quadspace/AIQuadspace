@@ -1,5 +1,10 @@
 from django.urls import path
-from chat_app.views import save_chat_message, get_thread_ids, get_chat_history
+from chat_app.views import (
+    save_chat_message,
+    get_thread_ids,
+    get_chat_history,
+    superuser_login,
+)
 from django.contrib import admin
 
 urlpatterns = [
@@ -7,5 +12,6 @@ urlpatterns = [
     path("api/thread_ids/", get_thread_ids, name="get_thread_ids"),
     path("api/chat_history/", get_chat_history, name="get_chat_history"),
     path("admin/", admin.site.urls),
+    path("superuser-login/", superuser_login, name="superuser_login"),
     # ... other url patterns
 ]

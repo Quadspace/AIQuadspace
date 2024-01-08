@@ -102,3 +102,829 @@ Frequent Updates: Recommends regular updates for drawings and analyses to adapt 
 Industrial Engineer Hiring: Highlights the difficulty and cost of hiring experienced industrial engineers compared to their specialized services.
 
 
+Ultimate Warehouse Capacity Checklist: A Comprehensive Inside-Out Approach
+Designed for Warehouse Operations Managers, Supply Chain Professionals, and Industrial Engineers that
+are focused on optimizing warehouse capacity and operational efficiency. While using this checklist for
+each area, you will quickly collect information and decide if you have adequate capacity, or a shortage,
+or excess capacity. You can spend as much or as little time on each section as you have available for this
+assessment. Striking the balance of collecting all available data and making an informed judgement call is
+the challenge of all business professionals. A few areas should stand out as the most capacity constrained
+and can be prioritized. ** Note: if you complete this checklist on days with unusually light workloads, or at
+the beginning or end of shifts, your results may not be widely applicable. This checklist can be completed
+several times per year and by different team members to get a wider range of input.
+
+Warehouse Area
+1
+1.1
+
+1.2
+
+1.3
+
+2
+2.1
+2.2
+
+2.3
+
+2.4
+
+3
+3.1
+3.2
+3.3
+
+3.4
+
+Measurement & Notes
+
+Capacity Observation
+Assessment
+
+Staffing Levels
+Vacancy % - Number of unfilled
+open positions compared to your
+total staffing numbers. Review for
+each shift.
+Absenteeism % - Number of
+callouts or no shows compared to
+planned headcount. Review for
+each shift.
+Is there a process for calculating
+the required to run staffing levels
+for each department using volume
+data?
+Inventory Storage - Can use WMS, AutoCAD, or physical audit.
+Document total available storage
+locations and compare to active
+SKU count.
+Review inventory stored or staged
+in non-permanent or unlabeled
+locations. This could indicate an
+overall location storage.
+Location utilization % - Calculate
+by counting empty locations and
+compare to total locations.
+Reflect on storage type. If most
+inventory is stored on the floor or
+in low shelving. Could racking could
+provide additional capacity?
+
+Shortage
+
+Adequate
+
+Excess
+
+Shortage
+
+Adequate
+
+Excess
+
+No
+
+Mixture
+
+Yes
+
+Shortage
+
+Adequate
+
+Excess
+
+Shortage
+
+Adequate
+
+Excess
+
+Shortage
+
+Adequate
+
+Excess
+
+Floor
+
+Shelving
+
+Racking
+
+Material Handling Equipment – Refer to a list of equipment organized by type.
+How many pieces of equipment are
+unusable or out of service?
+Does each equipment type have
+effective maintenance plan?
+Compare equipment count to the
+number of trained operators per
+shift
+Is any equipment shared between
+departments leading to waiting or
+delays?
+
+Several
+
+Not
+many
+
+None
+
+No
+
+Some
+
+All
+
+Shortage
+
+Adequate
+
+Excess
+
+Yes
+
+Not often
+
+No
+
+If you would like to review your results, or need help redesigning your warehouse then reach out
+to us at info@quadspace.us
+
+Ultimate Warehouse Capacity Checklist: A Comprehensive Inside-Out Approach
+3.5
+
+Is any equipment specialized, often
+sitting idle?
+
+4
+
+Processing Area Efficiency
+
+4.1
+
+Throughput - Measure completed
+outputs within an hour and divide
+by labor hours used. Repeat each
+process. Compare to desired
+output.
+Evaluate if work areas are
+appropriately sized for inventory
+and equipment needed in the area.
+Repeat each process.
+Waste (Motion) - Observe
+unnecessary movement within work
+areas. Repeat each process.
+Waste (Waiting) - Observe work
+balance, are people waiting on
+more inventory, equipment, or each
+other before they can proceed.
+Waste (Defects) – Are tasks done
+right the first time avoiding rework?
+
+4.2
+
+4.3
+
+4.4
+
+4.5
+
+5
+5.1
+
+5.2
+5.3
+
+5.4
+
+5.5
+
+5.5
+
+Shortage
+
+Adequate
+
+Excess
+
+Shortage
+
+Adequate
+
+Excess
+
+Shortage
+
+Adequate
+
+Excess
+
+Yes
+
+Rarely
+
+No
+
+Yes
+
+Rarely
+
+No
+
+No
+
+Mostly
+
+Yes
+
+Shortage
+
+Adequate
+
+Excess
+
+Mixture
+
+All Flex
+
+Door, Dock, and Staging Lane Management
+Document number of dock doors
+with necessary and optional
+equipment.
+Are doors reserved for inbound,
+outbound, or can be flexed?
+Observe how many doors are used
+simultaneously. Check at least 3
+times more than 4 hours apart.
+Record dock door usage times. Can
+use WMS data or observe.
+**Note** this should be reviewed
+for both manual and machine
+inbounds/outbounds.
+
+All
+Reserved
+Obs 1:
+
+Obs 2:
+
+Obs 3:
+
+>4 hours
+
+2–4
+hours
+
+>2
+hours
+
+Document the total number of
+staging lanes.
+**Note** ideally uniquely identified
+with floor markings and overhead
+signage.
+
+Shortage
+
+Adequate
+
+Excess
+
+Record staging lane dwell times.
+Can use WMS data or observe.
+
+>4 hours
+
+2–4
+hours
+
+>2
+hours
+
+This checklist serves as a starting place roadmap to a highly efficient and productive warehouse.
+Systematically addressing each key area unlocks significant improvements in operational efficiency. The
+material handling equipment section is heavily focused on forklifts. We can provide additional information
+on assessing capacity for conveyors, robotics, and automation.
+To get improvement ideas, follow us on Linkedin https://www.linkedin.com/company/quadspace/ and check out
+our blog https://quadspace.us/blog/. Also keep an eye out for periodic webinars and classes we host.
+
+If you would like to review your results, or need help redesigning your warehouse then reach out
+to us at info@quadspace.us
+
+
+
+Text for references to user answers:
+RMA Planning Guide # 1108
+
+Page 1 of 4
+
+
+Good Practice in Plant Layout and Facilities Planning
+
+Founded in 1956, Richard Muther & Associates has completed more than 1000 layout and facilities planning projects, involving all kinds of plants and warehouses. Our planning methods -- Systematic Layout Planning (SLP), Systematic Handling Analysis (SHA), and Systematic Planning of Industrial Facilities (SPIF) -- are used throughout the world.
+
+Recently, a manufacturing company refused to pay its architect over inadequacies in a newly-constructed building. These included lack of space in key areas, poor placement of key activities, excessive material handling, and increased operating costs.
+
+We were retained as experts to determine if the architect did a competent job and observed good planning practice. We provided the following list as the most important elements of good layout and facilities planning. In our experience, a well-planned project will observe each of the 20 points below.
+
+1.
+
+Written summaries of key input data. This is data about the business and its processes – not the facility or its space requirements. For new plants, the planner should provide charts or tables that clearly contrast historical, current, and projected future data in a way that clearly alerts management and reviewers to the significance of planned changes in:
+Products and materials, especially changes in the numbers of items being
+processed, and in their physical sizes and types.
+
+Quantities: throughput (production volumes) by product (P-Q or product mix).
+
+And for storage facilities and areas, the inventory levels on hand.
+
+Routings, processes, types and sizes of equipment, and sequence of operations.
+
+Supporting services, including tool storage, maintenance, offices, utilities…
+Time-related changes in shifts, working hours, seasonality, etc.
+
+
+This key input information should be gathered, presented and confirmed, before layout planning begins, and re-confirmed at subsequent major reviews and decision points. It is not uncommon for such data to change as people have more time to reflect on implications, and as a wider circle of reviewers see the information that has been provided.
+
+
+The larger the capital investment, and the greater the “fixity” of proposed plans, the longer should be the horizon on input data and trends.
+
+2.
+
+Formal presentation, written analysis and (written) reconciliation of any major differences in the input data. This is done to insure that the best numbers or assumptions are being used, and that everyone involved in planning and approval agrees on the requirements.
+
+RMA – 1108 © Copyright 2002. RICHARD MUTHER & ASSOCIATES
+ALL RIGHTS RESERVED
+
+RMA Planning Guide # 1108
+
+Page 2 of 4
+Good Practice in Plant Layout & Facilities Planning
+
+
+3.
+
+Written list of key planning assumptions and discussion of their consequences if not obvious. Best practice is to rate the significance or import of the assumption on the plans being prepared. The assumptions list should be started early in the planning process and maintained as a “register.” It is typically reviewed periodically in attempts to resolve issues and uncertainties, and as later input to contingency plans.
+
+Open issues should be resolved early in the project whenever possible.
+
+4.
+
+Involvement of a multi-disciplinary team, formally named by the overall project manager as the source of layout relationships and ultimately for approval of the plans developed. When too much of the work, and too many of the decisions are made by the layout planner, then oversights are sure to result. To guard against this, the planner should lobby senior management to name a team.
+
+5.
+
+Formal presentation and systematic evaluation of 2 or 3 significantly different alternative block or overall layouts. Typically, these alternatives are constructed to feature differing:
+a. Flow patterns, such as straight-thru vs. U-shape (with combined Receiving and Shipping)
+b. Storage concepts – central vs. decentralized; with and without mezzanines…
+c. Directions of and reserves for future expansion
+
+d. Placements of major “monuments” (fixed equipment such as drop hammers, autoclaves, process tanks, compressors, boilers, etc.)
+
+
+Evaluation customarily includes cost and benefit comparisons, and participative, formal scoring of the alternatives by a cross-section of appropriate operating and support personnel.
+
+
+When the project is to plan a new or expanded site, the evaluation should consider alternative site layouts and flow patterns and well as alternative building layouts.
+
+6.
+
+Effective use of color on drawings and presentations in order to highlight and help the viewer understand the amounts, kinds, and overall shapes of the proposed spaces and arrangements. Typically, aisle placement and storage areas are highlighted in this way.
+
+7.
+
+Use of colored overlays to show major movements of materials and flow patterns, and to help the viewer confirm that the layout minimizes material handling effort.
+
+Overlays should indicate the material handling methods where known.
+
+8.
+
+Formal presentation and written reconciliation of all space estimates, in amount, kind, and shape or critical dimensions:
+a. Between space currently used and projected future needs;
+b. Between projected needs and the space actually provided in the various alternative plans.
+
+RMA – 1108 © Copyright 2002. RICHARD MUTHER & ASSOCIATES
+ALL RIGHTS RESERVED
+
+RMA Planning Guide # 1108
+
+Page 3 of 4
+Good Practice in Plant Layout & Facilities Planning
+
+
+9.
+
+Well-documented support for any major reductions (or increases) in space, from present operations. Such documentation includes:
+a. Written list of space estimating assumptions.
+
+b. Calculations showing the effect of specific assumptions on space required.
+
+c. Sketches where new, unfamiliar, specialized, expensive, or highly fixed equipment is the basis for the difference.
+
+10.
+
+No summary of space requirements without explicit, written presentation of an allowance for main aisle space. Without this, there can be no closure on the adequacy of the total space provided. (Aisles could simply be an afterthought and receive whatever is left after housing individual areas).
+
+11.
+
+No summary of space requirements without explicit, written recognition and discussion of building features, especially ceiling height and overhead clearance, floor loading and strength, column spacing, primary utilities distribution, docks and other major openings.
+
+12.
+
+Formal documentation of all activity-area relationships in the proposed layout.
+
+Documented resolution of differences in desired activity-area placements as expressed by different client personnel. This is a universal problem in layout work.
+
+The people involved will differ in their desires and reasoning. It is the job of the layout planner to achieve and document consensus on desired placement, clearly record the reasons therefore, and to quantify or rate the degree of desired closeness that will be observed during planning. The industry standard document for this purpose is the rated-and-reason-supported Relationship Chart, signed-off by the leader of the project and/or planning team.
+
+13.
+
+In the early stages of the planning, more weight should be given to the voice of operators and supervisors on matters of layout, material movement, and space requirements than to top executives. The planner should believe the operators and supervisors until it can be demonstrated that they are wrong.
+
+14.
+
+In the early stages of the planning, more weight should be given to the voice of “old timers” than to “new comers.” The planner should believe the more senior people until it can be demonstrated that they are wrong.
+
+15.
+
+If the top manager or new managers are at odds with old timers and operational management on matters of consequence, then the layout planer must tactfully surface and explain the consequences of such disagreements to all parties involved, and try to get them to agree. If disagreements remain, prepare a contingency plan around them.
+
+16.
+
+Formal risk assessment and contingency plan agreed to during approval of plans (so that consequences and redress of incorrect assumptions and inputs are themselves planned events). The contingency plan is thus a part of the total plan being approved.
+
+RMA – 1108 © Copyright 2002. RICHARD MUTHER & ASSOCIATES
+ALL RIGHTS RESERVED
+
+RMA Planning Guide # 1108
+
+Page 4 of 4
+Good Practice in Plant Layout & Facilities Planning
+
+
+17.
+
+Hold detailed layouts of machinery and equipment, or limit these to critical areas until total space requirements and the block layout are established. When this rule is violated, the reviewers become so overwhelmed by the detail and amount of
+information presented that they lose sight of the big picture and of what may be missing or not presented.
+
+18.
+
+When detailed layouts are presented, storage racks are included as equipment, the same as machinery. Leaving them out leads to oversights in amount, configuration, and accessibility, and to misunderstanding of material handling methods.
+
+19.
+
+Detailed layouts should show material handling equipment. Templates loaded with the largest pieces of material and placed in tightest maneuvering areas to provide visual confirmation are helpful. Material handling personnel should review the plans.
+
+Typical checking points should include: docks, narrow aisle spaces or intersections, in storage racks, and at access and staging points to ovens, autoclaves, paint booths, etc.
+
+
+In cases where clearance and maneuverability cannot be visualized in a two-dimensional plan view, the planner should provide elevation drawings or a 3-dimensional visualization.
+
+20.
+
+Finished layouts should be documented with adequate drawings and /or
+specifications, so that suppliers of purchased equipment understand what they are bidding on, and so that the installation crew(s) can understand what is needed.
+
+
+* * *
+How does your project rate? If you are observing the 20 points above, chances are you will arrive at a good plan with minimal oversights and changes at installation time.
+
+If you want to assure that these points are addressed on every project, then use our systematic planning methods. These include:
+Systematic Layout Planning (SLP)
+Systematic Handling Analysis (SHA)
+Systematic Planning of Industrial Facilities (SPIF)
+
+To learn more about these and our other planning methods, visit our website at:
+www.hpcinc.com/rma.html, or contact us at: Richard Muther & Associates
+151 Village Parkway, Building 6
+Marietta, GA 30067
+Phone: 770-859-0161
+RMA – 1108 © Copyright 2002. RICHARD MUTHER & ASSOCIATES
+ALL RIGHTS RESERVED
+
+
+Document Outline
+
+Good Practice in Plant Layout and Facilities Planning
+
+
+Intangible Factors Influencing the Choice of Alternative Facilities
+
+The following list of factors include those most commonly considered when evaluating alternative facilities plans for other than economic reasons. These are intended to be used with the weighted-factor method of evaluation as applied on RMA Working Forms 170 and 173.
+In truth, each factor will affect costs, but in such a nonfinite or imprecise manner that estimates made for them would be misleading.
+From this list, you can select those that are relevant to each particular project. Not all factors will be used; usually, some 8 to 20 factors are selected. Other factors not listed may be added to those selected for special projects. More frequently, two or three factors will be combined. Even more frequently, the wording of the factors and their descriptive explanations will be changed to make them more directly applicable to the specific project at hand. The factors must be made explicit and be clearly understood; otherwise, the weighting and rating are inclined to be cursory, inaccurate, and unreliable – all under the false guise of quantified objectivity.
+Planners should note that the evaluation of alternative plans occurs several times in most projects, and that the factors are likely not to be the same each time.
+
+
+FACTORS IN VOL VING NON-COMPANY PEOPLE
+
+Compatibility with Legal Controls: The extent to which the facilities meet or comply with zoning regulations, building codes, waste control, environmental protection, pollution standards, labor requirements, and related legal considerations.
+Appearance, Promotional Value, Public and Community Relations: The contribution of the facilities to the general "attractiveness" of the plant and company, to potential employees and stockholders, to the company's reputation in the community, to its respect in the trade or with customers, and to its national/international image.
+Service to Customers: The ease or extent of giving effective service to customers – delivery of right items when needed.
+Ease of Distribution: The ease or effectiveness with which products can be distributed to warehouses, jobbers or direct to customers.
+Freedom from Interfacing Negotiations; Dependency on and Delays by/with External Agencies: The degree to which the alternative is unencumbered by required peripheral negotiations, like rerouting of public roads, intersections, access entrances or exits, stoplights; by similar changing of railroads, airport or heliport, bridges, drainage, easements, restrictive covenants; and by clearances with area development agency, flood control, regional planning commission, city hall… (See also # 16)
+
+FACTORS INVOLVING BUSINESS MANAGEMENT
+
+Ability to Meet Capacity or Requirements: How well the facilities actually meet the planned needs or output wanted from the installation and how well they meet the performance objectives or aims.
+Opportunity for Profit Growth: How good does the opportunity for profit growth appear to be when considered against total investment, potential growth in sales, resale values, etc.
+Fit with Company Organization Structure: The degree to which the facilities match or meet the existing, planned or desired organization structure.
+Management and/or Administrative Attention: How well the proposed plans free management from periodic reviews, checks and attention-requiring administrative approvals.
+Effectiveness of Communications or Procedures: The ease or effectiveness of operating the planning-and/or-control systems or of transmitting information clearly and on time.
+Speed of Implementation: The speed or quickness with which the proposed plan can be executed and brought into a practical state of operation – considering company- controlled delays, interdivisional negotiations, sequential dependencies, protracted approvals by managers… (See also #5)
+
+FACTORS RELATING TO OPERATIONS
+
+Freedom from Disruption during Initial Implementation: The ease of executing or installing the plan from the standpoint of downtime, disruption to operations, inconvenience, mess and confusion. (See also #45)
+Effectiveness of Operations: The effectiveness with which the facilities aid, serve or support the producing operations to attain their full potential, including handling/ transport, storage, tools, scrap/waste and planning/control facilities.
+Flow of Material(s) Effectiveness: The effectiveness of the sequencing of working operations or steps – without unnecessary backtracking, cross flow, transfers, long or irregular hauls-of "materials" being processed. (See also #33)
+Control of Quality: The ease of controlling the desired level(s) of quality in the facilities planned. Example: vibration problems with delicate machinery.
+Working Conditions and Employee Satisfaction: The extent to which the facilities contribute to a pleasant place to work and to freedom from inconveniences, awkward- ness and disruptions for employees. Feelings of employees that they are segregated or disadvantaged can be caused by the arrangement of facilities.
+Effective Use of Employees: The ease of available labor to use the facilities, the freedom from costly training, and the features provided by the facilities to aid the effective utilization of employees.
+Maintenance Problems and Costs: The extent to which the facilities will benefit or assist maintenance work, will increase the costs and problems of facilities maintenance, or will cause disruptions/interferences with periodic and day-to-day equipment repair, building modifications, utility adjustments and service, and yards, grounds and janitorial care.
+Ease of Supervision and Management Control: The ease for supervisors or managers to direct and control the operations and/or facilities for which they are responsible.
+
+FACTORS RELATING TO PHYSICAL CONSIDERATIONS
+
+Utilization of Natural Conditions, Existing Buildings or Surroundings: The extent to which the facilities take advantage of, or capitalize on, the natural conditions of the site, the land area, physical surroundings, existing building structure(s), and neighboring areas.
+Utilization of Space and Equipment: The extent to which process machinery, supporting and service equipment, and space available are used, particularly those facilities directly related to processing.
+Effectiveness of Materials Handling and/or Transport Facilities: The practical ability of the handling/transport equipment, containers/transport units to move materials easily and effectively into, through, and out of the facilities planned, including freedom from traffic congestion and from delays to emergency vehicles. (See also #23 and #36)
+Effectiveness of Storage Facilities: The adequacy, suitability, accessibility, flexibility, reliability, security, and ease of control of the facilities to hold or store materials, parts, products, supplies, returns, service parts, repairs…
+Effectiveness of Integration of Utilities and Auxiliary Services: The adequacy, suit- ability, accessibility, flexibility, reliability, freedom from hazard, and ease of servicing the utilities, auxiliary service lines, drainage/flood control, sprinklers, heating, ventilating, and air conditioning.
+Safety and Housekeeping: The effectiveness of the facilities in preventing or deterring accidents, avoiding risk or damage to employees, materials or facilities, and contributing to the general cleanliness of the plant and site. Adequate aisle/road widths, access to safety doors and equipment…
+Plant Security and Theft: The ease and reliability of safeguarding company property or security-classified information, and of controlling theft or pilferage.
+Conservation of Energy and Accommodation to Varying Sources: How well the proposed plan conserves energy (fuel, cool air, heat losses, lost/waste power) and how well it can adjust to changes in fuels, power, energy-recovery opportunities, and resource control regulations.
+FACTORSRELATING TO FUTURE CHANGE
+
+Compatibility with Long-range Considerations: Degree to which the proposal (or alternative plan) fits in with the longer-range logical use or development of land, buildings, machinery and equipment, especially with any approved master site plan and future facilities development plans for intermediate stages of plant growth – including known or anticipated plans of city or regional planning agencies, area development groups, highway commissions…
+Ease of Future Expansion: The simplicity or ease of extending the space employed, and of increasing or adding to all the existing facilities.
+Adaptability and Versatility: The ease of accommodating changes (without major rearrangement of facilities) in product designs, sales volumes, processes or methods, procedures, or timing.
+Flexibility of Layout and Other Facilities: The ease of physically rearranging the facilities to accommodate changes in product or materials, quantities, processes, supporting services, seasonal variations, or customer delivery requirements.
+Ease of Rehabilitation and Installation: The extent to which the facilities ease the confusion, disruption, and interruptions to operations and work force when future changes in or expansion of the facilities are being made. (See also #21)
+Protection against Physical Hazards: Ability to face and respond to physical disasters like fires, floods, tornados, neighboring hazards, and the like, other than those changes considered under #43 and #47.
+Continuity of Operations: Ability to maintain operations of the plant and deliveries (shipments) under varying and unforeseen external or internal conditions and circumstances (disorders, riots, work stoppages…)
+This Planning Guide is excerpted from Volume II of the two-volume set:
+Systematic Planning of Industrial Facilities (SPIF), by Richard Muther and Lee Hales ISBN: 0933684-21-5
+Order from Management & Industrial Research Publications,
+P.O. Box 7133, Kansas City, Missouri, USA 64113. Phone: 816-444-6622. Fax: 816-444-1140.
+Price (2002): $95
+
+Procedure for Making Relationship Diagrams
+
+Relationship diagramming is a central technique in Systematic Layout Planning (SLP).
+The activity relationship diagram converts vowel-letter ratings on the relationship chart to a graphic visualization of desired closeness among activity-areas. In the space relationship diagram, each activity-area is drawn to scale, thus showing the relative size (and sometimes the shape) of each area, as well as its best-related position.
+The procedure for graphically making an activity-relationship diagram, based on the relationships of activity-areas having been charted, is as follows:
+Starting with Activity-area 1, see if it relates to any other activity-area by an A rating.
+If so, diagram this by starting more or less in the center of a plain piece of paper. Draw the symbol for Activity-area 1; place the numeral 1 inside it; about a half inch to the right, draw the symbol for the A-related activity-area and place its number inside; then connect the two symbols with four straight lines. Keep approximately one-sixteenth inch between each of the four lines. In metric, space symbols one centimeter apart and keep approximately two millimeters between lines.
+Continue down the row for Activity-area I, adding the respective symbol and number to the diagram for any A-rated relationships, placing each at the same half-inch distance from the symbol for the activity-area with which it bears an A rating. Continue for the row representing Activity-area 2, then 3, etc… Place these in the diagram, trying to maintain a half-inch distance between the symbols of each pair of A-related activity- areas. Don't try to look ahead. Progress down each of the rows until all A's are diagramed. Don't worry if you have to start a second partial diagram below the first that is not connected to the first; it will connect up later on.
+Count the number of 4-line relationships and be sure it equals the frequency count on the relationship chart for the number of A ratings.
+If there are more than six or eight relationships diagramed, the planner should redraw the diagram trying to get the symbols so located as to honor the half-inch distance for each set or bundle of four lines. Don't worry if the lines cross; don't worry if symbols hang off by themselves related only by one relationship.
+After diagramming all A-rated relationships -- and redrawing, if necessary -- again go down each row, starting with Activity-area 1, and look for E-rated relationships.
+Place these on the redrawn diagram of 4-line ratings. Place each symbol approximately one inch from any other E-related symbol, insofar as practically possible. Connect with three lines each pair of symbols representing an E-letter relationship.
+Continue down the rows for all the activity-areas, diagramming E-rated relationships; count the number of 3-line relationships to be sure it equals the frequency count for E's on the relationship chart.
+Redraw the diagram for best fit of A's and E's". Note: "best fit" is roughly that which makes the "area" inside each "band" of lines equal; but don't try for precision here. Of course, this redrawing may compromise the ideal of keeping the same distance between all symbols having the same relationship rating.
+Continue similarly-down each row for the I's: add the related symbols to the diagram with two connecting lines; place symbols approximately two inches apart; count for correct number; and redraw the diagram. If either or both symbols are already drawn, connect them as they are located. Do not place any activity-area in the diagram more than once.
+Diagram the O's the same way, placing them approximately three inches from other symbols having O-rated relationship. Ignore the U's. Diagram the X's with a zigzag or wiggly line. The zigzag is likened to a compressed spring pushing the symbols apart, just as the straight lines represent elastic bands pulling the activity-areas together.
+Redraw the entire diagram for best fit. Check for inclusion of all relationships of each rating. Then color the relationships per the standard color code, which is similar to the sequence of the color spectrum.
+You have now completed an activity relationship diagram. (See Figure on Page 3).
+After determining the space required for each activity-area, and balancing the requirements against the space available, you are ready to make a space relationship diagram. The procedure is as follows:
+Get a piece of gridded cross-section paper, preferably tracing paper, and establish a scale where one square equals a certain area.
+Convert the space required for each activity-area on your space specifications sheet to a number of squares, at the scale established above.
+Place the number of squares on the grid sheet "over" its respective symbol on the activity relationship diagram. Usually the "most-related activity-area" will be in the center and this is a good place to start.
+Place the symbol and activity-area number inside the block of squares.
+Add the number of lines between blocks as on the activity relationship diagram, letting them drift into each block for clearer legibility.
+Honoring the relative positions of each activity-area, continue converting each to its respective block of squares.
+When all blocks are diagramed, verify that they are all accounted for and that all relationship lines are shown.
+Then color, or indicate by black-and-white shading, the type of space for each activity- area's block.
+Note two things in addition: 1. The space relationship diagram will subsequently be adjusted to a conceptual or planned layout by moving the blocks together: 2. At the detail level of planning (Phase III), a template or drawing of each machine or piece of equipment will be used instead of a block of squares.
+
+YOUR
+
+NETWORK PLANNING
+
+CAN BE
+
+M O RE
+EF F EC TI VE
+Here’s a systematic approach to an efficient network plan.
+
+Y
+
+ou have a suspicion
+that your network
+planning is less than
+productive and
+efficient. But how can
+you tell?
+
+Chandra Natarajan, Manager at The
+Pepsi Bottling Company and a
+specialist in network planning, says
+that you can ask three questions to
+determine if there is a problem:
+
+Action steps
+If you find that improvement is
+needed, Chandra Natarajan
+recommends that you apply
+Systematic Network Planning (SNP).
+“It can be easily learned and applied
+by any network manager, planner or
+operations research team member” he
+says. In its simplest form, SNP follows
+six steps.
+
+Step 1: Orient the project
+• Write down, circulate and get early
+1. Do our network projects take
+agreement on the project’s
+longer than expected?
+purpose, scope and objectives.
+•
+Understand the problem and the
+2. Do we have difficulty
+elements to be modeled.
+communicating our results and
+•
+List all of the issues, expected
+getting them accepted?
+problems or opportunities which
+may affect the planning of the
+3. Do we have to go through multiple
+network/or its subsequent
+iterations before operations
+operation. Then rate their
+managers will accept our findings
+importance and assign them to
+and recommendations?
+specific people for resolution.
+• Publish a plan and schedule for the
+Another way to determine your
+project.
+effectiveness is to take the Network
+Planning spot audit developed by
+Step 2: Define the variables
+Chandra with Richard Muther &
+Chandra explains that this one of the
+Associates (see next page). It’s based
+most difficult steps in network
+on 10 considerations important to
+planning. Before formulating
+every network planning project.
+
+variables into a model and software
+tool, he recommends:
+• Visualizing the lanes and nodes to
+be modeled with a clear and
+explicit diagram.
+• Identifying and confirming data
+elements and their sources, in
+terms of specific information
+systems, files, records or
+spreadsheets.
+• Publishing relevant constraints.
+• Publishing the assumptions list.
+• Writing out any formulas or
+algebraic expressions that will be
+used.
+• Reviewing all documentation of
+the intended variables with the
+appropriate people.
+Step 3: Analyze the sensitivities:
+Chandra calls this the credibilitybuilding step. Here, you create a
+validated baseline by comparing your
+model results to actual performance
+of the current network during a
+recent period. Chandra says that it is
+good practice to explain in writing
+the variance in the model results.
+This will help you and your team to
+become better modelers by learning
+from each project.
+
+Step 5: Evaluate the alternatives:
+Evaluate the network plans in a formal
+way, scoring their performance against
+a set of weighted factors or
+considerations – recognizing that
+lowest cost is only one factor. Common
+intangible considerations include
+business risk, ease of implementation,
+effect on morale of the employees,
+societal or environmental concerns,
+image, and capital availability issues.
+Step 6: Detail and Do: This is the
+step where details are worked out for
+the selected plan and then changes
+are made to the network. To become
+more effective in future modeling,
+planners should be involved in
+implementation. Says Chandra, “It is
+important to work closely with the
+operations team and to monitor the
+effects of the network changes. Be
+sure to perform a post implementation
+audit to make sure the model’s
+projected savings were achieved.”
+This helps capture lessons learned for
+future modeling.
+
+COURTESY OF CHANDRA NATARAJAN AND
+RICHARD MUTHER & ASSOCIATES, MARIETTA,
+GEORGIA. PHONE: 770-859-0161.
+www.RichardMuther.com
+
+POOR
+
+NNEETTW
+WOORRKK PPLLAANNNNIINNGG
+SSPPOOTT AAUUDDIITT
+
+FAIR
+
+easier today.” But none of the
+software teaches or provides a
+systematic approach to network
+planning projects. Working with
+the consulting firm of Richard
+Muther & Associates, Chandra has
+developed Systematic Network
+Planning (SNP) to fill this need and
+to help planners more effectively
+apply their software tools.
+
+GOOD
+
+While network planning requires the
+use of software, Chandra says
+“Software is only useful after you have
+the right ‘thoughtware’.” He mentions
+that there are many software
+providers who have made network
+planning an exciting domain. “With
+the advancement of computing
+capability, problems that once were
+difficult to solve are feasible and
+
+VERY GOOD
+
+Software Considerations
+
+EXCELLENT
+
+Step 4: Create the Scenarios: The
+development and presentation of
+multiple scenarios and plans is central
+to Systematic Network Planning.
+There are always two or more courses
+of action and management will choose
+more quickly and effectively when
+selecting from a set of good
+alternatives.
+• Identify potential scenarios that
+model the problem elements.
+• Add or remove variables from the
+baseline to represent each potential
+scenario.
+• Collect summary statistics for each
+alternative plan and document the
+results.
+“Always develop two or more
+alternatives, each with good features,”
+Chandra advises. “Then involve your
+operating personnel in deciding which
+one is best.”
+
+1. Quick start up on new projects – without
+confusion on purpose, scope, and approach.
+2. Finish on time or earlier than expected –
+without delays, excessive iterations and
+rework
+3. Visualization of the network being modeled –
+with clear and explicit diagrams of lanes and
+locations.
+4. Effective communication of model inputs and
+elements – data sources, assumptions,
+constraints, model structure.
+5. Effective documentation of the analysis
+performed – those not directly involved can
+see and explain the work.
+6. Formal evaluation of intangible factors in
+addition to cost – ease of implementation,
+business risk, flexibility.
+7. Involvement of operations personnel –
+especially in defining and evaluating
+scenarios and plans.
+8. Management chooses from multiple
+scenarios – each of which is a cost-effective
+course of action.
+9. Ready acceptance of model outputs by
+operations – without disbelief, objections,
+challenges of results
+10. Accurate results – actual results are close to
+projected savings.
+
+
+
+

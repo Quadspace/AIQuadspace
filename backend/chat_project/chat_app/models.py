@@ -11,6 +11,11 @@ class User(models.Model):
         return self.name
 
 
+class SuperuserCredentials(models.Model):
+    username = models.CharField(max_length=100, unique=True)
+    password = models.CharField(max_length=100)
+
+
 class ChatMessage(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE, null=False)
     role = models.CharField(

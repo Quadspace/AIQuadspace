@@ -1,7 +1,41 @@
-from django.http import JsonResponse
+from django.http import JsonResponse, HttpResponse, HttpResponseRedirect
 from django.views.decorators.csrf import csrf_exempt
+from django.shortcuts import render, redirect
 from .models import ChatMessage, User
 import json
+from .forms import SuperuserLoginForm
+from django.contrib import messages
+
+
+@csrf_exempt
+# Import your SuperuserLoginForm
+
+
+def superuser_login(request):
+    if request.method == "POST":
+        form = SuperuserLoginForm(request.POST)
+        if form.is_valid():
+            username = form.cleaned_data["username"]
+            password = form.cleaned_data["password"]
+
+            # Perform authentication logic here
+            # Check if the entered credentials match superuser credentials
+            # For simplicity, let's assume a hardcoded superuser for demonstration
+
+            if (
+                username == "your_superuser_username"
+                and password == "your_superuser_password"
+            ):
+                request.session["is_superuser"] = True
+                return redirect("admin")  # Redirect to the admin panel
+            else:
+                messages.error(request, "Invalid credentials. Please try again.")
+        else:
+            messages.error(request, "Invalid form input. Please check your inputs.")
+    else:
+        form = SuperuserLoginForm()
+
+    return render(request, "superuser_login.html", {"form": form})
 
 
 def get_thread_ids(request):

@@ -1,9 +1,11 @@
 import React, { useState, useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { v4 as uuidv4 } from "uuid";
 
 export default function AIResponse({ openModal }) {
   const key = import.meta.env.VITE_OPENAI_API_KEY;
+  const navigate = useNavigate();
   const [isChatOpen, setIsChatOpen] = useState(false);
   const [inputText, setInputText] = useState("");
   const [isLoading, setIsLoading] = useState(false);
@@ -19,6 +21,11 @@ export default function AIResponse({ openModal }) {
         "Hi! I'm Quad, here to chat with you about your warehouse processes and help you with your needs! ☀️<br><br> Let's chat about what's going on.",
     },
   ]);
+
+  const handleAdminButtonClick = (event) => {
+    event.preventDefault();
+    navigate("/superuser-login");
+  };
 
   const handleChatStart = () => {
     setSessionID(uuidv4());
@@ -87,29 +94,6 @@ export default function AIResponse({ openModal }) {
     });
   };
 
-  // const formatList = (content) => {
-  //   const lines = content.split("\n");
-  //   let formattedContent = "";
-  //   let inList = false;
-
-  //   for (let i = 0; i < lines.length; i++) {
-  //     const line = lines[i].trim();
-  //     if (line.startsWith("**")) {
-  //       // Bold title with a colon
-  //       const title = line.replace(/\*\*/g, "").trim();
-  //       formattedContent += `${
-  //         inList ? "<br><br>" : ""
-  //       }<strong>${title}:</strong> `;
-  //       inList = false;
-  //     } else if (line.length > 0) {
-  //       // List item or regular text
-  //       formattedContent += `${inList ? "<br><br>" : ""}${line}`;
-  //       inList = true;
-  //     }
-  //   }
-
-  //   return formattedContent;
-  // };
   const formatList = (content) => {
     const lines = content.split("\n");
     let formattedContent = "";
@@ -323,10 +307,11 @@ export default function AIResponse({ openModal }) {
           </div>
         </div>
       )}
+
       <div style={{ position: "fixed", bottom: 20, right: 20 }}>
-        <Link to="/admin">
-          <button className="small-admin-button">A</button>
-        </Link>
+        <button onClick={handleAdminButtonClick} className="small-admin-button">
+          A
+        </button>
       </div>
     </>
   );
