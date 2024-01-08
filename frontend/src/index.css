@@ -16,6 +16,23 @@ body {
   }
 }
 
+/* Add this in your index.css */
+.small-admin-button {
+  background-color: transparent; /* Make the background transparent */
+  border: none; /* Remove borders */
+  padding: 0; /* Remove padding */
+  font-size: 12px; /* Adjust the font size to make it small */
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  cursor: pointer;
+}
+
+.small-admin-button:hover {
+  text-decoration: underline; /* Add underline on hover (optional) */
+}
+
+
 .admin-container {
   width: 80%; /* Set a fixed width */
   margin: auto; /* Center the container */

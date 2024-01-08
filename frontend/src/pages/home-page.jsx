@@ -325,7 +325,7 @@ export default function AIResponse({ openModal }) {
       )}
       <div style={{ position: "fixed", bottom: 20, right: 20 }}>
         <Link to="/admin">
-          <button>Admin Login</button>
+          <button className="small-admin-button">A</button>
         </Link>
       </div>
     </>
