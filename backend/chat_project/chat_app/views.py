@@ -4,6 +4,26 @@ from .models import ChatMessage, User
 import json
 
 
+def get_thread_ids(request):
+    thread_ids = User.objects.values_list("name", flat=True).distinct()
+    return JsonResponse(list(thread_ids), safe=False)
+
+
+def get_chat_history(request):
+    thread_id = request.GET.get("thread_id")
+    if thread_id:
+        user = User.objects.get(name=thread_id)
+        chat_messages = ChatMessage.objects.filter(user=user).order_by("timestamp")
+        data = [
+            {"role": msg.role, "content": msg.content, "timestamp": msg.timestamp}
+            for msg in chat_messages
+        ]
+        return JsonResponse(data, safe=False)
+    return JsonResponse(
+        {"status": "error", "message": "Thread ID is required"}, status=400
+    )
+
+
 @csrf_exempt
 def save_chat_message(request):
     if request.method == "POST":

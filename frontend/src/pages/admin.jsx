@@ -59,6 +59,7 @@ export default function AdminPage() {
         ))}
       </select>
 
+      {/* Chat history display */}
       <div className="chat-history">
         {chatHistory.map((message, index) => (
           <div
