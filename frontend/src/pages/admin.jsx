@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 
 export default function AdminPage() {
   const [chatHistory, setChatHistory] = useState([]);
@@ -17,6 +18,11 @@ export default function AdminPage() {
     } catch (error) {
       console.error("Error fetching thread IDs:", error);
     }
+  };
+  const navigate = useNavigate(); // Create navigate object for navigation
+
+  const handleBack = () => {
+    navigate("/"); // Navigate back to the chat page
   };
 
   useEffect(() => {
@@ -47,15 +53,19 @@ export default function AdminPage() {
 
   return (
     <div className="disclaimer-wrapper">
+      <button onClick={handleBack} className="back-button">
+        ←
+      </button>{" "}
+      {/* Back button */}
       <div className="admin-container">
-        <h1>Admin</h1> {/* Admin header */}
+        <h1>Admin</h1>
         <div className="logo-container">
           <img src="/logofull.png" alt="Quadspace Logo" />
         </div>
         <select
           value={selectedThreadId}
           onChange={(e) => setSelectedThreadId(e.target.value)}
-          className="chat-input" // Reuse style for consistent appearance
+          className="chat-input"
         >
           <option value="">Select a thread</option>
           {threadIds.map((threadId, index) => (

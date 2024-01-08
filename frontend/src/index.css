@@ -47,6 +47,30 @@ body {
   z-index: 1;
 }
 
+.back-button {
+  position: absolute;
+  color: rgb(26, 25, 25);
+  top: 20px;
+  left: 20px;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  font-size: 24px;
+  line-height: 40px; /* Vertically center the arrow */
+  text-align: center;
+  cursor: pointer;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.back-button:hover {
+  background-color: #f8f8f8;
+}
+
 .chat-bubble:before {
   left: -27px; /* Adjusted for 75% scaled size */
 }
