@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
+import { v4 as uuidv4 } from "uuid";
 
 export default function AIResponse({ openModal }) {
   const key = import.meta.env.VITE_OPENAI_API_KEY;
@@ -7,6 +8,9 @@ export default function AIResponse({ openModal }) {
   const [inputText, setInputText] = useState("");
   const [isLoading, setIsLoading] = useState(false);
   const [showTyping, setShowTyping] = useState(true);
+  const [sessionID, setSessionID] = useState("");
+  const [isNameCaptured, setIsNameCaptured] = useState(false);
+  const [userName, setUserName] = useState("");
 
   const [chatHistory, setChatHistory] = useState([
     {
@@ -17,6 +21,7 @@ export default function AIResponse({ openModal }) {
   ]);
 
   const handleChatStart = () => {
+    setSessionID(uuidv4());
     setIsChatOpen(true);
     setShowTyping(true);
 
@@ -153,16 +158,25 @@ export default function AIResponse({ openModal }) {
   const handleSubmit = async () => {
     setIsLoading(true);
     setShowTyping(true);
-    setInputText("");
+
+    // If the user's name hasn't been captured yet, treat the first message as the user's name.
+    if (!isNameCaptured) {
+      setUserName(inputText);
+      setIsNameCaptured(true);
+    }
 
     const userMessageContent = {
       role: "user",
       content: inputText,
+      session_id: sessionID,
+      name: userName, // Ensure this is correctly set
     };
 
-    appendToChatHistory(userMessageContent);
+    appendToChatHistory({ role: "user", content: inputText });
+    setInputText("");
 
     try {
+      // Send message to your backend
       await fetch("http://127.0.0.1:8000/api/save_chat_message/", {
         method: "POST",
         headers: {
@@ -170,16 +184,12 @@ export default function AIResponse({ openModal }) {
         },
         body: JSON.stringify(userMessageContent),
       });
-    } catch (error) {
-      console.error("Error saving user message:", error);
-    }
 
-    try {
-      const fileContent = await fetchFileContent();
-      const systemMessage = fileContent
-        ? { role: "system", content: fileContent }
-        : null;
+      // Fetch the content of knowledge.txt
+      const fileContent = await fetch("/knowledge.txt");
+      const knowledgeText = await fileContent.text();
 
+      // Fetch response from OpenAI API
       const response = await fetch(
         "https://api.openai.com/v1/chat/completions",
         {
@@ -190,9 +200,11 @@ export default function AIResponse({ openModal }) {
           },
           body: JSON.stringify({
             model: "gpt-4-1106-preview",
-            messages: systemMessage
-              ? [systemMessage, ...chatHistory, userMessageContent]
-              : [...chatHistory, userMessageContent],
+            messages: [
+              { role: "system", content: knowledgeText }, // Include the knowledge text as a system message
+              ...chatHistory,
+              { role: "user", content: inputText },
+            ],
           }),
         }
       );
@@ -205,23 +217,25 @@ export default function AIResponse({ openModal }) {
       const assistantMessageContent = {
         role: "assistant",
         content: data.choices[0].message.content,
+        session_id: sessionID,
+        name: userName, // Include the userName for the assistant's response
       };
 
-      appendToChatHistory(assistantMessageContent);
+      appendToChatHistory({
+        role: "assistant",
+        content: data.choices[0].message.content,
+      });
 
-      try {
-        await fetch("http://127.0.0.1:8000/api/save_chat_message/", {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify(assistantMessageContent),
-        });
-      } catch (error) {
-        console.error("Error saving assistant message:", error);
-      }
+      // Optionally, send assistant message to your backend
+      await fetch("http://127.0.0.1:8000/api/save_chat_message/", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(assistantMessageContent),
+      });
     } catch (error) {
-      console.error("Error fetching data:", error);
+      console.error("Error:", error);
     } finally {
       setShowTyping(false);
       setIsLoading(false);
