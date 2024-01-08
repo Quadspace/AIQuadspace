@@ -2,54 +2,63 @@ import React, { useState, useEffect } from "react";
 
 export default function AdminPage() {
   const [chatHistory, setChatHistory] = useState([]);
+  const [selectedThreadId, setSelectedThreadId] = useState("");
+  const [threadIds, setThreadIds] = useState([]); // State for storing unique thread IDs
 
-  // Function to format a timestamp into "dd/mm/yy hh:mm:ss AM/PM" format
-  const formatTimestamp = (timestamp) => {
-    const options = {
-      year: "2-digit",
-      month: "2-digit",
-      day: "2-digit",
-      hour: "2-digit",
-      minute: "2-digit",
-      second: "2-digit",
-      hour12: true,
-    };
-    return new Date(timestamp).toLocaleString("en-US", options);
+  // Function to fetch unique thread IDs from the backend
+  const fetchThreadIds = async () => {
+    try {
+      const response = await fetch("http://localhost:8000/api/thread_ids");
+      if (!response.ok) {
+        throw new Error("Failed to fetch thread IDs");
+      }
+      const data = await response.json();
+      setThreadIds(data);
+    } catch (error) {
+      console.error("Error fetching thread IDs:", error);
+    }
   };
 
   useEffect(() => {
-    // Fetch chat history from your Django backend
+    fetchThreadIds(); // Fetch thread IDs when the component mounts
+  }, []);
+
+  useEffect(() => {
+    // Fetch chat history for the selected thread ID
     const fetchChatHistory = async () => {
       try {
-        const response = await fetch("http://localhost:8000/api/chat_history");
+        const response = await fetch(
+          `http://localhost:8000/api/chat_history?thread_id=${selectedThreadId}`
+        );
         if (!response.ok) {
           throw new Error("Failed to fetch chat history");
         }
         const data = await response.json();
-
-        // Sort the chat history by timestamp in ascending order (earliest to latest)
-        const sortedChatHistory = data.sort((a, b) =>
-          a.timestamp.localeCompare(b.timestamp)
-        );
-
-        // Format the timestamps
-        const formattedChatHistory = sortedChatHistory.map((message) => ({
-          ...message,
-          formattedTimestamp: formatTimestamp(message.timestamp),
-        }));
-
-        setChatHistory(formattedChatHistory);
+        setChatHistory(data);
       } catch (error) {
         console.error("Error fetching chat history:", error);
       }
     };
 
-    fetchChatHistory();
-  }, []);
+    if (selectedThreadId) {
+      fetchChatHistory();
+    }
+  }, [selectedThreadId]);
 
   return (
     <div className="admin-container">
-      <h1>Admin Panel - Chat History</h1>
+      <select
+        value={selectedThreadId}
+        onChange={(e) => setSelectedThreadId(e.target.value)}
+      >
+        <option value="">Select a thread</option>
+        {threadIds.map((threadId, index) => (
+          <option key={index} value={threadId}>
+            {threadId}
+          </option>
+        ))}
+      </select>
+
       <div className="chat-history">
         {chatHistory.map((message, index) => (
           <div
