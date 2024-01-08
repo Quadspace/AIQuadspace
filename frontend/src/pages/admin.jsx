@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 
+
 export default function AdminPage() {
   const [chatHistory, setChatHistory] = useState([]);
   const [selectedThreadId, setSelectedThreadId] = useState("");
@@ -54,7 +55,7 @@ export default function AdminPage() {
   return (
     <div className="disclaimer-wrapper">
       <button onClick={handleBack} className="back-button">
-        ←
+        <i className="fas fa-arrow-left"></i>
       </button>{" "}
       {/* Back button */}
       <div className="admin-container">
