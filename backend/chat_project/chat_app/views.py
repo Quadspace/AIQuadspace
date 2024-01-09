@@ -5,12 +5,11 @@ from .models import ChatMessage, User
 import json
 from .forms import SuperuserLoginForm
 from django.contrib import messages
+from rest_framework_simplejwt.tokens import RefreshToken
+from django.contrib.auth import authenticate
 
 
 @csrf_exempt
-# Import your SuperuserLoginForm
-
-
 def superuser_login(request):
     if request.method == "POST":
         form = SuperuserLoginForm(request.POST)
@@ -18,24 +17,24 @@ def superuser_login(request):
             username = form.cleaned_data["username"]
             password = form.cleaned_data["password"]
 
-            # Perform authentication logic here
-            # Check if the entered credentials match superuser credentials
-            # For simplicity, let's assume a hardcoded superuser for demonstration
-
-            if (
-                username == "your_superuser_username"
-                and password == "your_superuser_password"
-            ):
-                request.session["is_superuser"] = True
-                return redirect("admin")  # Redirect to the admin panel
+            # Authenticate user
+            user = authenticate(username=username, password=password)
+            if user is not None and user.is_superuser:
+                # Generate token
+                refresh = RefreshToken.for_user(user)
+                return JsonResponse(
+                    {
+                        "refresh": str(refresh),
+                        "access": str(refresh.access_token),
+                    }
+                )
             else:
-                messages.error(request, "Invalid credentials. Please try again.")
+                return JsonResponse({"error": "Invalid credentials"}, status=401)
         else:
-            messages.error(request, "Invalid form input. Please check your inputs.")
+            return JsonResponse({"error": "Invalid form input"}, status=400)
     else:
         form = SuperuserLoginForm()
-
-    return render(request, "superuser_login.html", {"form": form})
+        return render(request, "superuser_login.html", {"form": form})
 
 
 def get_thread_ids(request):

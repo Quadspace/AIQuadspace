@@ -4,34 +4,21 @@ import { useNavigate } from "react-router-dom";
 const SuperuserLoginForm = () => {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
-  const [error, setError] = useState(""); // To handle and display login errors
+  const [error, setError] = useState("");
   const navigate = useNavigate();
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    setError(""); // Reset error message
+    setError("");
 
-    // Send login credentials to backend
-    try {
-      const response = await fetch("http://localhost:8000/api/token/", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({ username, password }),
-      });
-
-      const data = await response.json();
-      if (response.ok) {
-        // Store the JWT token in local storage or in-memory
-        localStorage.setItem("token", data.token);
-        navigate("/admin"); // Redirect to the admin panel
-      } else {
-        // Handle incorrect credentials
-        setError(data.non_field_errors || "Incorrect username or password");
-      }
-    } catch (error) {
-      setError("An error occurred. Please try again later.");
+    // Here, implement your logic to check if the user is a superuser.
+    // This is a simplified example using hardcoded credentials.
+    if (username === "admin" && password === "safepass1") {
+      // Set the 'isSuperuser' flag in local storage
+      localStorage.setItem("isSuperuser", "true");
+      navigate("/admin");
+    } else {
+      setError("Incorrect username or password");
     }
   };
 
@@ -43,8 +30,7 @@ const SuperuserLoginForm = () => {
     <div className="login-form-wrapper">
       <button onClick={handleBack} className="login-back-button">
         <i className="fas fa-arrow-left"></i>
-      </button>{" "}
-      {/* Back button */}
+      </button>
       <div className="login-form-container">
         <h2>Admin Login</h2>
         {error && <p className="error-message">{error}</p>}
