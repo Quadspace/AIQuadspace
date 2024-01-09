@@ -16,6 +16,88 @@ body {
   }
 }
 
+.login-back-button {
+  position: absolute;
+  color: rgb(26, 25, 25);
+  top: 20px;
+  left: 20px;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  font-size: 24px;
+  line-height: 40px; /* Vertically center the arrow */
+  text-align: center;
+  cursor: pointer;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5px;
+}
+
+.login-back-button:hover {
+  background-color: #f8f8f8;
+}
+
+.login-form-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+.login-form-container {
+  max-width: 800px;
+  width: 100%;
+  margin: auto;
+  padding: 20px;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.admin-login-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.admin-input-container {
+  margin-bottom: 15px;
+  width: 100%;
+}
+
+.admin-form-label {
+  display: block;
+  margin-bottom: 5px;
+  text-align: left;
+  width: 100%;
+}
+
+.admin-chat-input {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 8px; /* Adjust padding as needed */
+  border: 1px solid #ddd; /* Border color */
+  border-radius: 4px; /* Rounded edges */
+  margin-top: 5px; /* Space between label and input */
+}
+
+.admin-send-button {
+  padding: 10px 20px;
+  background-color: #00d8ee;
+  border: none;
+  border-radius: 4px;
+  color: white;
+  cursor: pointer;
+  font-size: 16px;
+}
+
 /* Add this in your index.css */
 .small-admin-button {
   background-color: transparent; /* Make the background transparent */
@@ -31,7 +113,6 @@ body {
 .small-admin-button:hover {
   text-decoration: underline; /* Add underline on hover (optional) */
 }
-
 
 .admin-container {
   width: 80%; /* Set a fixed width */
@@ -340,4 +421,12 @@ button {
     height: 90vh; /* Taller height for larger screens */
     margin-top: 50px; /* Larger top margin for larger screens */
   }
+}
+
+@media (max-width: 768px) {
+  .login-form-container {
+    width: 90%;
+  }
+
+  /* Additional mobile-specific styles if needed */
 }

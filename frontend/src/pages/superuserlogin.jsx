@@ -35,35 +35,53 @@ const SuperuserLoginForm = () => {
     }
   };
 
+  const handleBack = () => {
+    navigate("/"); // Navigate back to the homepage
+  };
+
   return (
-    <div>
-      <h2>Superuser Login</h2>
-      {error && <p style={{ color: "red" }}>{error}</p>}
-      <form onSubmit={handleSubmit}>
-        <div>
-          <label htmlFor="username">Username:</label>
-          <input
-            type="text"
-            id="username"
-            name="username"
-            value={username}
-            onChange={(e) => setUsername(e.target.value)}
-            required
-          />
-        </div>
-        <div>
-          <label htmlFor="password">Password:</label>
-          <input
-            type="password"
-            id="password"
-            name="password"
-            value={password}
-            onChange={(e) => setPassword(e.target.value)}
-            required
-          />
-        </div>
-        <button type="submit">Login</button>
-      </form>
+    <div className="login-form-wrapper">
+      <button onClick={handleBack} className="login-back-button">
+        <i className="fas fa-arrow-left"></i>
+      </button>{" "}
+      {/* Back button */}
+      <div className="login-form-container">
+        <h2>Admin Login</h2>
+        {error && <p className="error-message">{error}</p>}
+        <form onSubmit={handleSubmit} className="admin-login-form">
+          <div className="admin-input-container">
+            <label htmlFor="username" className="admin-form-label">
+              Username:
+            </label>
+            <input
+              className="admin-chat-input"
+              type="text"
+              id="username"
+              name="username"
+              value={username}
+              onChange={(e) => setUsername(e.target.value)}
+              required
+            />
+          </div>
+          <div className="admin-input-container">
+            <label htmlFor="password" className="admin-form-label">
+              Password:
+            </label>
+            <input
+              className="admin-chat-input"
+              type="password"
+              id="password"
+              name="password"
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
+              required
+            />
+          </div>
+          <button className="admin-send-button" type="submit">
+            Login
+          </button>
+        </form>
+      </div>
     </div>
   );
 };
