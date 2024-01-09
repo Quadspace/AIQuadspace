@@ -69,7 +69,11 @@ export default function AIResponse({ openModal }) {
     if (chatContentRef.current) {
       chatContentRef.current.scrollTop = chatContentRef.current.scrollHeight;
     }
-  }, [chatHistory]);
+    // Check if the input field is not disabled and then set focus
+    if (inputRef.current && !isLoading) {
+      inputRef.current.focus();
+    }
+  }, [chatHistory, isLoading]);
 
   const handleInputChange = (e) => {
     setInputText(e.target.value);
