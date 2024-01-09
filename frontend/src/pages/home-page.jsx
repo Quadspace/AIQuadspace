@@ -24,6 +24,7 @@ export default function AIResponse({ openModal }) {
 
   const handleAdminButtonClick = (event) => {
     event.preventDefault();
+    console.log("Navigating to superuser-login");
     navigate("/superuser-login");
   };
 

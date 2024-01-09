@@ -49,6 +49,7 @@ INSTALLED_APPS = [
     "django.contrib.staticfiles",
     "chat_app",
     "corsheaders",
+    "rest_framework",
 ]
 
 MIDDLEWARE = [
@@ -64,6 +65,13 @@ MIDDLEWARE = [
 ]
 
 ROOT_URLCONF = "chat_project.urls"
+
+REST_FRAMEWORK = {
+    "DEFAULT_AUTHENTICATION_CLASSES": (
+        "rest_framework_simplejwt.authentication.JWTAuthentication",
+    ),
+    # ... other settings
+}
 
 TEMPLATES = [
     {
