@@ -12,29 +12,19 @@ from django.contrib.auth import authenticate
 @csrf_exempt
 def superuser_login(request):
     if request.method == "POST":
-        form = SuperuserLoginForm(request.POST)
-        if form.is_valid():
-            username = form.cleaned_data["username"]
-            password = form.cleaned_data["password"]
+        data = json.loads(request.body)
+        username = data.get("username")
+        password = data.get("password")
 
-            # Authenticate user
-            user = authenticate(username=username, password=password)
-            if user is not None and user.is_superuser:
-                # Generate token
-                refresh = RefreshToken.for_user(user)
-                return JsonResponse(
-                    {
-                        "refresh": str(refresh),
-                        "access": str(refresh.access_token),
-                    }
-                )
-            else:
-                return JsonResponse({"error": "Invalid credentials"}, status=401)
+        user = authenticate(username=username, password=password)
+        if user is not None and user.is_superuser:
+            return JsonResponse({"status": "success"})
         else:
-            return JsonResponse({"error": "Invalid form input"}, status=400)
-    else:
-        form = SuperuserLoginForm()
-        return render(request, "superuser_login.html", {"form": form})
+            return JsonResponse(
+                {"status": "failure", "message": "Invalid credentials"}, status=401
+            )
+
+    return JsonResponse({"status": "error", "message": "Invalid request"}, status=400)
 
 
 def get_thread_ids(request):

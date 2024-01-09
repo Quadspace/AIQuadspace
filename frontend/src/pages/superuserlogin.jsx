@@ -11,14 +11,28 @@ const SuperuserLoginForm = () => {
     e.preventDefault();
     setError("");
 
-    // Here, implement your logic to check if the user is a superuser.
-    // This is a simplified example using hardcoded credentials.
-    if (username === "admin" && password === "safepass1") {
-      // Set the 'isSuperuser' flag in local storage
-      localStorage.setItem("isSuperuser", "true");
-      navigate("/admin");
-    } else {
-      setError("Incorrect username or password");
+    try {
+      const response = await fetch(
+        "http://localhost:8000/api/superuser_login/",
+        {
+          // Update the URL to the new endpoint
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({ username, password }),
+        }
+      );
+
+      const data = await response.json();
+      if (response.ok) {
+        localStorage.setItem("isSuperuser", "true"); // Set the flag to indicate superuser authentication
+        navigate("/admin");
+      } else {
+        setError(data.message || "Incorrect username or password");
+      }
+    } catch (error) {
+      setError("Network error. Please try again later.");
     }
   };
 
