@@ -166,7 +166,7 @@ export default function AIResponse({ openModal }) {
 
     try {
       // Send message to your backend
-      await fetch("http://127.0.0.1:8000/api/save_chat_message/", {
+      await fetch("https://quad2.onrender.com/api/save_chat_message/", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
