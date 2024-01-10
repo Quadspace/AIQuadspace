@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 
-
 export default function AdminPage() {
   const [chatHistory, setChatHistory] = useState([]);
   const [selectedThreadId, setSelectedThreadId] = useState("");
@@ -10,7 +9,7 @@ export default function AdminPage() {
   // Function to fetch unique thread IDs from the backend
   const fetchThreadIds = async () => {
     try {
-      const response = await fetch("http://localhost:8000/api/thread_ids");
+      const response = await fetch("https://quad2.onrender.com/api/thread_ids");
       if (!response.ok) {
         throw new Error("Failed to fetch thread IDs");
       }
@@ -35,7 +34,7 @@ export default function AdminPage() {
     const fetchChatHistory = async () => {
       try {
         const response = await fetch(
-          `http://localhost:8000/api/chat_history?thread_id=${selectedThreadId}`
+          `https://quad2.onrender.com/api/chat_history?thread_id=${selectedThreadId}`
         );
         if (!response.ok) {
           throw new Error("Failed to fetch chat history");
