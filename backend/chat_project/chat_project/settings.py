@@ -27,15 +27,17 @@ SECRET_KEY = os.environ["SECRET_KEY"]
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ["localhost", "127.0.0.1", "quad2.onrender.com"]
-# CORS_ORIGIN_ALLOW_ALL = True
+# ALLOWED_HOSTS = ["localhost", "127.0.0.1", "quad2.onrender.com"]
+ALLOWED_HOSTS = ["quad2.onrender.com"]
 
-CORS_ALLOWED_ORIGINS = [
-    "https://quad1.netlify.app",
-    "http://localhost:8000",
-    "http://localhost:5173",
-    "http://127.0.0.1:9000",
-]
+CORS_ORIGIN_ALLOW_ALL = True
+
+# CORS_ALLOWED_ORIGINS = [
+#     "https://quad1.netlify.app",
+#     "http://localhost:8000",
+#     "http://localhost:5173",
+#     "http://127.0.0.1:9000",
+# ]
 
 
 # Application definition
@@ -54,11 +56,11 @@ INSTALLED_APPS = [
 
 MIDDLEWARE = [
     "django.middleware.security.SecurityMiddleware",
+    "corsheaders.middleware.CorsMiddleware",
+    "django.middleware.common.CommonMiddleware",
     "django.contrib.sessions.middleware.SessionMiddleware",
     "django.middleware.common.CommonMiddleware",
     "django.middleware.csrf.CsrfViewMiddleware",
-    "corsheaders.middleware.CorsMiddleware",
-    "django.middleware.common.CommonMiddleware",
     "django.contrib.auth.middleware.AuthenticationMiddleware",
     "django.contrib.messages.middleware.MessageMiddleware",
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
