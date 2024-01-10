@@ -28,14 +28,14 @@ SECRET_KEY = os.environ["SECRET_KEY"]
 DEBUG = False
 
 ALLOWED_HOSTS = ["localhost", "127.0.0.1", "quad2.onrender.com"]
-CORS_ORIGIN_ALLOW_ALL = True
+# CORS_ORIGIN_ALLOW_ALL = True
 
-# CORS_ALLOWED_ORIGINS = [
-#     "https://example.com",
-#     "http://localhost:8000",
-#     "http://localhost:5173",
-#     "http://127.0.0.1:9000",
-# ]
+CORS_ALLOWED_ORIGINS = [
+    "https://quad1.netlify.app",
+    "http://localhost:8000",
+    "http://localhost:5173",
+    "http://127.0.0.1:9000",
+]
 
 
 # Application definition
