@@ -22,31 +22,49 @@ const CreateAccountPage = () => {
     navigate("/chat"); // or '/chat'
   };
 
+  const handleGoToLogin = () => {
+    navigate("/"); // Navigate to the login page
+  };
+
   return (
-    <div className="create-account-page">
-      <img src="/logofull.png" alt="Quadspace Logo" />
-      <div className="create-account-container">
-        <input
-          type="email"
-          value={email}
-          onChange={(e) => setEmail(e.target.value)}
-          placeholder="Email"
-        />
-        <input
-          type="password"
-          value={password}
-          onChange={(e) => setPassword(e.target.value)}
-          placeholder="Password"
-        />
-        <input
-          type="password"
-          value={confirmPassword}
-          onChange={(e) => setConfirmPassword(e.target.value)}
-          placeholder="Confirm Password"
-        />
-        <button onClick={handleCreateAccount}>Create Account</button>
+    <>
+      <h1 className="auth-title">Create Account</h1>
+      <div className="auth-container">
+        <img src="/logofull.png" alt="Quadspace Logo" className="auth-logo" />
+        <div className="auth-form-container">
+          <input
+            className="auth-input"
+            type="email"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+            placeholder="Email"
+          />
+          <input
+            className="auth-input"
+            type="password"
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+            placeholder="Password"
+          />
+          <input
+            className="auth-input"
+            type="password"
+            value={confirmPassword}
+            onChange={(e) => setConfirmPassword(e.target.value)}
+            placeholder="Confirm Password"
+          />
+          <button className="auth-button" onClick={handleCreateAccount}>
+            Create Account
+          </button>
+          <button
+            className="auth-button auth-button-spacing"
+            onClick={handleGoToLogin}
+          >
+            Go to Login
+          </button>
+        </div>
       </div>
-    </div>
+    </>
   );
 };
 

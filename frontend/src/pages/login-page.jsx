@@ -17,23 +17,30 @@ const LoginPage = () => {
   };
 
   return (
-    <div className="login-page">
-      <img src="/logofull.png" alt="Quadspace Logo" />
-      <div className="login-container">
+    <div className="auth-container">
+      <img src="/logofull.png" alt="Quadspace Logo" className="auth-logo" />
+      <div className="auth-form-container">
         <input
+          className="auth-input"
           type="email"
           value={email}
           onChange={(e) => setEmail(e.target.value)}
           placeholder="Email"
         />
         <input
+          className="auth-input"
           type="password"
           value={password}
           onChange={(e) => setPassword(e.target.value)}
           placeholder="Password"
         />
-        <button onClick={handleLogin}>Log In</button>
-        <button onClick={handleCreateAccount} className="smaller-button">
+        <button className="auth-button" onClick={handleLogin}>
+          Log In
+        </button>
+        <button
+          className="auth-button auth-button-spacing"
+          onClick={handleCreateAccount}
+        >
           Create Account
         </button>
       </div>
