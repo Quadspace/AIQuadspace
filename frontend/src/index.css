@@ -16,6 +16,30 @@ body {
   }
 }
 
+.privacy-policy-container {
+  max-height: 200px; /* Adjust the height as needed */
+  overflow-y: auto; /* Enable vertical scrolling */
+  margin-bottom: 10px; /* Space below the policy container */
+  border: 1px solid #ddd; /* Border around the policy container */
+  padding: 10px; /* Padding inside the container */
+  text-align: left; /* Align the text to the left */
+}
+
+.privacy-policy-content {
+  /* Style for the actual privacy policy content */
+}
+
+.privacy-agreement {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px; /* Space below the checkbox */
+}
+
+.privacy-agreement input[type="checkbox"] {
+  margin-right: 5px; /* Space between checkbox and label text */
+}
+
+
 .auth-container {
   display: flex;
   flex-direction: column; /* Stack items vertically */

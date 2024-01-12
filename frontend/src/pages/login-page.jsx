@@ -12,6 +12,8 @@ const LoginPage = () => {
     navigate("/chat"); // Assuming '/home' is the path for your current homepage.
   };
 
+  
+
   const handleCreateAccount = () => {
     navigate("/create-account"); // Navigate to the create account page.
   };
