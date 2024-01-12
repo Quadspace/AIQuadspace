@@ -7,23 +7,37 @@ const CreateAccountPage = () => {
   const [confirmPassword, setConfirmPassword] = useState("");
   const navigate = useNavigate();
 
-  const handleCreateAccount = (e) => {
+  const handleCreateAccount = async (e) => {
     e.preventDefault();
-    // Add your logic for creating an account here.
-    // This could involve validation and then sending data to the backend.
 
-    // Example validation
     if (password !== confirmPassword) {
       alert("Passwords do not match!");
       return;
     }
 
-    // On successful account creation, you might navigate to the login page or the chat page
-    navigate("/chat"); // or '/chat'
+    try {
+      const response = await fetch("http://localhost:8000/api/register/", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ email, password }),
+      });
+
+      if (!response.ok) {
+        throw new Error("Failed to create account");
+      }
+
+      const data = await response.json();
+      alert("Account created successfully! Please login.");
+      navigate("/"); // Navigate to the login page
+    } catch (error) {
+      alert(error.message || "An error occurred");
+    }
   };
 
   const handleGoToLogin = () => {
-    navigate("/"); // Navigate to the login page
+    navigate("/");
   };
 
   return (

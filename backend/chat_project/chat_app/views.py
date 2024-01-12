@@ -1,12 +1,29 @@
 from django.http import JsonResponse, HttpResponse, HttpResponseRedirect
 from django.views.decorators.csrf import csrf_exempt
 from django.shortcuts import render, redirect
-from .models import ChatMessage, User
+from .models import ChatMessage, User, EmailUser
 import json
 from .forms import SuperuserLoginForm
 from django.contrib import messages
 from rest_framework_simplejwt.tokens import RefreshToken
 from django.contrib.auth import authenticate
+from rest_framework import status
+from rest_framework.decorators import api_view
+from rest_framework.response import Response
+
+
+@api_view(["POST"])
+def register(request):
+    email = request.data.get("email")
+    password = request.data.get("password")
+    if EmailUser.objects.filter(email=email).exists():
+        return Response(
+            {"error": "Email already exists"}, status=status.HTTP_400_BAD_REQUEST
+        )
+    user = EmailUser.objects.create_user(email=email, password=password)
+    return Response(
+        {"message": "User created successfully"}, status=status.HTTP_201_CREATED
+    )
 
 
 @csrf_exempt
