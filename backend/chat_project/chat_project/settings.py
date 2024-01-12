@@ -25,10 +25,13 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = os.environ["SECRET_KEY"]
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
-# ALLOWED_HOSTS = ["localhost", "127.0.0.1", "quad2.onrender.com"]
-ALLOWED_HOSTS = ["quad2.onrender.com"]
+ALLOWED_HOSTS = [
+    "localhost",
+    "127.0.0.1",
+]
+# ALLOWED_HOSTS = ["quad2.onrender.com"]
 
 CORS_ORIGIN_ALLOW_ALL = True
 

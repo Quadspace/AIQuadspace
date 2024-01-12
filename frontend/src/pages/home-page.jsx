@@ -166,7 +166,8 @@ export default function AIResponse({ openModal }) {
 
     try {
       // Send message to your backend
-      await fetch("https://quad2.onrender.com/api/save_chat_message/", {
+      // await fetch("https://quad2.onrender.com/api/save_chat_message/", {
+      await fetch("http://localhost:8000/api/save_chat_message/", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -216,7 +217,8 @@ export default function AIResponse({ openModal }) {
       });
 
       // Optionally, send assistant message to your backend
-      await fetch("https://quad2.onrender.com/api/save_chat_message/", {
+      // await fetch("https://quad2.onrender.com/api/save_chat_message/", {
+      await fetch("http://localhost:8000/api/save_chat_message/", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

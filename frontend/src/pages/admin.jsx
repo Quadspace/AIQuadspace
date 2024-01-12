@@ -9,7 +9,8 @@ export default function AdminPage() {
   // Function to fetch unique thread IDs from the backend
   const fetchThreadIds = async () => {
     try {
-      const response = await fetch("https://quad2.onrender.com/api/thread_ids");
+      // const response = await fetch("https://quad2.onrender.com/api/thread_ids");
+      const response = await fetch("http://localhost:8000/api/thread_ids");
       if (!response.ok) {
         throw new Error("Failed to fetch thread IDs");
       }
@@ -33,8 +34,11 @@ export default function AdminPage() {
     // Fetch chat history for the selected thread ID
     const fetchChatHistory = async () => {
       try {
+        // const response = await fetch(
+        //   `https://quad2.onrender.com/api/chat_history?thread_id=${selectedThreadId}`
+        // // );
         const response = await fetch(
-          `https://quad2.onrender.com/api/chat_history?thread_id=${selectedThreadId}`
+          `http://localhost:8000/api/chat_history?thread_id=${selectedThreadId}`
         );
         if (!response.ok) {
           throw new Error("Failed to fetch chat history");
