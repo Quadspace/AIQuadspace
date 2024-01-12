@@ -7,6 +7,8 @@ import AdminPage from "./pages/admin";
 import SuperuserLoginForm from "./pages/superuserlogin";
 import ErrorPage from "./pages/error-page";
 import ProtectedRoute from "./components/ProtectedRoute";
+import LoginPage from "./pages/login-page";
+import CreateAccountPage from "./pages/createaccountpage";
 import "./index.css";
 
 // Function to clear authentication state
@@ -24,12 +26,12 @@ root.render(
   <React.StrictMode>
     <Router>
       <Routes>
-        {/* Other routes */}
-        <Route path="/" element={<HomePage />} />
-        <Route path="home" element={<HomePage />} />
-        <Route path="superuser-login" element={<SuperuserLoginForm />} />
+        <Route path="/" element={<LoginPage />} />
+        <Route path="/chat" element={<HomePage />} />
+        <Route path="/create-account" element={<CreateAccountPage />} />
+        <Route path="/superuser-login" element={<SuperuserLoginForm />} />
         <Route
-          path="admin"
+          path="/admin"
           element={
             <ProtectedRoute>
               <AdminPage />
@@ -41,3 +43,4 @@ root.render(
     </Router>
   </React.StrictMode>
 );
+
