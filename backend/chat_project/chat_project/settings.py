@@ -69,6 +69,10 @@ MIDDLEWARE = [
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
 ]
 
+AUTHENTICATION_BACKENDS = [
+    "django.contrib.auth.backends.ModelBackend",  # or any other appropriate backend
+]
+
 ROOT_URLCONF = "chat_project.urls"
 
 REST_FRAMEWORK = {
@@ -110,6 +114,8 @@ DATABASES = {
         "PORT": os.environ["DB_PORT"],
     }
 }
+
+AUTH_USER_MODEL = "chat_app.EmailUser"
 
 
 # Password validation

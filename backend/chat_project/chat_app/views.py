@@ -6,10 +6,10 @@ import json
 from .forms import SuperuserLoginForm
 from django.contrib import messages
 from rest_framework_simplejwt.tokens import RefreshToken
-from django.contrib.auth import authenticate
 from rest_framework import status
 from rest_framework.decorators import api_view
 from rest_framework.response import Response
+from django.contrib.auth import authenticate
 
 
 @api_view(["POST"])
@@ -24,6 +24,20 @@ def register(request):
     return Response(
         {"message": "User created successfully"}, status=status.HTTP_201_CREATED
     )
+
+
+@api_view(["POST"])
+def login_view(request):
+    email = request.data.get("email")
+    password = request.data.get("password")
+    user = authenticate(email=email, password=password)
+
+    if user is not None:
+        return Response({"message": "Login successful"}, status=status.HTTP_200_OK)
+    else:
+        return Response(
+            {"error": "Invalid credentials"}, status=status.HTTP_401_UNAUTHORIZED
+        )
 
 
 @csrf_exempt
