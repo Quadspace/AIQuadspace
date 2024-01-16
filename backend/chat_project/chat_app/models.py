@@ -44,34 +44,18 @@ class EmailUser(AbstractBaseUser):
         return self.is_admin
 
 
-class User(models.Model):
-    name = models.CharField(max_length=100, unique=True)
-    session_id = models.CharField(
-        max_length=100, unique=True, null=True
-    )  # Optional, for tracking sessions
-
-    def __str__(self):
-        return self.name
-
-
 class ChatThread(models.Model):
     user = models.ForeignKey(EmailUser, on_delete=models.CASCADE)
+    # Add any other fields you might need for a chat thread
 
-
-class SuperuserCredentials(models.Model):
-    username = models.CharField(max_length=100, unique=True)
-    password_hash = models.CharField(max_length=128)
-
-    def set_password(self, raw_password):
-        self.password_hash = make_password(raw_password)
-        self.save()
-
-    def check_password(self, raw_password):
-        return check_password(raw_password, self.password_hash)
+    def __str__(self):
+        return f"ChatThread for {self.user.email}"
 
 
 class ChatMessage(models.Model):
-    user = models.ForeignKey(User, on_delete=models.CASCADE, null=False)
+    user = models.ForeignKey(
+        EmailUser, on_delete=models.CASCADE, related_name="messages"
+    )
     role = models.CharField(
         max_length=10, choices=[("user", "User"), ("assistant", "Assistant")]
     )
@@ -80,3 +64,6 @@ class ChatMessage(models.Model):
 
     def __str__(self):
         return f"{self.role}: {self.content[:50]}..."
+
+
+# You can add any other models you need here

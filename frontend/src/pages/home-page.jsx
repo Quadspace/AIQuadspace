@@ -1,7 +1,5 @@
 import React, { useState, useEffect, useRef } from "react";
-import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
-import { v4 as uuidv4 } from "uuid";
 
 export default function AIResponse({ openModal }) {
   const key = import.meta.env.VITE_OPENAI_API_KEY;
@@ -10,11 +8,8 @@ export default function AIResponse({ openModal }) {
   const [inputText, setInputText] = useState("");
   const [isLoading, setIsLoading] = useState(false);
   const [showTyping, setShowTyping] = useState(true);
-  const [sessionID, setSessionID] = useState("");
-  const [isNameCaptured, setIsNameCaptured] = useState(false);
-  const [userName, setUserName] = useState("");
+  const [userEmail, setUserEmail] = useState(""); // State to hold the user's email
   const [agreementChecked, setAgreementChecked] = useState(false);
-
   const [chatHistory, setChatHistory] = useState([
     {
       role: "assistant",
@@ -23,15 +18,15 @@ export default function AIResponse({ openModal }) {
     },
   ]);
 
-  const handleAdminButtonClick = async (event) => {
-    event.preventDefault();
+  // Function to handle admin button click
+  const handleAdminButtonClick = async () => {
     try {
       const accessToken = localStorage.getItem("accessToken");
       const response = await fetch("http://localhost:8000/api/check_admin/", {
         method: "GET",
         headers: {
-          Authorization: `Bearer ${accessToken}`,
           "Content-Type": "application/json",
+          Authorization: `Bearer ${accessToken}`,
         },
       });
 
@@ -47,11 +42,10 @@ export default function AIResponse({ openModal }) {
     }
   };
 
+  // Function to handle chat start
   const handleChatStart = () => {
-    setSessionID(uuidv4());
     setIsChatOpen(true);
     setShowTyping(true);
-
     setTimeout(() => {
       setShowTyping(false);
       appendToChatHistory({
@@ -64,6 +58,7 @@ export default function AIResponse({ openModal }) {
   const chatContentRef = useRef(null);
   const inputRef = useRef(null);
 
+  // Function to format input text into link
   function linkify(inputText) {
     // URLs to be replaced with custom text
     const urlMappings = {
@@ -84,11 +79,11 @@ export default function AIResponse({ openModal }) {
     });
   }
 
+  // useEffect to handle auto-scroll and input focus
   useEffect(() => {
     if (chatContentRef.current) {
       chatContentRef.current.scrollTop = chatContentRef.current.scrollHeight;
     }
-    // Check if the input field is not disabled and then set focus
     if (inputRef.current && !isLoading) {
       inputRef.current.focus();
     }
@@ -96,7 +91,6 @@ export default function AIResponse({ openModal }) {
 
   const handleInputChange = (e) => {
     setInputText(e.target.value);
-
     const textarea = e.target;
     textarea.style.height = "auto";
     textarea.style.height = `${textarea.scrollHeight}px`; // Set to content height
@@ -109,13 +103,7 @@ export default function AIResponse({ openModal }) {
   };
 
   const appendToChatHistory = (message) => {
-    setChatHistory((prevChatHistory) => {
-      const formattedMessage = {
-        ...message,
-        content: formatList(message.content), // Format the content if it's a list
-      };
-      return [...prevChatHistory, formattedMessage];
-    });
+    setChatHistory((prevChatHistory) => [...prevChatHistory, message]);
   };
 
   const formatList = (content) => {
@@ -159,7 +147,7 @@ export default function AIResponse({ openModal }) {
       return await response.text();
     } catch (error) {
       console.error("Error reading file:", error);
-      return ""; // Return empty string if there's an error
+      return "";
     }
   };
 
@@ -167,38 +155,29 @@ export default function AIResponse({ openModal }) {
     setIsLoading(true);
     setShowTyping(true);
 
-    // If the user's name hasn't been captured yet, treat the first message as the user's name.
-    if (!isNameCaptured) {
-      setUserName(inputText);
-      setIsNameCaptured(true);
-    }
-
+    const userEmail = localStorage.getItem("userEmail");
     const userMessageContent = {
       role: "user",
       content: inputText,
-      session_id: sessionID,
-      name: userName, // Ensure this is correctly set
+      userEmail: userEmail, // Use user's email as identifier
     };
 
     appendToChatHistory({ role: "user", content: inputText });
     setInputText("");
 
     try {
-      // Send message to your backend
-      // await fetch("https://quad2.onrender.com/api/save_chat_message/", {
+      const accessToken = localStorage.getItem("accessToken");
       await fetch("http://localhost:8000/api/save_chat_message/", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
+          Authorization: `Bearer ${accessToken}`, // Include the JWT token
         },
         body: JSON.stringify(userMessageContent),
       });
 
-      // Fetch the content of knowledge.txt
-      const fileContent = await fetch("/knowledge.txt");
-      const knowledgeText = await fileContent.text();
+      const knowledgeText = await fetchFileContent();
 
-      // Fetch response from OpenAI API
       const response = await fetch(
         "https://api.openai.com/v1/chat/completions",
         {
@@ -210,7 +189,7 @@ export default function AIResponse({ openModal }) {
           body: JSON.stringify({
             model: "gpt-4-1106-preview",
             messages: [
-              { role: "system", content: knowledgeText }, // Include the knowledge text as a system message
+              { role: "system", content: knowledgeText },
               ...chatHistory,
               { role: "user", content: inputText },
             ],
@@ -223,26 +202,9 @@ export default function AIResponse({ openModal }) {
       }
 
       const data = await response.json();
-      const assistantMessageContent = {
-        role: "assistant",
-        content: data.choices[0].message.content,
-        session_id: sessionID,
-        name: userName, // Include the userName for the assistant's response
-      };
-
       appendToChatHistory({
         role: "assistant",
         content: data.choices[0].message.content,
-      });
-
-      // Optionally, send assistant message to your backend
-      // await fetch("https://quad2.onrender.com/api/save_chat_message/", {
-      await fetch("http://localhost:8000/api/save_chat_message/", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(assistantMessageContent),
       });
     } catch (error) {
       console.error("Error:", error);

@@ -18,9 +18,11 @@ const LoginPage = () => {
 
       if (response.ok) {
         const data = await response.json();
-        // Store the token in the local storage or a more secure place
+        // Store the token and email in the local storage
         localStorage.setItem("accessToken", data.access);
         localStorage.setItem("refreshToken", data.refresh);
+        localStorage.setItem("userEmail", email);
+
         navigate("/chat");
       } else {
         // Handle login failure

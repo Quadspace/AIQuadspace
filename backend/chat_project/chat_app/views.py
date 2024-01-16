@@ -1,19 +1,21 @@
 from django.http import JsonResponse, HttpResponse, HttpResponseRedirect
 from django.views.decorators.csrf import csrf_exempt
 from django.shortcuts import render, redirect
-from .models import ChatMessage, User, EmailUser, SuperuserCredentials
+from .models import ChatMessage, EmailUser
 import json
-from .forms import SuperuserLoginForm
+
 from django.contrib import messages
 from rest_framework_simplejwt.tokens import RefreshToken
 from rest_framework import status
-from rest_framework.decorators import api_view
+from rest_framework.decorators import api_view, permission_classes
 from rest_framework.response import Response
 from django.contrib.auth import authenticate, login
 from django.contrib.auth.hashers import check_password
 from rest_framework.decorators import api_view, parser_classes
 from rest_framework.parsers import JSONParser
 from rest_framework.permissions import IsAuthenticated
+
+
 import logging
 
 logger = logging.getLogger(__name__)
@@ -35,36 +37,9 @@ def register(request):
 
 @api_view(["GET"])
 def check_admin(request):
-    # Ensure the user is authenticated
     if request.user.is_authenticated:
-        # Check if the user is an admin
-        admin_status = getattr(request.user, "is_admin", False)
-    else:
-        admin_status = False
-
-    logger.info(f"User: {request.user}, Is Admin: {admin_status}")
-
-    # Return the admin status
-    return JsonResponse({"isAdmin": admin_status})
-
-
-@api_view(["POST"])
-def superuser_login(request):
-    username = request.data.get("username")
-    password = request.data.get("password")
-
-    try:
-        superuser = SuperuserCredentials.objects.get(username=username)
-        if check_password(password, superuser.password_hash):
-            return JsonResponse({"status": "success"})
-        else:
-            return JsonResponse(
-                {"status": "failure", "message": "Invalid credentials"}, status=401
-            )
-    except SuperuserCredentials.DoesNotExist:
-        return JsonResponse(
-            {"status": "failure", "message": "User not found"}, status=404
-        )
+        return Response({"isAdmin": request.user.is_admin})
+    return Response({"isAdmin": False}, status=status.HTTP_403_FORBIDDEN)
 
 
 def get_thread_ids(request):
@@ -87,20 +62,30 @@ def get_chat_history(request):
     )
 
 
+@api_view(["POST"])
+@permission_classes([IsAuthenticated])
 def save_chat_message(request):
-    if request.method == "POST":
-        data = json.loads(request.body)
-        user_name = data.get("name")
+    try:
+        data = request.data
+        email = data.get("userEmail")
+        content = data.get("content")
+        role = data.get("role")
 
-        if user_name:
-            user, created = User.objects.get_or_create(name=user_name)
-        else:
+        if not email or not content or not role:
             return JsonResponse(
-                {"status": "error", "message": "User name is required"}, status=400
+                {"status": "error", "message": "Missing required fields"}, status=400
             )
 
-        ChatMessage.objects.create(
-            user=user, role=data["role"], content=data["content"]
-        )
+        user = EmailUser.objects.get(email=email)
+        ChatMessage.objects.create(user=user, role=role, content=content)
         return JsonResponse({"status": "success"})
-    return JsonResponse({"status": "error"}, status=400)
+
+    except EmailUser.DoesNotExist:
+        return JsonResponse(
+            {"status": "error", "message": "User not found"}, status=404
+        )
+    except Exception as e:
+        logger.error(f"Error saving chat message: {e}")
+        return JsonResponse(
+            {"status": "error", "message": "Internal server error"}, status=500
+        )
