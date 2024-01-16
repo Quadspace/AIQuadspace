@@ -23,10 +23,28 @@ export default function AIResponse({ openModal }) {
     },
   ]);
 
-  const handleAdminButtonClick = (event) => {
+  const handleAdminButtonClick = async (event) => {
     event.preventDefault();
-    console.log("Navigating to superuser-login");
-    navigate("/superuser-login");
+    try {
+      const accessToken = localStorage.getItem("accessToken");
+      const response = await fetch("http://localhost:8000/api/check_admin/", {
+        method: "GET",
+        headers: {
+          Authorization: `Bearer ${accessToken}`,
+          "Content-Type": "application/json",
+        },
+      });
+
+      const data = await response.json();
+      if (response.ok && data.isAdmin) {
+        navigate("/admin");
+      } else {
+        alert("Access denied. You must have admin access.");
+      }
+    } catch (error) {
+      console.error("Error:", error);
+      alert("An error occurred. Please try again later.");
+    }
   };
 
   const handleChatStart = () => {

@@ -11,7 +11,7 @@ from chat_app.views import (
     get_chat_history,
     superuser_login,
     register,
-    login_view,
+    check_admin,
 )
 from django.contrib import admin
 
@@ -25,6 +25,5 @@ urlpatterns = [
     path("api/token/refresh/", TokenRefreshView.as_view(), name="token_refresh"),
     path("api/token/verify/", TokenVerifyView.as_view(), name="token_verify"),
     path("api/register/", register, name="register"),
-    path("api/login/", login_view, name="login"),
-    # ... other url patterns
+    path("api/check_admin/", check_admin, name="check_admin"),
 ]

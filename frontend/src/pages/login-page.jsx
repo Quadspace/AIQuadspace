@@ -8,8 +8,7 @@ const LoginPage = () => {
 
   const handleLogin = async () => {
     try {
-      const response = await fetch("http://localhost:8000/api/login/", {
-        // Replace with your actual login endpoint
+      const response = await fetch("http://localhost:8000/api/token/", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -19,16 +18,13 @@ const LoginPage = () => {
 
       if (response.ok) {
         const data = await response.json();
-        // Handle login success
-        console.log("Login successful:", data);
-        navigate("/chat"); // Navigate to the chat page
+        // Store the token in the local storage or a more secure place
+        localStorage.setItem("accessToken", data.access);
+        localStorage.setItem("refreshToken", data.refresh);
+        navigate("/chat");
       } else {
         // Handle login failure
-        if (response.status === 404) {
-          alert("Account not found. Please sign up.");
-        } else {
-          alert("Login failed. Please try again.");
-        }
+        alert("Login failed. Please try again.");
       }
     } catch (error) {
       console.error("Login error:", error);
@@ -47,6 +43,7 @@ const LoginPage = () => {
         <input
           className="auth-input"
           type="email"
+          name="email"
           value={email}
           onChange={(e) => setEmail(e.target.value)}
           placeholder="Email"
@@ -54,6 +51,7 @@ const LoginPage = () => {
         <input
           className="auth-input"
           type="password"
+          name="password"
           value={password}
           onChange={(e) => setPassword(e.target.value)}
           placeholder="Password"

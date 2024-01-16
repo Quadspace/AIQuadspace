@@ -13,6 +13,7 @@ import environ
 from pathlib import Path
 import os
 from dotenv import load_dotenv
+from datetime import timedelta
 
 load_dotenv()
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -33,7 +34,14 @@ ALLOWED_HOSTS = [
 ]
 # ALLOWED_HOSTS = ["quad2.onrender.com"]
 
+# CORS_ALLOWED_ORIGINS = [
+#     "http://localhost:5173",  # Add the origin of your frontend
+# ]
 CORS_ORIGIN_ALLOW_ALL = True
+
+CORS_ALLOW_METHODS = ["GET", "POST", "PUT", "DELETE"]
+CORS_ALLOW_HEADERS = ["Content-Type", "Authorization"]
+
 
 # CORS_ALLOWED_ORIGINS = [
 #     "https://quad1.netlify.app",
@@ -42,6 +50,26 @@ CORS_ORIGIN_ALLOW_ALL = True
 #     "http://127.0.0.1:9000",
 # ]
 
+SIMPLE_JWT = {
+    "ACCESS_TOKEN_LIFETIME": timedelta(minutes=43200),
+    "REFRESH_TOKEN_LIFETIME": timedelta(days=30),
+    # ... other settings ...
+}
+
+
+LOGGING = {
+    "version": 1,
+    "disable_existing_loggers": False,
+    "handlers": {
+        "console": {
+            "class": "logging.StreamHandler",
+        },
+    },
+    "root": {
+        "handlers": ["console"],
+        "level": "DEBUG",  # Set the logging level to DEBUG
+    },
+}
 
 # Application definition
 
@@ -62,7 +90,6 @@ MIDDLEWARE = [
     "corsheaders.middleware.CorsMiddleware",
     "django.middleware.common.CommonMiddleware",
     "django.contrib.sessions.middleware.SessionMiddleware",
-    "django.middleware.common.CommonMiddleware",
     "django.middleware.csrf.CsrfViewMiddleware",
     "django.contrib.auth.middleware.AuthenticationMiddleware",
     "django.contrib.messages.middleware.MessageMiddleware",
@@ -73,6 +100,25 @@ AUTHENTICATION_BACKENDS = [
     "django.contrib.auth.backends.ModelBackend",  # or any other appropriate backend
 ]
 
+
+SESSION_ENGINE = "django.contrib.sessions.backends.db"
+
+SESSION_COOKIE_NAME = "your_session_cookie_name"
+
+# Set session cookie age (optional, default is 1209600 seconds, which is 2 weeks)
+SESSION_COOKIE_AGE = 3600  # Set to 1 hour for testing
+
+# Set the path for session cookies (optional)
+SESSION_COOKIE_PATH = "/"
+
+# Ensure that the session cookie is marked as secure (requires HTTPS, optional)
+SESSION_COOKIE_SECURE = True  # Set to True for production
+
+# Ensure that the session cookie is HTTP-only (not accessible via JavaScript)
+SESSION_COOKIE_HTTPONLY = True
+
+# Optionally, set a custom session serializer (default is JSONSerializer)
+SESSION_SERIALIZER = "django.contrib.sessions.serializers.JSONSerializer"
 ROOT_URLCONF = "chat_project.urls"
 
 REST_FRAMEWORK = {

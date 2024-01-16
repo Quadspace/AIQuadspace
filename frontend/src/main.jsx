@@ -4,7 +4,6 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 import HomePage from "./pages/home-page";
 import AdminPage from "./pages/admin";
-import SuperuserLoginForm from "./pages/superuserlogin";
 import ErrorPage from "./pages/error-page";
 import ProtectedRoute from "./components/ProtectedRoute";
 import LoginPage from "./pages/login-page";
@@ -29,7 +28,7 @@ root.render(
         <Route path="/" element={<LoginPage />} />
         <Route path="/chat" element={<HomePage />} />
         <Route path="/create-account" element={<CreateAccountPage />} />
-        <Route path="/superuser-login" element={<SuperuserLoginForm />} />
+
         <Route
           path="/admin"
           element={
@@ -43,4 +42,3 @@ root.render(
     </Router>
   </React.StrictMode>
 );
-

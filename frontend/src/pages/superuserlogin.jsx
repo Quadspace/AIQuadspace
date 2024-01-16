@@ -13,9 +13,7 @@ const SuperuserLoginForm = () => {
 
     try {
       const response = await fetch(
-        // "https://quad2.onrender.com/api/superuser_login/",
         "http://localhost:8000/api/superuser_login/",
-
         {
           // Update the URL to the new endpoint
           method: "POST",

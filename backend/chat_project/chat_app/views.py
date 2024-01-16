@@ -1,7 +1,7 @@
 from django.http import JsonResponse, HttpResponse, HttpResponseRedirect
 from django.views.decorators.csrf import csrf_exempt
 from django.shortcuts import render, redirect
-from .models import ChatMessage, User, EmailUser
+from .models import ChatMessage, User, EmailUser, SuperuserCredentials
 import json
 from .forms import SuperuserLoginForm
 from django.contrib import messages
@@ -9,7 +9,14 @@ from rest_framework_simplejwt.tokens import RefreshToken
 from rest_framework import status
 from rest_framework.decorators import api_view
 from rest_framework.response import Response
-from django.contrib.auth import authenticate
+from django.contrib.auth import authenticate, login
+from django.contrib.auth.hashers import check_password
+from rest_framework.decorators import api_view, parser_classes
+from rest_framework.parsers import JSONParser
+from rest_framework.permissions import IsAuthenticated
+import logging
+
+logger = logging.getLogger(__name__)
 
 
 @api_view(["POST"])
@@ -26,36 +33,38 @@ def register(request):
     )
 
 
-@api_view(["POST"])
-def login_view(request):
-    email = request.data.get("email")
-    password = request.data.get("password")
-    user = authenticate(email=email, password=password)
-
-    if user is not None:
-        return Response({"message": "Login successful"}, status=status.HTTP_200_OK)
+@api_view(["GET"])
+def check_admin(request):
+    # Ensure the user is authenticated
+    if request.user.is_authenticated:
+        # Check if the user is an admin
+        admin_status = getattr(request.user, "is_admin", False)
     else:
-        return Response(
-            {"error": "Invalid credentials"}, status=status.HTTP_401_UNAUTHORIZED
-        )
+        admin_status = False
+
+    logger.info(f"User: {request.user}, Is Admin: {admin_status}")
+
+    # Return the admin status
+    return JsonResponse({"isAdmin": admin_status})
 
 
-@csrf_exempt
+@api_view(["POST"])
 def superuser_login(request):
-    if request.method == "POST":
-        data = json.loads(request.body)
-        username = data.get("username")
-        password = data.get("password")
+    username = request.data.get("username")
+    password = request.data.get("password")
 
-        user = authenticate(username=username, password=password)
-        if user is not None and user.is_superuser:
+    try:
+        superuser = SuperuserCredentials.objects.get(username=username)
+        if check_password(password, superuser.password_hash):
             return JsonResponse({"status": "success"})
         else:
             return JsonResponse(
                 {"status": "failure", "message": "Invalid credentials"}, status=401
             )
-
-    return JsonResponse({"status": "error", "message": "Invalid request"}, status=400)
+    except SuperuserCredentials.DoesNotExist:
+        return JsonResponse(
+            {"status": "failure", "message": "User not found"}, status=404
+        )
 
 
 def get_thread_ids(request):
@@ -78,7 +87,6 @@ def get_chat_history(request):
     )
 
 
-@csrf_exempt
 def save_chat_message(request):
     if request.method == "POST":
         data = json.loads(request.body)

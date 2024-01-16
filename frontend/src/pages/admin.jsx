@@ -4,63 +4,100 @@ import { useNavigate } from "react-router-dom";
 export default function AdminPage() {
   const [chatHistory, setChatHistory] = useState([]);
   const [selectedThreadId, setSelectedThreadId] = useState("");
-  const [threadIds, setThreadIds] = useState([]); // State for storing unique thread IDs
+  const [threadIdsByUser, setThreadIdsByUser] = useState({});
 
-  // Function to fetch unique thread IDs from the backend
-  const fetchThreadIds = async () => {
+  const navigate = useNavigate();
+
+  const fetchThreadIdsByUser = async () => {
+    const accessToken = localStorage.getItem("accessToken");
     try {
-      // const response = await fetch("https://quad2.onrender.com/api/thread_ids");
-      const response = await fetch("http://localhost:8000/api/thread_ids");
+      const response = await fetch(
+        "http://localhost:8000/api/thread_ids_by_user",
+        {
+          method: "GET",
+          headers: {
+            Authorization: `Bearer ${accessToken}`,
+            "Content-Type": "application/json",
+          },
+        }
+      );
       if (!response.ok) {
-        throw new Error("Failed to fetch thread IDs");
+        throw new Error("Failed to fetch chat threads by user");
       }
       const data = await response.json();
-      setThreadIds(data);
+      setThreadIdsByUser(data);
     } catch (error) {
-      console.error("Error fetching thread IDs:", error);
+      console.error("Error fetching chat threads by user:", error);
     }
   };
-  const navigate = useNavigate(); // Create navigate object for navigation
+
+  useEffect(() => {
+    fetchThreadIdsByUser();
+  }, []);
+
+  const createChatThread = async () => {
+    const accessToken = localStorage.getItem("accessToken");
+    try {
+      const response = await fetch(
+        "http://localhost:8000/api/create_chat_thread/",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+            Authorization: `Bearer ${accessToken}`,
+          },
+          body: JSON.stringify({
+            user_email: "example@email.com", // Replace with actual user email
+          }),
+        }
+      );
+      if (!response.ok) {
+        throw new Error("Failed to create chat thread");
+      }
+      // Handle the response as needed
+    } catch (error) {
+      console.error("Error creating chat thread:", error);
+    }
+  };
 
   const handleBack = () => {
-    navigate("/"); // Navigate back to the chat page
+    navigate("/");
   };
 
   useEffect(() => {
-    fetchThreadIds(); // Fetch thread IDs when the component mounts
-  }, []);
-
-  useEffect(() => {
-    // Fetch chat history for the selected thread ID
     const fetchChatHistory = async () => {
-      try {
-        // const response = await fetch(
-        //   `https://quad2.onrender.com/api/chat_history?thread_id=${selectedThreadId}`
-        // // );
-        const response = await fetch(
-          `http://localhost:8000/api/chat_history?thread_id=${selectedThreadId}`
-        );
-        if (!response.ok) {
-          throw new Error("Failed to fetch chat history");
+      if (selectedThreadId) {
+        const accessToken = localStorage.getItem("accessToken");
+        try {
+          const response = await fetch(
+            `http://localhost:8000/api/chat_history?thread_id=${selectedThreadId}`,
+            {
+              method: "GET",
+              headers: {
+                Authorization: `Bearer ${accessToken}`,
+                "Content-Type": "application/json",
+              },
+            }
+          );
+          if (!response.ok) {
+            throw new Error("Failed to fetch chat history");
+          }
+          const data = await response.json();
+          setChatHistory(data);
+        } catch (error) {
+          console.error("Error fetching chat history:", error);
         }
-        const data = await response.json();
-        setChatHistory(data);
-      } catch (error) {
-        console.error("Error fetching chat history:", error);
       }
     };
 
-    if (selectedThreadId) {
-      fetchChatHistory();
-    }
+    fetchChatHistory();
   }, [selectedThreadId]);
 
   return (
     <div className="disclaimer-wrapper">
       <button onClick={handleBack} className="back-button">
         <i className="fas fa-arrow-left"></i>
-      </button>{" "}
-      {/* Back button */}
+      </button>
       <div className="admin-container">
         <h1>Admin</h1>
         <div className="logo-container">
@@ -72,10 +109,14 @@ export default function AdminPage() {
           className="chat-input"
         >
           <option value="">Select a thread</option>
-          {threadIds.map((threadId, index) => (
-            <option key={index} value={threadId}>
-              {threadId}
-            </option>
+          {Object.keys(threadIdsByUser).map((userEmail) => (
+            <optgroup key={userEmail} label={userEmail}>
+              {threadIdsByUser[userEmail].map((threadId) => (
+                <option key={threadId} value={threadId}>
+                  {threadId}
+                </option>
+              ))}
+            </optgroup>
           ))}
         </select>
         <div className="chat-container" style={{ marginTop: "20px" }}>

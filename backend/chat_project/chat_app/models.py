@@ -1,5 +1,6 @@
 from django.db import models
 from django.contrib.auth.models import AbstractBaseUser, BaseUserManager
+from django.contrib.auth.hashers import make_password, check_password
 
 
 class EmailUserManager(BaseUserManager):
@@ -53,9 +54,20 @@ class User(models.Model):
         return self.name
 
 
+class ChatThread(models.Model):
+    user = models.ForeignKey(EmailUser, on_delete=models.CASCADE)
+
+
 class SuperuserCredentials(models.Model):
     username = models.CharField(max_length=100, unique=True)
-    password = models.CharField(max_length=100)
+    password_hash = models.CharField(max_length=128)
+
+    def set_password(self, raw_password):
+        self.password_hash = make_password(raw_password)
+        self.save()
+
+    def check_password(self, raw_password):
+        return check_password(raw_password, self.password_hash)
 
 
 class ChatMessage(models.Model):
