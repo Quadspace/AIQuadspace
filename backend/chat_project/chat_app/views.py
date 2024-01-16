@@ -3,6 +3,8 @@ from django.views.decorators.csrf import csrf_exempt
 from django.shortcuts import render, redirect
 from .models import ChatMessage, EmailUser
 import json
+from django.db.models import F
+
 
 from django.contrib import messages
 from rest_framework_simplejwt.tokens import RefreshToken
@@ -13,7 +15,7 @@ from django.contrib.auth import authenticate, login
 from django.contrib.auth.hashers import check_password
 from rest_framework.decorators import api_view, parser_classes
 from rest_framework.parsers import JSONParser
-from rest_framework.permissions import IsAuthenticated
+from rest_framework.permissions import IsAuthenticated, IsAdminUser
 
 
 import logging
@@ -42,9 +44,19 @@ def check_admin(request):
     return Response({"isAdmin": False}, status=status.HTTP_403_FORBIDDEN)
 
 
+@api_view(["GET"])
+@permission_classes([IsAuthenticated, IsAdminUser])  # Ensure only admins can access
 def get_thread_ids(request):
-    thread_ids = User.objects.values_list("name", flat=True).distinct()
-    return JsonResponse(list(thread_ids), safe=False)
+    # Fetch distinct email addresses and their corresponding chat threads
+    email_users = (
+        EmailUser.objects.annotate(thread_id=F("messages__id"))
+        .values_list("email", "thread_id")
+        .distinct()
+    )
+    threads_by_user = {}
+    for email, thread_id in email_users:
+        threads_by_user.setdefault(email, []).append(thread_id)
+    return JsonResponse(threads_by_user, safe=False)
 
 
 def get_chat_history(request):

@@ -11,16 +11,13 @@ export default function AdminPage() {
   const fetchThreadIdsByUser = async () => {
     const accessToken = localStorage.getItem("accessToken");
     try {
-      const response = await fetch(
-        "http://localhost:8000/api/thread_ids_by_user",
-        {
-          method: "GET",
-          headers: {
-            Authorization: `Bearer ${accessToken}`,
-            "Content-Type": "application/json",
-          },
-        }
-      );
+      const response = await fetch("http://localhost:8000/api/thread_ids/", {
+        method: "GET",
+        headers: {
+          Authorization: `Bearer ${accessToken}`,
+          "Content-Type": "application/json",
+        },
+      });
       if (!response.ok) {
         throw new Error("Failed to fetch chat threads by user");
       }
