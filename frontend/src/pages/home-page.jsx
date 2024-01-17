@@ -198,22 +198,23 @@ export default function AIResponse({ openModal }) {
     };
 
     appendToChatHistory({ role: "user", content: inputText });
-    setInputText("");
 
     try {
       const accessToken = localStorage.getItem("accessToken");
 
+      // Save user message
       await fetch("http://localhost:8000/api/save_chat_message/", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
-          Authorization: `Bearer ${accessToken}`, // Include the JWT token
+          Authorization: `Bearer ${accessToken}`,
         },
         body: JSON.stringify(userMessageContent),
       });
 
       const knowledgeText = await fetchFileContent();
 
+      // Get assistant's response
       const response = await fetch(
         "https://api.openai.com/v1/chat/completions",
         {
@@ -238,9 +239,28 @@ export default function AIResponse({ openModal }) {
       }
 
       const data = await response.json();
+      const assistantResponse = data.choices[0].message.content;
+
       appendToChatHistory({
         role: "assistant",
-        content: data.choices[0].message.content,
+        content: assistantResponse,
+      });
+
+      // Save assistant's response
+      const assistantMessageContent = {
+        role: "assistant",
+        content: assistantResponse,
+        userEmail: localStorage.getItem("userEmail"),
+        threadIdentifier,
+      };
+
+      await fetch("http://localhost:8000/api/save_chat_message/", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Authorization: `Bearer ${accessToken}`,
+        },
+        body: JSON.stringify(assistantMessageContent),
       });
     } catch (error) {
       console.error("Error:", error);

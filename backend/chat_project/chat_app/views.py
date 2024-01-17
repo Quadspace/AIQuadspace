@@ -128,12 +128,9 @@ def save_chat_message(request):
 
         # Create and save the chat message
         ChatMessage.objects.create(user=user, role=role, content=content, thread=thread)
+
         return JsonResponse({"status": "success"})
 
-    except EmailUser.DoesNotExist:
-        return JsonResponse(
-            {"status": "error", "message": "User not found"}, status=404
-        )
     except ChatThread.DoesNotExist:
         return JsonResponse(
             {"status": "error", "message": "Thread not found"}, status=404
