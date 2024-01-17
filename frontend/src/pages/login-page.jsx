@@ -1,16 +1,21 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
-
 const LoginPage = () => {
-    const [email, setEmail] = useState("");
-    const [password, setPassword] = useState("");
-    const [errorMessage, setErrorMessage] = useState("");
-    const navigate = useNavigate();
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [errorMessage, setErrorMessage] = useState("");
+  const navigate = useNavigate();
 
-  const handleLogin = async () => {
+  const handleLogin = async (e) => {
+    e.preventDefault(); // Prevent default form submission behavior
+
+    // Clear any existing session data
+    localStorage.removeItem("accessToken");
+    localStorage.removeItem("refreshToken");
+
     try {
-      const response = await fetch("http://localhost:8000/api/token/", {
+      const loginResponse = await fetch("http://localhost:8000/api/token/", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -18,21 +23,25 @@ const LoginPage = () => {
         body: JSON.stringify({ email, password }),
       });
 
-      if (response.ok) {
-        const data = await response.json();
-        // Store the token and email in the local storage
-        localStorage.setItem("accessToken", data.access);
-        localStorage.setItem("refreshToken", data.refresh);
-        localStorage.setItem("userEmail", email);
+      const loginData = await loginResponse.json();
 
-        navigate("/chat");
+      if (loginResponse.ok) {
+        // Store the new tokens
+        localStorage.setItem("accessToken", loginData.access);
+        localStorage.setItem("refreshToken", loginData.refresh);
+
+        navigate("/chat"); // Navigate to chat page
       } else {
-        // Handle login failure
-        setErrorMessage("Login failed. Please try again.");
+        if (loginData.password) {
+          setErrorMessage(loginData.password[0]);
+        } else if (loginData.detail) {
+          setErrorMessage(loginData.detail);
+        } else {
+          setErrorMessage("Login failed");
+        }
       }
     } catch (error) {
-      console.error("Login error:", error);
-      setErrorMessage("An error occurred. Please try again later.");
+      setErrorMessage(error.message || "An error occurred during login");
     }
   };
 

@@ -47,6 +47,58 @@ def register(request):
     )
 
 
+@api_view(["POST"])
+def login_user(request):
+    email = request.data.get("email")
+    password = request.data.get("password")
+
+    if not EmailUser.objects.filter(email=email).exists():
+        return Response(
+            {"error": "Email does not exist in our system."},
+            status=status.HTTP_404_NOT_FOUND,
+        )
+
+    user = authenticate(email=email, password=password)
+    if user is not None:
+        if user.is_active:
+            # Create and return tokens or other login confirmation
+            # Example:
+            refresh = RefreshToken.for_user(user)
+            return Response(
+                {
+                    "refresh": str(refresh),
+                    "access": str(refresh.access_token),
+                }
+            )
+        else:
+            return Response(
+                {"error": "User account is inactive."}, status=status.HTTP_403_FORBIDDEN
+            )
+    else:
+        return Response(
+            {"error": "Password is incorrect."}, status=status.HTTP_400_BAD_REQUEST
+        )
+
+
+@api_view(["POST"])
+def token_obtain_pair(request):
+    email = request.data.get("email")
+    password = request.data.get("password")
+
+    if not password:
+        return Response(
+            {"password": ["This field may not be blank."]},
+            status=status.HTTP_400_BAD_REQUEST,
+        )
+
+    user = authenticate(email=email, password=password)
+    if not user:
+        return Response(
+            {"detail": "No active account found with the given credentials"},
+            status=status.HTTP_401_UNAUTHORIZED,
+        )
+
+
 @api_view(["GET"])
 def check_admin(request):
     if request.user.is_authenticated:

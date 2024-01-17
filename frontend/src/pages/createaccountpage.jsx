@@ -57,7 +57,7 @@ const CreateAccountPage = () => {
       });
 
       if (response.ok) {
-        // Log in the new user
+        // Log in the new user after successful account creation
         await handleLogin(email, password);
       } else {
         const data = await response.json();
@@ -68,6 +68,9 @@ const CreateAccountPage = () => {
     } catch (error) {
       setErrorMessage(error.message || "An unexpected error occurred");
     }
+  };
+  const handleGoToLogin = () => {
+    navigate("/"); // Navigate to the login page
   };
 
   return (
@@ -103,7 +106,7 @@ const CreateAccountPage = () => {
           </button>
           <button
             className="auth-button auth-button-spacing"
-            onClick={handleLogin}
+            onClick={handleGoToLogin}
           >
             Go to Login
           </button>
