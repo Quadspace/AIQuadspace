@@ -11,17 +11,21 @@ from chat_app.views import (
     get_chat_history,
     register,
     check_admin,
+    create_chat_thread,
 )
 from django.contrib import admin
 
 urlpatterns = [
     path("api/save_chat_message/", save_chat_message, name="save_chat_message"),
     path("api/thread_ids/", get_thread_ids, name="get_thread_ids"),
-    path("api/chat_history/", get_chat_history, name="get_chat_history"),
+    path(
+        "api/chat_history/<int:thread_id>/", get_chat_history, name="get_chat_history"
+    ),
     path("admin/", admin.site.urls),
     path("api/token/", TokenObtainPairView.as_view(), name="token_obtain_pair"),
     path("api/token/refresh/", TokenRefreshView.as_view(), name="token_refresh"),
     path("api/token/verify/", TokenVerifyView.as_view(), name="token_verify"),
     path("api/register/", register, name="register"),
     path("api/check_admin/", check_admin, name="check_admin"),
+    path("api/create_chat_thread/", create_chat_thread, name="create_chat_thread"),
 ]

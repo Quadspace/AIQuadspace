@@ -8,11 +8,11 @@ export default function AdminPage() {
 
   const navigate = useNavigate();
 
+  // Fetch thread identifiers by user
   const fetchThreadIdsByUser = async () => {
     const accessToken = localStorage.getItem("accessToken");
     try {
       const response = await fetch("http://localhost:8000/api/thread_ids/", {
-        method: "GET",
         headers: {
           Authorization: `Bearer ${accessToken}`,
           "Content-Type": "application/json",
@@ -32,44 +32,17 @@ export default function AdminPage() {
     fetchThreadIdsByUser();
   }, []);
 
-  const createChatThread = async () => {
-    const accessToken = localStorage.getItem("accessToken");
-    try {
-      const response = await fetch(
-        "http://localhost:8000/api/create_chat_thread/",
-        {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-            Authorization: `Bearer ${accessToken}`,
-          },
-          body: JSON.stringify({
-            user_email: "example@email.com", // Replace with actual user email
-          }),
-        }
-      );
-      if (!response.ok) {
-        throw new Error("Failed to create chat thread");
-      }
-      // Handle the response as needed
-    } catch (error) {
-      console.error("Error creating chat thread:", error);
-    }
-  };
-
-  const handleBack = () => {
-    navigate("/");
-  };
-
+  // Fetch chat history for a selected thread
   useEffect(() => {
     const fetchChatHistory = async () => {
       if (selectedThreadId) {
         const accessToken = localStorage.getItem("accessToken");
         try {
           const response = await fetch(
-            `http://localhost:8000/api/chat_history?thread_id=${selectedThreadId}`,
+            `http://localhost:8000/api/chat_history/${encodeURIComponent(
+              selectedThreadId
+            )}/`,
             {
-              method: "GET",
               headers: {
                 Authorization: `Bearer ${accessToken}`,
                 "Content-Type": "application/json",
@@ -92,7 +65,7 @@ export default function AdminPage() {
 
   return (
     <div className="disclaimer-wrapper">
-      <button onClick={handleBack} className="back-button">
+      <button onClick={() => navigate("/")} className="back-button">
         <i className="fas fa-arrow-left"></i>
       </button>
       <div className="admin-container">
@@ -106,15 +79,17 @@ export default function AdminPage() {
           className="chat-input"
         >
           <option value="">Select a thread</option>
-          {Object.keys(threadIdsByUser).map((userEmail) => (
-            <optgroup key={userEmail} label={userEmail}>
-              {threadIdsByUser[userEmail].map((threadId) => (
-                <option key={threadId} value={threadId}>
-                  {threadId}
-                </option>
-              ))}
-            </optgroup>
-          ))}
+          {Object.entries(threadIdsByUser).map(
+            ([userEmail, threadIdentifiers]) => (
+              <optgroup key={userEmail} label={userEmail}>
+                {threadIdentifiers.map((identifier, index) => (
+                  <option key={index} value={identifier}>
+                    Thread {index + 1}
+                  </option>
+                ))}
+              </optgroup>
+            )
+          )}
         </select>
         <div className="chat-container" style={{ marginTop: "20px" }}>
           <div className="chat-box">
@@ -131,7 +106,7 @@ export default function AdminPage() {
                   <strong>{message.role.toUpperCase()}:</strong>{" "}
                   {message.content}
                   <br />
-                  <small>{message.formattedTimestamp}</small>
+                  <small>{new Date(message.timestamp).toLocaleString()}</small>
                 </p>
               ))}
             </div>

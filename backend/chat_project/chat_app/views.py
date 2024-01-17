@@ -1,11 +1,12 @@
 from django.http import JsonResponse, HttpResponse, HttpResponseRedirect
 from django.views.decorators.csrf import csrf_exempt
 from django.shortcuts import render, redirect
-from .models import ChatMessage, EmailUser
+from .models import ChatMessage, EmailUser, ChatThread
 import json
 from django.db.models import F
+import re
 
-
+from django.db import transaction
 from django.contrib import messages
 from rest_framework_simplejwt.tokens import RefreshToken
 from rest_framework import status
@@ -21,6 +22,15 @@ from rest_framework.permissions import IsAuthenticated, IsAdminUser
 import logging
 
 logger = logging.getLogger(__name__)
+
+
+def parse_thread_identifier(thread_identifier):
+    try:
+        email, thread_id = thread_identifier.rsplit("-", 1)
+        return email, int(thread_id)
+    except ValueError:
+        # Handle the case where the format is not as expected
+        return thread_identifier, None
 
 
 @api_view(["POST"])
@@ -45,33 +55,64 @@ def check_admin(request):
 
 
 @api_view(["GET"])
-@permission_classes([IsAuthenticated, IsAdminUser])  # Ensure only admins can access
+@permission_classes([IsAuthenticated, IsAdminUser])
 def get_thread_ids(request):
     # Fetch distinct email addresses and their corresponding chat threads
-    email_users = (
-        EmailUser.objects.annotate(thread_id=F("messages__id"))
-        .values_list("email", "thread_id")
-        .distinct()
-    )
     threads_by_user = {}
-    for email, thread_id in email_users:
-        threads_by_user.setdefault(email, []).append(thread_id)
+    for user in EmailUser.objects.all():
+        threads = ChatThread.objects.filter(user=user)
+        threads_by_user[user.email] = [
+            thread.get_thread_identifier() for thread in threads
+        ]
     return JsonResponse(threads_by_user, safe=False)
 
 
-def get_chat_history(request):
-    thread_id = request.GET.get("thread_id")
-    if thread_id:
-        user = User.objects.get(name=thread_id)
-        chat_messages = ChatMessage.objects.filter(user=user).order_by("timestamp")
+@api_view(["POST"])
+@permission_classes([IsAuthenticated])
+def create_chat_thread(request):
+    user_email = request.data.get("userEmail")
+    try:
+        user = EmailUser.objects.get(email=user_email)
+        new_thread = ChatThread.objects.create(user=user)
+        new_thread_identifier = str(new_thread.id)  # Use a simple ID
+
+        return JsonResponse(
+            {"threadIdentifier": new_thread_identifier}, status=status.HTTP_201_CREATED
+        )
+    except EmailUser.DoesNotExist:
+        return JsonResponse(
+            {"error": "User not found"}, status=status.HTTP_404_NOT_FOUND
+        )
+    except Exception as e:
+        # Log the exception for debugging
+        return JsonResponse(
+            {"error": str(e)}, status=status.HTTP_500_INTERNAL_SERVER_ERROR
+        )
+
+
+def get_chat_history(request, thread_identifier):
+    try:
+        email, thread_count = parse_thread_identifier(thread_identifier)
+        user = EmailUser.objects.get(email=email)
+        thread = ChatThread.objects.filter(user=user)[thread_count - 1]
+        chat_messages = ChatMessage.objects.filter(thread=thread).order_by("timestamp")
         data = [
             {"role": msg.role, "content": msg.content, "timestamp": msg.timestamp}
             for msg in chat_messages
         ]
         return JsonResponse(data, safe=False)
-    return JsonResponse(
-        {"status": "error", "message": "Thread ID is required"}, status=400
-    )
+    except EmailUser.DoesNotExist:
+        return JsonResponse(
+            {"status": "error", "message": "User not found"}, status=404
+        )
+    except ChatThread.DoesNotExist:
+        return JsonResponse(
+            {"status": "error", "message": "Thread not found"}, status=404
+        )
+    except IndexError:
+        return JsonResponse(
+            {"status": "error", "message": "Invalid thread number"}, status=400
+        )
 
 
 @api_view(["POST"])
@@ -79,22 +120,31 @@ def get_chat_history(request):
 def save_chat_message(request):
     try:
         data = request.data
-        email = data.get("userEmail")
+        thread_id = data.get("threadIdentifier")
         content = data.get("content")
         role = data.get("role")
 
-        if not email or not content or not role:
+        # Ensure all required fields are provided
+        if not thread_id or not content or not role:
             return JsonResponse(
                 {"status": "error", "message": "Missing required fields"}, status=400
             )
 
-        user = EmailUser.objects.get(email=email)
-        ChatMessage.objects.create(user=user, role=role, content=content)
+        # Find the specific chat thread
+        thread = ChatThread.objects.get(id=thread_id)
+        user = thread.user
+
+        # Create and save the chat message
+        ChatMessage.objects.create(user=user, role=role, content=content, thread=thread)
         return JsonResponse({"status": "success"})
 
     except EmailUser.DoesNotExist:
         return JsonResponse(
             {"status": "error", "message": "User not found"}, status=404
+        )
+    except ChatThread.DoesNotExist:
+        return JsonResponse(
+            {"status": "error", "message": "Thread not found"}, status=404
         )
     except Exception as e:
         logger.error(f"Error saving chat message: {e}")

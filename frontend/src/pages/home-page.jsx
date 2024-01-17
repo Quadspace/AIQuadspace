@@ -10,6 +10,8 @@ export default function AIResponse({ openModal }) {
   const [showTyping, setShowTyping] = useState(true);
   const [userEmail, setUserEmail] = useState(""); // State to hold the user's email
   const [agreementChecked, setAgreementChecked] = useState(false);
+  const [threadIdentifier, setThreadIdentifier] = useState("");
+
   const [chatHistory, setChatHistory] = useState([
     {
       role: "assistant",
@@ -43,17 +45,6 @@ export default function AIResponse({ openModal }) {
   };
 
   // Function to handle chat start
-  const handleChatStart = () => {
-    setIsChatOpen(true);
-    setShowTyping(true);
-    setTimeout(() => {
-      setShowTyping(false);
-      appendToChatHistory({
-        role: "assistant",
-        content: "Who do I have the pleasure of speaking with?",
-      });
-    }, 3500); // Delay for the second message
-  };
 
   const chatContentRef = useRef(null);
   const inputRef = useRef(null);
@@ -78,6 +69,50 @@ export default function AIResponse({ openModal }) {
       return `<a href="${url}" target="_blank" rel="noopener noreferrer" style="color: blue; text-decoration: underline;">${url}</a>`;
     });
   }
+
+  const handleChatStart = async () => {
+    setIsChatOpen(true);
+    setShowTyping(true);
+
+    // Retrieve the user's email and access token
+    const userEmail = localStorage.getItem("userEmail");
+    const accessToken = localStorage.getItem("accessToken");
+
+    try {
+      // Make a POST request to create a new chat thread
+      const response = await fetch(
+        "http://localhost:8000/api/create_chat_thread/",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+            Authorization: `Bearer ${accessToken}`,
+          },
+          body: JSON.stringify({ userEmail }),
+        }
+      );
+
+      if (!response.ok) {
+        throw new Error("Failed to create chat thread");
+      }
+
+      // Retrieve the thread identifier from the response
+      const data = await response.json();
+      setThreadIdentifier(data.threadIdentifier); // This now directly stores the thread ID
+
+      // Continue with displaying the initial assistant message
+      setTimeout(() => {
+        setShowTyping(false);
+        appendToChatHistory({
+          role: "assistant",
+          content: "Who do I have the pleasure of speaking with?",
+        });
+      }, 3500); // Adjust the delay as needed
+    } catch (error) {
+      console.error("Error creating chat thread:", error);
+      // Optionally, handle the error (e.g., show a message to the user)
+    }
+  };
 
   // useEffect to handle auto-scroll and input focus
   useEffect(() => {
@@ -155,11 +190,11 @@ export default function AIResponse({ openModal }) {
     setIsLoading(true);
     setShowTyping(true);
 
-    const userEmail = localStorage.getItem("userEmail");
     const userMessageContent = {
       role: "user",
       content: inputText,
-      userEmail: userEmail, // Use user's email as identifier
+      userEmail: localStorage.getItem("userEmail"),
+      threadIdentifier, // This is now just a simple ID
     };
 
     appendToChatHistory({ role: "user", content: inputText });
@@ -167,6 +202,7 @@ export default function AIResponse({ openModal }) {
 
     try {
       const accessToken = localStorage.getItem("accessToken");
+
       await fetch("http://localhost:8000/api/save_chat_message/", {
         method: "POST",
         headers: {

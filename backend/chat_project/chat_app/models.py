@@ -46,15 +46,21 @@ class EmailUser(AbstractBaseUser):
 
 class ChatThread(models.Model):
     user = models.ForeignKey(EmailUser, on_delete=models.CASCADE)
-    # Add any other fields you might need for a chat thread
+
+    def get_thread_identifier(self):
+        # Simple identifier for each thread using just the ID
+        return str(self.id)
 
     def __str__(self):
-        return f"ChatThread for {self.user.email}"
+        return f"ChatThread ID: {self.get_thread_identifier()}"
 
 
 class ChatMessage(models.Model):
     user = models.ForeignKey(
         EmailUser, on_delete=models.CASCADE, related_name="messages"
+    )
+    thread = models.ForeignKey(
+        ChatThread, on_delete=models.CASCADE, related_name="messages"
     )
     role = models.CharField(
         max_length=10, choices=[("user", "User"), ("assistant", "Assistant")]
@@ -64,6 +70,3 @@ class ChatMessage(models.Model):
 
     def __str__(self):
         return f"{self.role}: {self.content[:50]}..."
-
-
-# You can add any other models you need here
