@@ -1,10 +1,12 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
+
 const LoginPage = () => {
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
-  const navigate = useNavigate();
+    const [email, setEmail] = useState("");
+    const [password, setPassword] = useState("");
+    const [errorMessage, setErrorMessage] = useState("");
+    const navigate = useNavigate();
 
   const handleLogin = async () => {
     try {
@@ -26,11 +28,11 @@ const LoginPage = () => {
         navigate("/chat");
       } else {
         // Handle login failure
-        alert("Login failed. Please try again.");
+        setErrorMessage("Login failed. Please try again.");
       }
     } catch (error) {
       console.error("Login error:", error);
-      alert("An error occurred. Please try again later.");
+      setErrorMessage("An error occurred. Please try again later.");
     }
   };
 
@@ -42,6 +44,7 @@ const LoginPage = () => {
     <div className="auth-container">
       <img src="/logofull.png" alt="Quadspace Logo" className="auth-logo" />
       <div className="auth-form-container">
+        {errorMessage && <div style={{ color: "red" }}>{errorMessage}</div>}
         <input
           className="auth-input"
           type="email"

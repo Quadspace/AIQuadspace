@@ -5,13 +5,15 @@ const CreateAccountPage = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
+  const [errorMessage, setErrorMessage] = useState("");
+
   const navigate = useNavigate();
 
   const handleCreateAccount = async (e) => {
     e.preventDefault();
 
     if (password !== confirmPassword) {
-      alert("Passwords do not match!");
+      setErrorMessage("Passwords do not match!");
       return;
     }
 
@@ -29,10 +31,10 @@ const CreateAccountPage = () => {
       }
 
       const data = await response.json();
-      alert("Account created successfully! Please login.");
+      setErrorMessage("Account created successfully! Please login.");
       navigate("/"); // Navigate to the login page
     } catch (error) {
-      alert(error.message || "An error occurred");
+      setErrorMessage(error.message || "An error occurred");
     }
   };
 
@@ -44,9 +46,11 @@ const CreateAccountPage = () => {
     <>
       <h1 className="auth-title">Create Account</h1>
       <div className="auth-container">
+
         <img src="/logofull.png" alt="Quadspace Logo" className="auth-logo" />
         <div className="auth-form-container">
-          <input
+            {errorMessage && <div style={{ color: "red" }}>{errorMessage}</div>}
+            <input
             className="auth-input"
             type="email"
             value={email}

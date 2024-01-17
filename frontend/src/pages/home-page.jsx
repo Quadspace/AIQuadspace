@@ -11,6 +11,7 @@ export default function AIResponse({ openModal }) {
   const [userEmail, setUserEmail] = useState(""); // State to hold the user's email
   const [agreementChecked, setAgreementChecked] = useState(false);
   const [threadIdentifier, setThreadIdentifier] = useState("");
+  const [errorMessage, setErrorMessage] = useState("");
 
   const [chatHistory, setChatHistory] = useState([
     {
@@ -36,11 +37,11 @@ export default function AIResponse({ openModal }) {
       if (response.ok && data.isAdmin) {
         navigate("/admin");
       } else {
-        alert("Access denied. You must have admin access.");
+        setErrorMessage("Access denied. You must have admin access.");
       }
     } catch (error) {
       console.error("Error:", error);
-      alert("An error occurred. Please try again later.");
+      setErrorMessage("An error occurred. Please try again later.");
     }
   };
 
@@ -71,6 +72,12 @@ export default function AIResponse({ openModal }) {
   }
 
   const handleChatStart = async () => {
+    console.log("Checkbox Checked:", agreementChecked); // Debugging state
+    if (!agreementChecked) {
+      console.log("Setting error message"); // Debugging condition
+      setErrorMessage("You must select the checkbox to agree");
+      return; // Stop further execution if the checkbox isn't checked
+    }
     setIsChatOpen(true);
     setShowTyping(true);
 
@@ -126,9 +133,13 @@ export default function AIResponse({ openModal }) {
 
   const handleInputChange = (e) => {
     setInputText(e.target.value);
+    setErrorMessage("");
     const textarea = e.target;
     textarea.style.height = "auto";
     textarea.style.height = `${textarea.scrollHeight}px`; // Set to content height
+  };
+  const clearErrorMessage = () => {
+    setErrorMessage("");
   };
 
   const handleInputKeyDown = (e) => {
@@ -276,6 +287,8 @@ export default function AIResponse({ openModal }) {
 
   const handleCheckboxChange = (e) => {
     setAgreementChecked(e.target.checked);
+    clearErrorMessage();
+    console.log("Checkbox state updated to:", e.target.checked); // Debugging
   };
 
   return (
@@ -289,6 +302,7 @@ export default function AIResponse({ openModal }) {
               style={{ maxWidth: "100%", height: "auto" }}
             />
             <div className="privacy-policy-container">
+              
               <h2>Privacy Policy</h2>
               <div className="privacy-policy-content">
                 {/* Insert your long privacy policy text here */}
@@ -611,6 +625,11 @@ export default function AIResponse({ openModal }) {
                 {/* Continue with the rest of the privacy policy content */}
               </div>
             </div>
+            {errorMessage && (
+              <div style={{ color: "red", marginTop: "10px" }}>
+                {errorMessage}
+              </div>
+            )}
             <label className="privacy-agreement">
               <input
                 type="checkbox"
@@ -620,9 +639,8 @@ export default function AIResponse({ openModal }) {
               />
               I agree to the Privacy Policy
             </label>
-            <button onClick={handleChatStart} disabled={!agreementChecked}>
-              I give permission
-            </button>
+
+            <button onClick={handleChatStart}>I give permission</button>
           </div>
         </div>
       ) : (
@@ -639,6 +657,12 @@ export default function AIResponse({ openModal }) {
           />
 
           <div className="chat-box" ref={chatContentRef}>
+            {errorMessage && (
+              <div style={{ color: "red", padding: "10px" }}>
+                {errorMessage}
+              </div>
+            )}
+
             <div className="chat-content">
               {chatHistory.map((message, index) => (
                 <p
