@@ -198,6 +198,7 @@ export default function AIResponse({ openModal }) {
     };
 
     appendToChatHistory({ role: "user", content: inputText });
+    setInputText("");
 
     try {
       const accessToken = localStorage.getItem("accessToken");
