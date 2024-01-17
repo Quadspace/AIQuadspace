@@ -26,15 +26,26 @@ const CreateAccountPage = () => {
         body: JSON.stringify({ email, password }),
       });
 
-      if (!response.ok) {
-        throw new Error("Failed to create account");
-      }
-
       const data = await response.json();
-      setErrorMessage("Account created successfully! Please login.");
-      navigate("/"); // Navigate to the login page
+
+      if (response.ok) {
+        setErrorMessage("Account created successfully! Please login.");
+        navigate("/"); // Navigate to the login page
+      } else {
+        // Adjusted to check for the specific error message from the server
+        if (data.error === "Email already exists") {
+          setErrorMessage(
+            "Email already exists. Please try a different email."
+          );
+        } else {
+          setErrorMessage(
+            data.error || "Failed to create account. Please try again."
+          );
+        }
+      }
     } catch (error) {
-      setErrorMessage(error.message || "An error occurred");
+      // Generic catch block for network or other unexpected errors
+      setErrorMessage(error.message || "An unexpected error occurred");
     }
   };
 
@@ -46,11 +57,10 @@ const CreateAccountPage = () => {
     <>
       <h1 className="auth-title">Create Account</h1>
       <div className="auth-container">
-
         <img src="/logofull.png" alt="Quadspace Logo" className="auth-logo" />
         <div className="auth-form-container">
-            {errorMessage && <div style={{ color: "red" }}>{errorMessage}</div>}
-            <input
+          {errorMessage && <div style={{ color: "red" }}>{errorMessage}</div>}
+          <input
             className="auth-input"
             type="email"
             value={email}
