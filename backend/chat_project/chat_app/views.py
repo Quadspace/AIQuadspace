@@ -70,24 +70,12 @@ def get_thread_ids(request):
 @api_view(["POST"])
 @permission_classes([IsAuthenticated])
 def create_chat_thread(request):
-    user_email = request.data.get("userEmail")
-    try:
-        user = EmailUser.objects.get(email=user_email)
-        new_thread = ChatThread.objects.create(user=user)
-        new_thread_identifier = str(new_thread.id)  # Use a simple ID
-
-        return JsonResponse(
-            {"threadIdentifier": new_thread_identifier}, status=status.HTTP_201_CREATED
-        )
-    except EmailUser.DoesNotExist:
-        return JsonResponse(
-            {"error": "User not found"}, status=status.HTTP_404_NOT_FOUND
-        )
-    except Exception as e:
-        # Log the exception for debugging
-        return JsonResponse(
-            {"error": str(e)}, status=status.HTTP_500_INTERNAL_SERVER_ERROR
-        )
+    user = request.user  # Authenticated user
+    new_thread = ChatThread.objects.create(user=user)
+    new_thread_identifier = str(new_thread.id)  # Simple identifier for the thread
+    return JsonResponse(
+        {"threadIdentifier": new_thread_identifier}, status=status.HTTP_201_CREATED
+    )
 
 
 @api_view(["GET"])

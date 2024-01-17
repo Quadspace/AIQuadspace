@@ -9,6 +9,36 @@ const CreateAccountPage = () => {
 
   const navigate = useNavigate();
 
+  const handleLogin = async (email, password) => {
+    // Clear any existing session data
+    localStorage.removeItem("accessToken");
+    localStorage.removeItem("refreshToken");
+
+    try {
+      const loginResponse = await fetch("http://localhost:8000/api/token/", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ email, password }),
+      });
+
+      const loginData = await loginResponse.json();
+
+      if (loginResponse.ok) {
+        // Store the new tokens
+        localStorage.setItem("accessToken", loginData.access);
+        localStorage.setItem("refreshToken", loginData.refresh);
+        localStorage.setItem("userEmail", email);
+        navigate("/chat"); // Adjust URL as needed
+      } else {
+        throw new Error(loginData.detail || "Login failed");
+      }
+    } catch (error) {
+      setErrorMessage(error.message || "An error occurred during login");
+    }
+  };
+
   const handleCreateAccount = async (e) => {
     e.preventDefault();
 
@@ -26,31 +56,18 @@ const CreateAccountPage = () => {
         body: JSON.stringify({ email, password }),
       });
 
-      const data = await response.json();
-
       if (response.ok) {
-        setErrorMessage("Account created successfully! Please login.");
-        navigate("/"); // Navigate to the login page
+        // Log in the new user
+        await handleLogin(email, password);
       } else {
-        // Adjusted to check for the specific error message from the server
-        if (data.error === "Email already exists") {
-          setErrorMessage(
-            "Email already exists. Please try a different email."
-          );
-        } else {
-          setErrorMessage(
-            data.error || "Failed to create account. Please try again."
-          );
-        }
+        const data = await response.json();
+        setErrorMessage(
+          data.error || "Failed to create account. Please try again."
+        );
       }
     } catch (error) {
-      // Generic catch block for network or other unexpected errors
       setErrorMessage(error.message || "An unexpected error occurred");
     }
-  };
-
-  const handleGoToLogin = () => {
-    navigate("/");
   };
 
   return (
@@ -86,7 +103,7 @@ const CreateAccountPage = () => {
           </button>
           <button
             className="auth-button auth-button-spacing"
-            onClick={handleGoToLogin}
+            onClick={handleLogin}
           >
             Go to Login
           </button>

@@ -72,21 +72,16 @@ export default function AIResponse({ openModal }) {
   }
 
   const handleChatStart = async () => {
-    console.log("Checkbox Checked:", agreementChecked); // Debugging state
     if (!agreementChecked) {
-      console.log("Setting error message"); // Debugging condition
       setErrorMessage("You must select the checkbox to agree");
-      return; // Stop further execution if the checkbox isn't checked
+      return;
     }
     setIsChatOpen(true);
     setShowTyping(true);
 
-    // Retrieve the user's email and access token
-    const userEmail = localStorage.getItem("userEmail");
     const accessToken = localStorage.getItem("accessToken");
 
     try {
-      // Make a POST request to create a new chat thread
       const response = await fetch(
         "http://localhost:8000/api/create_chat_thread/",
         {
@@ -95,7 +90,6 @@ export default function AIResponse({ openModal }) {
             "Content-Type": "application/json",
             Authorization: `Bearer ${accessToken}`,
           },
-          body: JSON.stringify({ userEmail }),
         }
       );
 
@@ -103,7 +97,6 @@ export default function AIResponse({ openModal }) {
         throw new Error("Failed to create chat thread");
       }
 
-      // Retrieve the thread identifier from the response
       const data = await response.json();
       setThreadIdentifier(data.threadIdentifier); // This now directly stores the thread ID
 
