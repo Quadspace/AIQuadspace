@@ -90,28 +90,20 @@ def create_chat_thread(request):
         )
 
 
-def get_chat_history(request, thread_identifier):
+@api_view(["GET"])
+@permission_classes([IsAuthenticated])
+def get_chat_history(request, thread_id):
     try:
-        email, thread_count = parse_thread_identifier(thread_identifier)
-        user = EmailUser.objects.get(email=email)
-        thread = ChatThread.objects.filter(user=user)[thread_count - 1]
+        thread = ChatThread.objects.get(id=thread_id)
         chat_messages = ChatMessage.objects.filter(thread=thread).order_by("timestamp")
         data = [
             {"role": msg.role, "content": msg.content, "timestamp": msg.timestamp}
             for msg in chat_messages
         ]
         return JsonResponse(data, safe=False)
-    except EmailUser.DoesNotExist:
-        return JsonResponse(
-            {"status": "error", "message": "User not found"}, status=404
-        )
     except ChatThread.DoesNotExist:
         return JsonResponse(
             {"status": "error", "message": "Thread not found"}, status=404
-        )
-    except IndexError:
-        return JsonResponse(
-            {"status": "error", "message": "Invalid thread number"}, status=400
         )
 
 
