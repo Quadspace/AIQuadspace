@@ -75,10 +75,10 @@ const CreateAccountPage = () => {
 
   return (
     <>
-      <h1 className="auth-title">Create Account</h1>
       <div className="auth-container">
         <img src="/logofull.png" alt="Quadspace Logo" className="auth-logo" />
         <div className="auth-form-container">
+      <h1 className="auth-title">Create Account</h1>
           {errorMessage && <div style={{ color: "red" }}>{errorMessage}</div>}
           <input
             className="auth-input"
