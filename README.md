@@ -1,5 +1,5 @@
 Quad AI Chat Documentation
-Last updated: 1/10/2024
+Last updated: 1/19/2024
 
 Specifications
 Frontend
@@ -29,8 +29,11 @@ As an admin for Quadspace, I want to know only registered users can enter into t
 
 
 Workflow
-User is greeted with the disclaimer on the homepage that states:  “By clicking "Chat with Quad", I acknowledge that by using this chatbot, I give Quadspace, LLC permission to store and use all data entered into this chat conversation for the purposes of improving services and user experience. Your information will be handled in accordance with our Privacy Policy.” 
-There is a button below it that states “Chat with Quad”.  Clicking this is the user’s agreement to have their chat messages recorded for Quadspace’s use. 
+User is presented with a login page for username and password.  If they have an account they may log in.  If they do not have an account, they can create an account by clicking the corresponding button.  On the create account page they will be required to enter a username and a password and then confirm it.  If there are no errors it will log the user in. 
+
+Once the user is logged in they will be presented with the privacy policy and a checkbox stating they have read the policy, and a button that allows them to agree and move on to the chat.  
+
+Clicking this is the user’s agreement to have their chat messages recorded for Quadspace’s use. 
 Clicking the button takes the user to the chat interface.  The first 2 messages will load from the Quad Assistant before the user types in anything. Quad will ask for the name of the user. 
 Quad will greet the user by the name that was given in the first prompt.  Then say "In a sentence or two, tell me [insert user's name here] what challenges you are facing in regards to your warehouse needs. Feel free to be casual like this is a discussion between friends or coworkers."
 After this, Quad will respond with something nice and appropriate.  Then ask the user to think of a time in the past when they had to deal with this issue.  Ask them "What have you done to try to fix this problem so far?"  This is to determine what they have already tried or if they have not tried much at all so this isn't actually that big of a deal for them.  
@@ -62,32 +65,47 @@ Admin page with similar chat interface, but also Select Thread dropdown for admi
 Data Models
 
 Tables
-User
-Hosts chat users grouped by Name and UUID
-SuperUserCredentials
-Hosts admin (superusers) who can log in to the admin portal
-Currently just one entry
+
+EmailUser
+- email
+- is_active
+- is_admin
+
 ChatMessage
-Holds all chat data and groups by Name given in first user response and UUID.
-Used as a foreign key to connect to User Table.
+- user
+--linked to email from EmailUser table
+- thread
+- role
+- content
+- timestamp
+
+ChatThread
+- user
+-- linked to email from EmailUser table via thread identifier
+
 
 
 How To:
 
 Login as admin:
 Click “A” button in button right hand corner of screen 
-Log in with super user credentials 
-Access chat logs
-Log into admin page and select thread name from dropdown menu to read through chat
+--If logged in user is administrator the chat logs will be shown
+
+Access chat logs:
+Log into admin page and select thread name from dropdown menu to read through chats
+
 Create new admin:
-In command line, move into project folder and run the following command
-Python3 mange.py createsuperuser
-Follow the prompts from there to create 
-Logout of admin:
-Click “Back” button or go to any other page (automatic logout)
-Access PostgreSQL databases (raw chat data)
+Create new account or log in with created account.
+View EmailUser table is Postico,
+Find column labeled "is_admin"
+Change to "True"
+Save changes
+
+
+Access PostgreSQL databases (raw chat data):
 Connect database to Postico application and view from there
-Upload more knowledge base for AI chat
+
+Upload more knowledge base for AI chat:
 Copy text from desired files into the bottom of knowledge.txt
 The more files added, the slower response time will be
 This could even stop OpenAI API request entirely due to size of requests
