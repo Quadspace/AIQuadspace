@@ -8,8 +8,7 @@ export default function AIResponse({ openModal }) {
   const [inputText, setInputText] = useState("");
   const [isLoading, setIsLoading] = useState(false);
   const [showTyping, setShowTyping] = useState(true);
-  const [userEmail, setUserEmail] = useState(""); // State to hold the user's email
-  const [agreementChecked, setAgreementChecked] = useState(false);
+  const [userEmail, setUserEmail] = useState(""); 
   const [threadIdentifier, setThreadIdentifier] = useState("");
   const [errorMessage, setErrorMessage] = useState("");
 
@@ -21,7 +20,7 @@ export default function AIResponse({ openModal }) {
     },
   ]);
 
-  // Function to handle admin button click
+ 
   const handleAdminButtonClick = async () => {
     try {
       const accessToken = localStorage.getItem("accessToken");
@@ -45,14 +44,14 @@ export default function AIResponse({ openModal }) {
     }
   };
 
-  // Function to handle chat start
+
 
   const chatContentRef = useRef(null);
   const inputRef = useRef(null);
 
-  // Function to format input text into link
+  
   function linkify(inputText) {
-    // URLs to be replaced with custom text
+    
     const urlMappings = {
       "https://forms.office.com/r/ManC4Y7ZA8": "Details Form",
       "https://quadspace.us/": "Quadspace",
@@ -62,11 +61,11 @@ export default function AIResponse({ openModal }) {
       /(\b(https?|ftp|file):\/\/[-A-Z0-9+&@#/%?=~_|!:,.;]*[-A-Z0-9+&@#/%=~_|])/gi;
 
     return inputText.replace(urlRegex, function (url) {
-      // Check if the url is one of the special cases
+      
       if (urlMappings[url]) {
         return `<a href="${url}" target="_blank" rel="noopener noreferrer" style="color: blue; text-decoration: underline;">${urlMappings[url]}</a>`;
       }
-      // If not a special case, return the url as is
+      
       return `<a href="${url}" target="_blank" rel="noopener noreferrer" style="color: blue; text-decoration: underline;">${url}</a>`;
     });
   }
@@ -98,23 +97,23 @@ export default function AIResponse({ openModal }) {
       }
 
       const data = await response.json();
-      setThreadIdentifier(data.threadIdentifier); // This now directly stores the thread ID
+      setThreadIdentifier(data.threadIdentifier); 
 
-      // Continue with displaying the initial assistant message
+      
       setTimeout(() => {
         setShowTyping(false);
         appendToChatHistory({
           role: "assistant",
           content: "Who do I have the pleasure of speaking with?",
         });
-      }, 3500); // Adjust the delay as needed
+      }, 3500); 
     } catch (error) {
       console.error("Error creating chat thread:", error);
-      // Optionally, handle the error (e.g., show a message to the user)
+      
     }
   };
 
-  // useEffect to handle auto-scroll and input focus
+
   useEffect(() => {
     if (chatContentRef.current) {
       chatContentRef.current.scrollTop = chatContentRef.current.scrollHeight;
@@ -129,7 +128,7 @@ export default function AIResponse({ openModal }) {
     setErrorMessage("");
     const textarea = e.target;
     textarea.style.height = "auto";
-    textarea.style.height = `${textarea.scrollHeight}px`; // Set to content height
+    textarea.style.height = `${textarea.scrollHeight}px`; 
   };
   const clearErrorMessage = () => {
     setErrorMessage("");
@@ -154,7 +153,7 @@ export default function AIResponse({ openModal }) {
     for (let i = 0; i < lines.length; i++) {
       const line = lines[i].trim();
       if (line.startsWith("**")) {
-        // Bold title with a colon
+        
         const title = line.replace(/\*\*/g, "").trim();
         formattedContent += `${
           inList ? "<br><br>" : ""
@@ -162,12 +161,12 @@ export default function AIResponse({ openModal }) {
         inList = false;
         isSubBullet = false;
       } else if (line.startsWith("-")) {
-        // Sub bullet point
+      
         formattedContent += `<br>${isSubBullet ? "" : "<br>"}${line}`;
         inList = true;
         isSubBullet = true;
       } else if (line.length > 0) {
-        // Regular text
+        
         formattedContent += `${inList ? "<br><br>" : ""}${line}`;
         inList = true;
         isSubBullet = false;
@@ -198,7 +197,7 @@ export default function AIResponse({ openModal }) {
       role: "user",
       content: inputText,
       userEmail: localStorage.getItem("userEmail"),
-      threadIdentifier, // This is now just a simple ID
+      threadIdentifier, 
     };
 
     appendToChatHistory({ role: "user", content: inputText });
@@ -207,7 +206,7 @@ export default function AIResponse({ openModal }) {
     try {
       const accessToken = localStorage.getItem("accessToken");
 
-      // Save user message
+      
       await fetch("http://localhost:8000/api/save_chat_message/", {
         method: "POST",
         headers: {
@@ -219,7 +218,7 @@ export default function AIResponse({ openModal }) {
 
       const knowledgeText = await fetchFileContent();
 
-      // Get assistant's response
+      
       const response = await fetch(
         "https://api.openai.com/v1/chat/completions",
         {
@@ -251,7 +250,7 @@ export default function AIResponse({ openModal }) {
         content: assistantResponse,
       });
 
-      // Save assistant's response
+      
       const assistantMessageContent = {
         role: "assistant",
         content: assistantResponse,
@@ -281,7 +280,7 @@ export default function AIResponse({ openModal }) {
   const handleCheckboxChange = (e) => {
     setAgreementChecked(e.target.checked);
     clearErrorMessage();
-    console.log("Checkbox state updated to:", e.target.checked); // Debugging
+   
   };
 
   return (
@@ -298,7 +297,7 @@ export default function AIResponse({ openModal }) {
               
               <h2>Privacy Policy</h2>
               <div className="privacy-policy-content">
-                {/* Insert your long privacy policy text here */}
+                
                 <p>
                   1. Personal information we collect We collect personal
                   information relating to you (“Personal Information”) as
@@ -615,7 +614,7 @@ export default function AIResponse({ openModal }) {
                   we will post an updated version on this page, unless another
                   type of notice is required by applicable law.
                 </p>
-                {/* Continue with the rest of the privacy policy content */}
+                
               </div>
             </div>
             {errorMessage && (
@@ -644,8 +643,8 @@ export default function AIResponse({ openModal }) {
             style={{
               maxWidth: "80%",
               height: "auto",
-              display: "block", // Added to make the image a block-level element
-              margin: "0 auto", // Added to center the image horizontally
+              display: "block", 
+              margin: "0 auto", 
             }}
           />
 

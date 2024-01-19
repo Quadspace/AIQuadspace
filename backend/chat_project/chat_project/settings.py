@@ -53,7 +53,7 @@ CORS_ALLOW_HEADERS = ["Content-Type", "Authorization"]
 SIMPLE_JWT = {
     "ACCESS_TOKEN_LIFETIME": timedelta(minutes=43200),
     "REFRESH_TOKEN_LIFETIME": timedelta(days=30),
-    # ... other settings ...
+   
 }
 
 
@@ -67,11 +67,11 @@ LOGGING = {
     },
     "root": {
         "handlers": ["console"],
-        "level": "DEBUG",  # Set the logging level to DEBUG
+        "level": "DEBUG",  
     },
 }
 
-# Application definition
+
 
 INSTALLED_APPS = [
     "django.contrib.admin",
@@ -97,7 +97,7 @@ MIDDLEWARE = [
 ]
 
 AUTHENTICATION_BACKENDS = [
-    "django.contrib.auth.backends.ModelBackend",  # or any other appropriate backend
+    "django.contrib.auth.backends.ModelBackend",  
 ]
 
 
@@ -105,19 +105,19 @@ SESSION_ENGINE = "django.contrib.sessions.backends.db"
 
 SESSION_COOKIE_NAME = "your_session_cookie_name"
 
-# Set session cookie age (optional, default is 1209600 seconds, which is 2 weeks)
-SESSION_COOKIE_AGE = 3600  # Set to 1 hour for testing
 
-# Set the path for session cookies (optional)
+SESSION_COOKIE_AGE = 3600  
+
+
 SESSION_COOKIE_PATH = "/"
 
-# Ensure that the session cookie is marked as secure (requires HTTPS, optional)
-SESSION_COOKIE_SECURE = True  # Set to True for production
 
-# Ensure that the session cookie is HTTP-only (not accessible via JavaScript)
+SESSION_COOKIE_SECURE = True  
+
+
 SESSION_COOKIE_HTTPONLY = True
 
-# Optionally, set a custom session serializer (default is JSONSerializer)
+
 SESSION_SERIALIZER = "django.contrib.sessions.serializers.JSONSerializer"
 ROOT_URLCONF = "chat_project.urls"
 
@@ -125,7 +125,7 @@ REST_FRAMEWORK = {
     "DEFAULT_AUTHENTICATION_CLASSES": (
         "rest_framework_simplejwt.authentication.JWTAuthentication",
     ),
-    # ... other settings
+    
 }
 
 TEMPLATES = [

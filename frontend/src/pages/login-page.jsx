@@ -8,9 +8,9 @@ const LoginPage = () => {
   const navigate = useNavigate();
 
   const handleLogin = async (e) => {
-    e.preventDefault(); // Prevent default form submission behavior
+    e.preventDefault(); 
 
-    // Clear any existing session data
+    
     localStorage.removeItem("accessToken");
     localStorage.removeItem("refreshToken");
 
@@ -26,11 +26,11 @@ const LoginPage = () => {
       const loginData = await loginResponse.json();
 
       if (loginResponse.ok) {
-        // Store the new tokens
+       
         localStorage.setItem("accessToken", loginData.access);
         localStorage.setItem("refreshToken", loginData.refresh);
 
-        navigate("/chat"); // Navigate to chat page
+        navigate("/chat"); 
       } else {
         if (loginData.password) {
           setErrorMessage(loginData.password[0]);
@@ -46,7 +46,7 @@ const LoginPage = () => {
   };
 
   const handleCreateAccount = () => {
-    navigate("/create-account"); // Navigate to the create account page.
+    navigate("/create-account"); 
   };
 
   return (

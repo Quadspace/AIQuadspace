@@ -32,7 +32,7 @@ export default function AdminPage() {
     fetchThreadIdsByUser();
   }, []);
 
-  // Fetch chat history for a selected thread
+  
   useEffect(() => {
     const fetchChatHistory = async () => {
       if (selectedThreadId) {

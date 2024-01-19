@@ -10,12 +10,12 @@ import LoginPage from "./pages/login-page";
 import CreateAccountPage from "./pages/createaccountpage";
 import "./index.css";
 
-// Function to clear authentication state
+
 const clearAuthState = () => {
-  localStorage.removeItem("isSuperuser"); // Replace 'isSuperuser' with your actual auth flag
+  localStorage.removeItem("isSuperuser"); 
 };
 
-// Clear authentication state on app load
+
 clearAuthState();
 
 const container = document.getElementById("root");

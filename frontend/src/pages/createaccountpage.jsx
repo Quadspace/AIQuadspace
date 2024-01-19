@@ -10,7 +10,7 @@ const CreateAccountPage = () => {
   const navigate = useNavigate();
 
   const handleLogin = async (email, password) => {
-    // Clear any existing session data
+    
     localStorage.removeItem("accessToken");
     localStorage.removeItem("refreshToken");
 
@@ -30,7 +30,7 @@ const CreateAccountPage = () => {
         localStorage.setItem("accessToken", loginData.access);
         localStorage.setItem("refreshToken", loginData.refresh);
         localStorage.setItem("userEmail", email);
-        navigate("/chat"); // Adjust URL as needed
+        navigate("/chat"); 
       } else {
         throw new Error(loginData.detail || "Login failed");
       }
@@ -57,7 +57,7 @@ const CreateAccountPage = () => {
       });
 
       if (response.ok) {
-        // Log in the new user after successful account creation
+      
         await handleLogin(email, password);
       } else {
         const data = await response.json();
@@ -70,7 +70,7 @@ const CreateAccountPage = () => {
     }
   };
   const handleGoToLogin = () => {
-    navigate("/"); // Navigate to the login page
+    navigate("/"); 
   };
 
   return (

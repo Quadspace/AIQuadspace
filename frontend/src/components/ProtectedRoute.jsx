@@ -32,7 +32,7 @@ const ProtectedRoute = ({ children }) => {
   }, []);
 
   if (isAdmin === null) {
-    // Loading state or a spinner can be rendered here
+   
     return <div>Loading...</div>;
   }
 

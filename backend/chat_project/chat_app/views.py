@@ -29,7 +29,6 @@ def parse_thread_identifier(thread_identifier):
         email, thread_id = thread_identifier.rsplit("-", 1)
         return email, int(thread_id)
     except ValueError:
-        # Handle the case where the format is not as expected
         return thread_identifier, None
 
 
@@ -61,8 +60,6 @@ def login_user(request):
     user = authenticate(email=email, password=password)
     if user is not None:
         if user.is_active:
-            # Create and return tokens or other login confirmation
-            # Example:
             refresh = RefreshToken.for_user(user)
             return Response(
                 {
@@ -109,7 +106,6 @@ def check_admin(request):
 @api_view(["GET"])
 @permission_classes([IsAuthenticated, IsAdminUser])
 def get_thread_ids(request):
-    # Fetch distinct email addresses and their corresponding chat threads
     threads_by_user = {}
     for user in EmailUser.objects.all():
         threads = ChatThread.objects.filter(user=user)
@@ -122,9 +118,9 @@ def get_thread_ids(request):
 @api_view(["POST"])
 @permission_classes([IsAuthenticated])
 def create_chat_thread(request):
-    user = request.user  # Authenticated user
+    user = request.user
     new_thread = ChatThread.objects.create(user=user)
-    new_thread_identifier = str(new_thread.id)  # Simple identifier for the thread
+    new_thread_identifier = str(new_thread.id)
     return JsonResponse(
         {"threadIdentifier": new_thread_identifier}, status=status.HTTP_201_CREATED
     )
@@ -156,17 +152,14 @@ def save_chat_message(request):
         content = data.get("content")
         role = data.get("role")
 
-        # Ensure all required fields are provided
         if not thread_id or not content or not role:
             return JsonResponse(
                 {"status": "error", "message": "Missing required fields"}, status=400
             )
 
-        # Find the specific chat thread
         thread = ChatThread.objects.get(id=thread_id)
         user = thread.user
 
-        # Create and save the chat message
         ChatMessage.objects.create(user=user, role=role, content=content, thread=thread)
 
         return JsonResponse({"status": "success"})
