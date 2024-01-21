@@ -15,7 +15,7 @@ const CreateAccountPage = () => {
     localStorage.removeItem("refreshToken");
 
     try {
-      const loginResponse = await fetch("http://localhost:8000/api/token/", {
+      const loginResponse = await fetch("https://quadbot-rt.onrender.com/api/token/", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -48,7 +48,7 @@ const CreateAccountPage = () => {
     }
 
     try {
-      const response = await fetch("http://localhost:8000/api/register/", {
+      const response = await fetch("https://quadbot-rt.onrender.com/api/register/", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

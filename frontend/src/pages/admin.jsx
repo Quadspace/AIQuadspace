@@ -12,7 +12,7 @@ export default function AdminPage() {
   const fetchThreadIdsByUser = async () => {
     const accessToken = localStorage.getItem("accessToken");
     try {
-      const response = await fetch("http://localhost:8000/api/thread_ids/", {
+      const response = await fetch("https://quadbot-rt.onrender.com/api/thread_ids/", {
         headers: {
           Authorization: `Bearer ${accessToken}`,
           "Content-Type": "application/json",
@@ -39,7 +39,7 @@ export default function AdminPage() {
         const accessToken = localStorage.getItem("accessToken");
         try {
           const response = await fetch(
-            `http://localhost:8000/api/chat_history/${encodeURIComponent(
+            `https://quadbot-rt.onrender.com/api/chat_history/${encodeURIComponent(
               selectedThreadId
             )}/`,
             {

@@ -45,7 +45,7 @@ CORS_ALLOW_HEADERS = ["Content-Type", "Authorization"]
 
 # CORS_ALLOWED_ORIGINS = [
 #     "https://quad1.netlify.app",
-#     "http://localhost:8000",
+#     "https://quadbot-rt.onrender.com",
 #     "http://localhost:5173",
 #     "http://127.0.0.1:9000",
 # ]

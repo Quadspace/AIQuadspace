@@ -24,7 +24,7 @@ export default function AIResponse({ openModal }) {
   const handleAdminButtonClick = async () => {
     try {
       const accessToken = localStorage.getItem("accessToken");
-      const response = await fetch("http://localhost:8000/api/check_admin/", {
+      const response = await fetch("https://quadbot-rt.onrender.com/api/check_admin/", {
         method: "GET",
         headers: {
           "Content-Type": "application/json",
@@ -82,7 +82,7 @@ export default function AIResponse({ openModal }) {
 
     try {
       const response = await fetch(
-        "http://localhost:8000/api/create_chat_thread/",
+        "https://quadbot-rt.onrender.com/api/create_chat_thread/",
         {
           method: "POST",
           headers: {
@@ -207,7 +207,7 @@ export default function AIResponse({ openModal }) {
       const accessToken = localStorage.getItem("accessToken");
 
       
-      await fetch("http://localhost:8000/api/save_chat_message/", {
+      await fetch("https://quadbot-rt.onrender.com/api/save_chat_message/", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -258,7 +258,7 @@ export default function AIResponse({ openModal }) {
         threadIdentifier,
       };
 
-      await fetch("http://localhost:8000/api/save_chat_message/", {
+      await fetch("https://quadbot-rt.onrender.com/api/save_chat_message/", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

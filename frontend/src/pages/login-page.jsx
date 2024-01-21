@@ -15,7 +15,7 @@ const LoginPage = () => {
     localStorage.removeItem("refreshToken");
 
     try {
-      const loginResponse = await fetch("http://localhost:8000/api/token/", {
+      const loginResponse = await fetch("https://quadbot-rt.onrender.com/api/token/", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
