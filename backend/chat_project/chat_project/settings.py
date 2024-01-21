@@ -31,6 +31,7 @@ DEBUG = True
 ALLOWED_HOSTS = [
     "localhost",
     "127.0.0.1",
+    'quadbot-rt.onrender.com'
 ]
 # ALLOWED_HOSTS = ["quad2.onrender.com"]
 
