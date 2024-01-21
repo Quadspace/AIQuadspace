@@ -35,7 +35,7 @@ ALLOWED_HOSTS = [
 # ALLOWED_HOSTS = ["quad2.onrender.com"]
 
 # CORS_ALLOWED_ORIGINS = [
-#     "http://localhost:5173",  # Add the origin of your frontend
+#     "https://quadspace.ai/",  # Add the origin of your frontend
 # ]
 CORS_ORIGIN_ALLOW_ALL = True
 
@@ -46,7 +46,7 @@ CORS_ALLOW_HEADERS = ["Content-Type", "Authorization"]
 # CORS_ALLOWED_ORIGINS = [
 #     "https://quad1.netlify.app",
 #     "https://quadbot-rt.onrender.com",
-#     "http://localhost:5173",
+#     "https://quadspace.ai/",
 #     "http://127.0.0.1:9000",
 # ]
 
