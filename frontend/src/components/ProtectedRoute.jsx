@@ -8,7 +8,7 @@ const ProtectedRoute = ({ children }) => {
     const checkAdminStatus = async () => {
       const accessToken = localStorage.getItem("accessToken");
       try {
-        const response = await fetch("https://quadbot-rt.onrender.comf/api/check_admin/", {
+        const response = await fetch("https://quadbot-rt.onrender.com/api/check_admin/", {
           method: "GET",
           headers: {
             Authorization: `Bearer ${accessToken}`,
