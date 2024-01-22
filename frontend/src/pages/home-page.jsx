@@ -624,12 +624,13 @@ export default function AIResponse({ openModal }) {
               </div>
             )}
             <label className="privacy-agreement">
-              <input
+            <input
                 type="checkbox"
                 name="agreement"
                 checked={agreementChecked}
                 onChange={handleCheckboxChange}
               />
+              I agree to the Privacy Policy
             </label>
 
             <button onClick={handleChatStart}>I give permission</button>
@@ -660,8 +661,8 @@ export default function AIResponse({ openModal }) {
                 <p
                   key={index}
                   className={`message ${message.role === "user"
-                    ? "user-message"
-                    : "assistant-message"
+                      ? "user-message"
+                      : "assistant-message"
                     }`}
                   dangerouslySetInnerHTML={{ __html: linkify(message.content) }}
                 />
