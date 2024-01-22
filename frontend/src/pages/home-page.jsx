@@ -8,9 +8,11 @@ export default function AIResponse({ openModal }) {
   const [inputText, setInputText] = useState("");
   const [isLoading, setIsLoading] = useState(false);
   const [showTyping, setShowTyping] = useState(true);
-  const [userEmail, setUserEmail] = useState(""); 
+  const [userEmail, setUserEmail] = useState("");
   const [threadIdentifier, setThreadIdentifier] = useState("");
   const [errorMessage, setErrorMessage] = useState("");
+  const [agreementChecked, setAgreementChecked] = useState(false);
+
 
   const [chatHistory, setChatHistory] = useState([
     {
@@ -20,7 +22,7 @@ export default function AIResponse({ openModal }) {
     },
   ]);
 
- 
+
   const handleAdminButtonClick = async () => {
     try {
       const accessToken = localStorage.getItem("accessToken");
@@ -49,9 +51,9 @@ export default function AIResponse({ openModal }) {
   const chatContentRef = useRef(null);
   const inputRef = useRef(null);
 
-  
+
   function linkify(inputText) {
-    
+
     const urlMappings = {
       "https://forms.office.com/r/ManC4Y7ZA8": "Details Form",
       "https://quadspace.us/": "Quadspace",
@@ -61,11 +63,11 @@ export default function AIResponse({ openModal }) {
       /(\b(https?|ftp|file):\/\/[-A-Z0-9+&@#/%?=~_|!:,.;]*[-A-Z0-9+&@#/%=~_|])/gi;
 
     return inputText.replace(urlRegex, function (url) {
-      
+
       if (urlMappings[url]) {
         return `<a href="${url}" target="_blank" rel="noopener noreferrer" style="color: blue; text-decoration: underline;">${urlMappings[url]}</a>`;
       }
-      
+
       return `<a href="${url}" target="_blank" rel="noopener noreferrer" style="color: blue; text-decoration: underline;">${url}</a>`;
     });
   }
@@ -97,19 +99,19 @@ export default function AIResponse({ openModal }) {
       }
 
       const data = await response.json();
-      setThreadIdentifier(data.threadIdentifier); 
+      setThreadIdentifier(data.threadIdentifier);
 
-      
+
       setTimeout(() => {
         setShowTyping(false);
         appendToChatHistory({
           role: "assistant",
           content: "Who do I have the pleasure of speaking with?",
         });
-      }, 3500); 
+      }, 3500);
     } catch (error) {
       console.error("Error creating chat thread:", error);
-      
+
     }
   };
 
@@ -128,7 +130,7 @@ export default function AIResponse({ openModal }) {
     setErrorMessage("");
     const textarea = e.target;
     textarea.style.height = "auto";
-    textarea.style.height = `${textarea.scrollHeight}px`; 
+    textarea.style.height = `${textarea.scrollHeight}px`;
   };
   const clearErrorMessage = () => {
     setErrorMessage("");
@@ -153,20 +155,19 @@ export default function AIResponse({ openModal }) {
     for (let i = 0; i < lines.length; i++) {
       const line = lines[i].trim();
       if (line.startsWith("**")) {
-        
+
         const title = line.replace(/\*\*/g, "").trim();
-        formattedContent += `${
-          inList ? "<br><br>" : ""
-        }<strong>${title}:</strong> `;
+        formattedContent += `${inList ? "<br><br>" : ""
+          }<strong>${title}:</strong> `;
         inList = false;
         isSubBullet = false;
       } else if (line.startsWith("-")) {
-      
+
         formattedContent += `<br>${isSubBullet ? "" : "<br>"}${line}`;
         inList = true;
         isSubBullet = true;
       } else if (line.length > 0) {
-        
+
         formattedContent += `${inList ? "<br><br>" : ""}${line}`;
         inList = true;
         isSubBullet = false;
@@ -197,7 +198,7 @@ export default function AIResponse({ openModal }) {
       role: "user",
       content: inputText,
       userEmail: localStorage.getItem("userEmail"),
-      threadIdentifier, 
+      threadIdentifier,
     };
 
     appendToChatHistory({ role: "user", content: inputText });
@@ -206,7 +207,7 @@ export default function AIResponse({ openModal }) {
     try {
       const accessToken = localStorage.getItem("accessToken");
 
-      
+
       await fetch("https://quadbot-rt.onrender.com/api/save_chat_message/", {
         method: "POST",
         headers: {
@@ -218,7 +219,7 @@ export default function AIResponse({ openModal }) {
 
       const knowledgeText = await fetchFileContent();
 
-      
+
       const response = await fetch(
         "https://api.openai.com/v1/chat/completions",
         {
@@ -250,7 +251,7 @@ export default function AIResponse({ openModal }) {
         content: assistantResponse,
       });
 
-      
+
       const assistantMessageContent = {
         role: "assistant",
         content: assistantResponse,
@@ -280,7 +281,7 @@ export default function AIResponse({ openModal }) {
   const handleCheckboxChange = (e) => {
     setAgreementChecked(e.target.checked);
     clearErrorMessage();
-   
+
   };
 
   return (
@@ -294,10 +295,10 @@ export default function AIResponse({ openModal }) {
               style={{ maxWidth: "100%", height: "auto" }}
             />
             <div className="privacy-policy-container">
-              
+
               <h2>Privacy Policy</h2>
               <div className="privacy-policy-content">
-                
+
                 <p>
                   1. Personal information we collect We collect personal
                   information relating to you (“Personal Information”) as
@@ -614,7 +615,7 @@ export default function AIResponse({ openModal }) {
                   we will post an updated version on this page, unless another
                   type of notice is required by applicable law.
                 </p>
-                
+
               </div>
             </div>
             {errorMessage && (
@@ -623,12 +624,10 @@ export default function AIResponse({ openModal }) {
               </div>
             )}
             <label className="privacy-agreement">
-              <input
-                type="checkbox"
-                name="agreement"
-                checked={agreementChecked}
-                onChange={handleCheckboxChange}
-              />
+              type="checkbox"
+              name="agreement"
+              checked={agreementChecked}
+              onChange={handleCheckboxChange}
               I agree to the Privacy Policy
             </label>
 
@@ -643,8 +642,8 @@ export default function AIResponse({ openModal }) {
             style={{
               maxWidth: "80%",
               height: "auto",
-              display: "block", 
-              margin: "0 auto", 
+              display: "block",
+              margin: "0 auto",
             }}
           />
 
@@ -659,11 +658,10 @@ export default function AIResponse({ openModal }) {
               {chatHistory.map((message, index) => (
                 <p
                   key={index}
-                  className={`message ${
-                    message.role === "user"
+                  className={`message ${message.role === "user"
                       ? "user-message"
                       : "assistant-message"
-                  }`}
+                    }`}
                   dangerouslySetInnerHTML={{ __html: linkify(message.content) }}
                 />
               ))}
