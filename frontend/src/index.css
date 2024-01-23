@@ -474,6 +474,7 @@ button {
   resize: none; 
   min-height: 10px; 
   max-height: 100px;
+  font-size:16px;
   box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
 }
 
