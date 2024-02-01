@@ -708,7 +708,7 @@ export default function AIResponse({ openModal }) {
       color: "black", 
       textAlign: "center",
       marginBottom: "10px"     }}>
-      Visit us at www.Quadspace.us
+"https://quadspace.us/"
     </div>
 
       <div style={{ position: "fixed", bottom: 20, right: 20 }}>
