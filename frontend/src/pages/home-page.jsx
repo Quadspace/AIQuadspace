@@ -55,7 +55,7 @@ export default function AIResponse({ openModal }) {
   function linkify(inputText) {
 
     const urlMappings = {
-      "https://forms.office.com/r/ManC4Y7ZA8": "Details Form",
+      "https://forms.office.com/r/HKjacNXHCd": "Details Form",
       "https://quadspace.us/": "Quadspace",
     };
 
@@ -699,6 +699,17 @@ export default function AIResponse({ openModal }) {
           </div>
         </div>
       )}
+ <div style={{ 
+      position: "fixed", 
+      bottom: 0, 
+      left: "50%", 
+      transform: "translateX(-50%)", 
+      fontSize: "20px", 
+      color: "black", 
+      textAlign: "center",
+      marginBottom: "10px"     }}>
+      Visit us at www.Quadspace.us
+    </div>
 
       <div style={{ position: "fixed", bottom: 20, right: 20 }}>
         <button onClick={handleAdminButtonClick} className="small-admin-button">
