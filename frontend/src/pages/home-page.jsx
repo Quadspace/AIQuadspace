@@ -705,10 +705,10 @@ export default function AIResponse({ openModal }) {
       left: "50%", 
       transform: "translateX(-50%)", 
       fontSize: "20px", 
-      color: "black", 
+      color: "white", 
       textAlign: "center",
       marginBottom: "10px"     }}>
-"https://quadspace.us/"
+https://www.quadspace.us
     </div>
 
       <div style={{ position: "fixed", bottom: 20, right: 20 }}>
