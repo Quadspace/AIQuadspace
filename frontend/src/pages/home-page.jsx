@@ -229,7 +229,7 @@ export default function AIResponse({ openModal }) {
             "Content-Type": "application/json",
           },
           body: JSON.stringify({
-            model: "o1-mini",
+            model: "o1-preview",
             messages: [
               { role: "system", content: knowledgeText },
               ...chatHistory,
